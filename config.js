@@ -17,7 +17,7 @@ const config = {
     nin_koder_importert: 'data/nin_koder_importert.json',
     nin_variasjon_importert: 'data/nin_variasjon_importert.json',
     nin_liste: 'data/nin_liste.json',
-    kodetre_30: 'data/kodetre_30.json',
+    bbox_30: 'data/bbox_30.json',
     nin_hierarki_overrides: 'data/nin_hierarki_overrides.json',
     taxon_50: 'data/taxon_50.json',
     kommune_60: 'data/kommune_60.json',
@@ -25,7 +25,8 @@ const config = {
     nin_diagnostisk_art: 'data/nin_diagnostisk_art.json',
     andre_koder: 'data/andre_koder.json',
     flettet: 'data/flettet.json',
-    metabase: 'data/metabase.json'
+    metabase: 'data/metabase.json',
+    kodetre: 'data/kodetre.json'
   },
   prefix: {
     natursystem: 'NA_',

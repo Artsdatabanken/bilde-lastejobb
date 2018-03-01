@@ -8,7 +8,7 @@ function flett(jsonPath) {
   Object.assign(r, data)
 }
 
-flett(config.datafil.)
+flett(config.datafil.bbox_30)
 flett(config.datafil.fylke_61)
 flett(config.datafil.kommune_60)
 flett(config.datafil.nin_diagnostisk_art)

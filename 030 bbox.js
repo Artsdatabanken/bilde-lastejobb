@@ -1,10 +1,10 @@
 const io = require('./lib/io')
 const config = require('./config')
 
-let koder = io.readJson(config.datafil.nin_liste)
 let bboxIn = io.readJson(config.datakilde.bbox)
 
 console.log('Lest ' + Object.keys(bboxIn).length + ' bboxer')
+
 function prefixedKode(kode) {
   kode = kode.toUpperCase()
   if (kode[2] === '_') return kode
@@ -25,20 +25,14 @@ function map(bbox) {
   return [[round(bbox[2]), round(bbox[3])], [round(bbox[0]), round(bbox[1])]]
 }
 
-let count = 0
-for (let kode of Object.keys(koder)) {
+let r = {}
+for (let kode of Object.keys(bbox)) {
   if (bbox[kode]) {
-    let node = koder[kode]
+    let node = {}
     node.bbox = map(bbox[kode])
-    count++
+    r[kode] = node
   }
 }
 
-let missed = []
-for (let kode of Object.keys(bbox)) {
-  if (!koder[kode]) missed.push(kode)
-}
-console.log('Ukjente koder: ', missed.join(' '))
-io.writeJson(config.datafil.kodetre_30 + '_skipped.json', missed)
-io.writeJson(config.datafil.kodetre_30, koder)
-console.log('Importert ' + count + ' bboxer')
+io.writeJson(config.datafil.bbox_30, r)
+console.log('Importert ' + Object.keys(r).length + ' bboxer')

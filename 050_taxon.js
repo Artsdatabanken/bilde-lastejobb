@@ -23,6 +23,11 @@ taxons.forEach(taxon => {
   c2p[taxon.TaxonId] = taxon.ParentTaxonId
 })
 
+let taxonId2Kode = {}
+taxons.forEach(c => {
+  taxonId2Kode[c.TaxonId] = kode(c)
+})
+
 let koder = {}
 taxons.forEach(c => {
   const e = {
@@ -36,6 +41,7 @@ taxons.forEach(c => {
   e.taxonIdParent = c.ParentTaxonId
   e.relasjon = []
   e.barn = {}
+  e.forelder = taxonId2Kode[c.ParentTaxonId]
   e.infoUrl = 'https://artsdatabanken.no/Taxon/x/' + c.ScientificNameId
   if (c.NatureAreaTypeCodes)
     e.relasjon.push(...c.NatureAreaTypeCodes.map(k => 'NA_' + kode))

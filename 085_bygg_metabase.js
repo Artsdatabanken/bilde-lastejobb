@@ -38,6 +38,9 @@ function byggTreFra(rotKode) {
 }
 
 const r = byggTreFra('')
+//console.log(Object.keys(r))
+//console.log(Object.keys(r['BS']['BS_1']['BS_1AR']['BS_1AR-A-BZZ-0'])) //['BS_1-AR'])
+//console.log(r.BS.1.AR.A.BZZ.0)
 
 io.writeJson(config.datafil.metabase, r)
 console.log('Skrevet ' + Object.keys(r).length + ' koder på rotnivå')
