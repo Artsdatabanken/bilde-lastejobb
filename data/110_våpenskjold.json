@@ -1,0 +1,2983 @@
+{
+  "meta": {
+    "tittel": "110 våpenskjold",
+    "produsert": "2018-03-03T12:17:11.693Z",
+    "utgiver": "Artsdatabanken",
+    "url":
+      "https://firebasestorage.googleapis.com/v0/b/grunnkart.appspot.com/o/koder%2F110_våpenskjold.json?alt=media",
+    "elementer": 438
+  },
+  "data": {
+    "AO_01-01": {
+      "tittel": "Halden",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c6/Halden_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Halden_komm.svg"
+    },
+    "AO_01-04": {
+      "tittel": "Moss",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/07/Moss_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Moss_komm.svg"
+    },
+    "AO_01-05": {
+      "tittel": "Sarpsborg",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/43/Sarpsborg_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sarpsborg_komm.svg"
+    },
+    "AO_01-06": {
+      "tittel": "Fredrikstad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/91/Fredrikstad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Fredrikstad_komm.svg"
+    },
+    "AO_01-11": {
+      "tittel": "Hvaler",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/89/Hvaler_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hvaler_komm.svg"
+    },
+    "AO_01-18": {
+      "tittel": "Aremark",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/1c/Aremark_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Aremark_komm.svg"
+    },
+    "AO_01-19": {
+      "tittel": "Marker",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/46/Marker_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Marker_komm.svg"
+    },
+    "AO_01-21": {
+      "tittel": "Rømskog",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/62/R%C3%B8mskog_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:R%C3%B8mskog_komm.svg"
+    },
+    "AO_01-22": {
+      "tittel": "Trøgstad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/24/Tr%C3%B8gstad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Tr%C3%B8gstad_komm.svg"
+    },
+    "AO_01-23": {
+      "tittel": "Spydeberg",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/18/Spydeberg_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Spydeberg_komm.svg"
+    },
+    "AO_01-24": {
+      "tittel": "Askim",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/63/Askim_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Askim_komm.svg"
+    },
+    "AO_01-25": {
+      "tittel": "Eidsberg",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/55/Eidsberg_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Eidsberg_komm.svg"
+    },
+    "AO_01-27": {
+      "tittel": "Skiptvet",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b9/Skiptvet_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Skiptvet_komm.svg"
+    },
+    "AO_01-28": {
+      "tittel": "Rakkestad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0d/Rakkestad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Rakkestad_komm.svg"
+    },
+    "AO_01-35": {
+      "tittel": "Råde",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/41/R%C3%A5de_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:R%C3%A5de_komm.svg"
+    },
+    "AO_01-36": {
+      "tittel": "Rygge",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/e2/Rygge_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Rygge_komm.svg"
+    },
+    "AO_01-37": {
+      "tittel": "Våler",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/33/V%C3%A5ler_%C3%98stfold_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:V%C3%A5ler_%C3%98stfold_komm.svg"
+    },
+    "AO_01-38": {
+      "tittel": "Hobøl",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/7d/Hob%C3%B8l_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hob%C3%B8l_komm.svg"
+    },
+    "AO_02-11": {
+      "tittel": "Vestby",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/81/Vestby_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Vestby_komm.svg"
+    },
+    "AO_02-13": {
+      "tittel": "Ski",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Ski_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ski_komm.svg"
+    },
+    "AO_02-14": {
+      "tittel": "Ås",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/ba/%C3%85s_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%85s_komm.svg"
+    },
+    "AO_02-15": {
+      "tittel": "Frogn",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/2c/Frogn_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Frogn_komm.svg"
+    },
+    "AO_02-16": {
+      "tittel": "Nesodden",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Nesodden_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nesodden_komm.svg"
+    },
+    "AO_02-17": {
+      "tittel": "Oppegård",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/24/Oppeg%C3%A5rd_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Oppeg%C3%A5rd_komm.svg"
+    },
+    "AO_02-19": {
+      "tittel": "Bærum",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/bd/B%C3%A6rum_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:B%C3%A6rum_komm.svg"
+    },
+    "AO_02-20": {
+      "tittel": "Asker",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a6/Asker_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Asker_komm.svg"
+    },
+    "AO_02-21": {
+      "tittel": "Aurskog-Høland",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/2d/Aurskog-H%C3%B8land_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Aurskog-H%C3%B8land_komm.svg"
+    },
+    "AO_02-26": {
+      "tittel": "Sørum",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/e8/S%C3%B8rum_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:S%C3%B8rum_komm.svg"
+    },
+    "AO_02-27": {
+      "tittel": "Fet",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Fet_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Fet_komm.svg"
+    },
+    "AO_02-28": {
+      "tittel": "Rælingen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/58/R%C3%A6lingen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:R%C3%A6lingen_komm.svg"
+    },
+    "AO_02-29": {
+      "tittel": "Enebakk",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a2/Enebakk_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Enebakk_komm.svg"
+    },
+    "AO_02-30": {
+      "tittel": "Lørenskog",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/ba/L%C3%B8renskog_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:L%C3%B8renskog_komm.svg"
+    },
+    "AO_02-31": {
+      "tittel": "Skedsmo",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Skedsmo_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Skedsmo_komm.svg"
+    },
+    "AO_02-33": {
+      "tittel": "Nittedal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/90/Nittedal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nittedal_komm.svg"
+    },
+    "AO_02-34": {
+      "tittel": "Gjerdrum",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/60/Gjerdrum_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Gjerdrum_komm.svg"
+    },
+    "AO_02-35": {
+      "tittel": "Ullensaker",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/88/Ullensaker_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Ullensaker_komm.svg"
+    },
+    "AO_02-36": {
+      "tittel": "Nes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/ad/Nes_Akershus_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nes_Akershus_komm.svg"
+    },
+    "AO_02-37": {
+      "tittel": "Eidsvoll",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c8/Eidsvoll_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Eidsvoll_komm.svg"
+    },
+    "AO_02-38": {
+      "tittel": "Nannestad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/2b/Nannestad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nannestad_komm.svg"
+    },
+    "AO_02-39": {
+      "tittel": "Hurdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/16/Hurdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hurdal_komm.svg"
+    },
+    "AO_03-01": {
+      "tittel": "Oslo",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/da/Oslo_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Oslo_komm.svg"
+    },
+    "AO_04-02": {
+      "tittel": "Kongsvinger",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/10/Kongsvinger_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Kongsvinger_komm.svg"
+    },
+    "AO_04-03": {
+      "tittel": "Hamar",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/71/Hamar_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hamar_komm.svg"
+    },
+    "AO_04-12": {
+      "tittel": "Ringsaker",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/32/Ringsaker_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Ringsaker_komm.svg"
+    },
+    "AO_04-15": {
+      "tittel": "Løten",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/15/L%C3%B8ten_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:L%C3%B8ten_komm.svg"
+    },
+    "AO_04-17": {
+      "tittel": "Stange",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/32/Stange_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Stange_komm.svg"
+    },
+    "AO_04-18": {
+      "tittel": "Nord-Odal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Nord-Odal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nord-Odal_komm.svg"
+    },
+    "AO_04-19": {
+      "tittel": "Sør-Odal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ef/S%C3%B8r-Odal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:S%C3%B8r-Odal_komm.svg"
+    },
+    "AO_04-20": {
+      "tittel": "Eidskog",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/fd/Eidskog_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Eidskog_komm.svg"
+    },
+    "AO_04-23": {
+      "tittel": "Grue",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f1/Grue_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Grue_komm.svg"
+    },
+    "AO_04-25": {
+      "tittel": "Åsnes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/1c/%C3%85snes_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%85snes_komm.svg"
+    },
+    "AO_04-26": {
+      "tittel": "Våler",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/08/V%C3%A5ler_Hedmark_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:V%C3%A5ler_Hedmark_komm.svg"
+    },
+    "AO_04-27": {
+      "tittel": "Elverum",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ed/Elverum_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Elverum_komm.svg"
+    },
+    "AO_04-28": {
+      "tittel": "Trysil",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/16/Trysil_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Trysil_komm.svg"
+    },
+    "AO_04-29": {
+      "tittel": "Åmot",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/4e/%C3%85mot_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%85mot_komm.svg"
+    },
+    "AO_04-30": {
+      "tittel": "Stor-Elvdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/2b/Stor-Elvdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Stor-Elvdal_komm.svg"
+    },
+    "AO_04-32": {
+      "tittel": "Rendalen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0e/Rendalen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Rendalen_komm.svg"
+    },
+    "AO_04-34": {
+      "tittel": "Engerdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ea/Engerdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Engerdal_komm.svg"
+    },
+    "AO_04-36": {
+      "tittel": "Tolga",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/1b/Tolga_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tolga_komm.svg"
+    },
+    "AO_04-37": {
+      "tittel": "Tynset",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tynset_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Tynset_komm.svg"
+    },
+    "AO_04-38": {
+      "tittel": "Alvdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/fd/Alvdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Alvdal_komm.svg"
+    },
+    "AO_04-39": {
+      "tittel": "Folldal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ea/Folldal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Folldal_komm.svg"
+    },
+    "AO_04-41": {
+      "tittel": "Os",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/e6/Os_Hedmark_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Os_Hedmark_komm.svg"
+    },
+    "AO_05-01": {
+      "tittel": "Lillehammer",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/2e/Lillehammer_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Lillehammer_komm.svg"
+    },
+    "AO_05-02": {
+      "tittel": "Gjøvik",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/34/Gj%C3%B8vik_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Gj%C3%B8vik_komm.svg"
+    },
+    "AO_05-11": {
+      "tittel": "Dovre",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/17/Dovre_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dovre_komm.svg"
+    },
+    "AO_05-12": {
+      "tittel": "Lesja",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/5a/Lesja_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lesja_komm.svg"
+    },
+    "AO_05-13": {
+      "tittel": "Skjåk",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/3a/Skj%C3%A5k_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Skj%C3%A5k_komm.svg"
+    },
+    "AO_05-14": {
+      "tittel": "Lom",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Lom_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lom_komm.svg"
+    },
+    "AO_05-15": {
+      "tittel": "Vågå",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/e8/V%C3%A5g%C3%A5_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:V%C3%A5g%C3%A5_komm.svg"
+    },
+    "AO_05-16": {
+      "tittel": "Nord-Fron",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a0/Nord-Fron_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nord-Fron_komm.svg"
+    },
+    "AO_05-17": {
+      "tittel": "Sel",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Sel_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sel_komm.svg"
+    },
+    "AO_05-19": {
+      "tittel": "Sør-Fron",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/74/S%C3%B8r-Fron_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:S%C3%B8r-Fron_komm.svg"
+    },
+    "AO_05-20": {
+      "tittel": "Ringebu",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/1b/Ringebu_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Ringebu_komm.svg"
+    },
+    "AO_05-21": {
+      "tittel": "Øyer",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/d6/%C3%98yer_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%98yer_komm.svg"
+    },
+    "AO_05-22": {
+      "tittel": "Gausdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/9d/Gausdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Gausdal_komm.svg"
+    },
+    "AO_05-28": {
+      "tittel": "Østre Toten",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f2/%C3%98stre_Toten_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%98stre_Toten_komm.svg"
+    },
+    "AO_05-29": {
+      "tittel": "Vestre Toten",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/8b/Vestre_Toten_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Vestre_Toten_komm.svg"
+    },
+    "AO_05-32": {
+      "tittel": "Jevnaker",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c7/Jevnaker_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Jevnaker_komm.svg"
+    },
+    "AO_05-33": {
+      "tittel": "Lunner",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/39/Lunner_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Lunner_komm.svg"
+    },
+    "AO_05-34": {
+      "tittel": "Gran",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c7/Gran_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gran_komm.svg"
+    },
+    "AO_05-36": {
+      "tittel": "Søndre Land",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/S%C3%B8ndre_Land_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:S%C3%B8ndre_Land_komm.svg"
+    },
+    "AO_05-38": {
+      "tittel": "Nordre Land",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b6/Nordre_Land_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nordre_Land_komm.svg"
+    },
+    "AO_05-40": {
+      "tittel": "Sør-Aurdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/fd/S%C3%B8r-Aurdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:S%C3%B8r-Aurdal_komm.svg"
+    },
+    "AO_05-41": {
+      "tittel": "Etnedal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/49/Etnedal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Etnedal_komm.svg"
+    },
+    "AO_05-42": {
+      "tittel": "Nord-Aurdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0e/Nord-Aurdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nord-Aurdal_komm.svg"
+    },
+    "AO_05-43": {
+      "tittel": "Vestre Slidre",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/7c/Vestre_Slidre_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Vestre_Slidre_komm.svg"
+    },
+    "AO_05-44": {
+      "tittel": "Øystre Slidre",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0a/%C3%98ystre_Slidre_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%98ystre_Slidre_komm.svg"
+    },
+    "AO_05-45": {
+      "tittel": "Vang",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/7f/Vang_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Vang_komm.svg"
+    },
+    "AO_06-02": {
+      "tittel": "Drammen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/25/Drammen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Drammen_komm.svg"
+    },
+    "AO_06-04": {
+      "tittel": "Kongsberg",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f0/Kongsberg_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Kongsberg_komm.svg"
+    },
+    "AO_06-05": {
+      "tittel": "Ringerike",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b4/Ringerike_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Ringerike_komm.svg"
+    },
+    "AO_06-12": {
+      "tittel": "Hole",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/68/Hole_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hole_komm.svg"
+    },
+    "AO_06-15": {
+      "tittel": "Flå",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a4/Fl%C3%A5_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Fl%C3%A5_komm.svg"
+    },
+    "AO_06-16": {
+      "tittel": "Nes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/8b/Nes_Buskerud_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nes_Buskerud_komm.svg"
+    },
+    "AO_06-17": {
+      "tittel": "Gol",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Gol_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gol_komm.svg"
+    },
+    "AO_06-18": {
+      "tittel": "Hemsedal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/3d/Hemsedal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hemsedal_komm.svg"
+    },
+    "AO_06-19": {
+      "tittel": "Ål",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b2/%C3%85l_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%85l_komm.svg"
+    },
+    "AO_06-20": {
+      "tittel": "Hol",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Hol_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hol_komm.svg"
+    },
+    "AO_06-21": {
+      "tittel": "Sigdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/76/Sigdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sigdal_komm.svg"
+    },
+    "AO_06-22": {
+      "tittel": "Krødsherad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/97/Kr%C3%B8dsherad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Kr%C3%B8dsherad_komm.svg"
+    },
+    "AO_06-23": {
+      "tittel": "Modum",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/79/Modum_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Modum_komm.svg"
+    },
+    "AO_06-24": {
+      "tittel": "Øvre Eiker",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/be/%C3%98vre_Eiker_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%98vre_Eiker_komm.svg"
+    },
+    "AO_06-25": {
+      "tittel": "Nedre Eiker",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/e0/Nedre_Eiker_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nedre_Eiker_komm.svg"
+    },
+    "AO_06-26": {
+      "tittel": "Lier",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/84/Lier_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lier_komm.svg"
+    },
+    "AO_06-27": {
+      "tittel": "Røyken",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/93/R%C3%B8yken_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:R%C3%B8yken_komm.svg"
+    },
+    "AO_06-28": {
+      "tittel": "Hurum",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/5c/Hurum_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hurum_komm.svg"
+    },
+    "AO_06-31": {
+      "tittel": "Flesberg",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f9/Flesberg_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Flesberg_komm.svg"
+    },
+    "AO_06-32": {
+      "tittel": "Rollag",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/08/Rollag_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Rollag_komm.svg"
+    },
+    "AO_06-33": {
+      "tittel": "Nore og Uvdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/78/Nore_og_Uvdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nore_og_Uvdal_komm.svg"
+    },
+    "AO_07-04": {
+      "tittel": "Tønsberg",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a3/T%C3%B8nsberg_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:T%C3%B8nsberg_komm.svg"
+    },
+    "AO_07-10": {
+      "tittel": "Sandefjord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b9/Sandefjord_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sandefjord_komm.svg"
+    },
+    "AO_07-11": {
+      "tittel": "Svelvik",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/13/Svelvik_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Svelvik_komm.svg"
+    },
+    "AO_07-12": {
+      "tittel": "Larvik",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/dc/Larvik_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Larvik_komm.svg"
+    },
+    "AO_07-13": {
+      "tittel": "Sande",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/78/Sande_Vestfold_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sande_Vestfold_komm.svg"
+    },
+    "AO_07-15": {
+      "tittel": "Holmestrand",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/58/Holmestrand_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Holmestrand_komm.svg"
+    },
+    "AO_07-16": {
+      "tittel": "Re",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Re_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Re_komm.svg"
+    },
+    "AO_08-05": {
+      "tittel": "Porsgrunn",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/44/Porsgrunn_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Porsgrunn_komm.svg"
+    },
+    "AO_08-06": {
+      "tittel": "Skien",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/fc/Skien_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Skien_komm.svg"
+    },
+    "AO_08-07": {
+      "tittel": "Notodden",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0e/Notodden_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Notodden_komm.svg"
+    },
+    "AO_08-11": {
+      "tittel": "Siljan",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c7/Siljan_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Siljan_komm.svg"
+    },
+    "AO_08-14": {
+      "tittel": "Bamble",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/bb/Bamble_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Bamble_komm.svg"
+    },
+    "AO_08-15": {
+      "tittel": "Kragerø",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/cf/Krager%C3%B8_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Krager%C3%B8_komm.svg"
+    },
+    "AO_08-17": {
+      "tittel": "Drangedal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a1/Drangedal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Drangedal_komm.svg"
+    },
+    "AO_08-19": {
+      "tittel": "Nome",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/ab/Nome_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Nome_komm.svg"
+    },
+    "AO_08-21": {
+      "tittel": "Bø",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/85/B%C3%B8_Telemark_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:B%C3%B8_Telemark_komm.svg"
+    },
+    "AO_08-22": {
+      "tittel": "Sauherad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/32/Sauherad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sauherad_komm.svg"
+    },
+    "AO_08-26": {
+      "tittel": "Tinn",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/18/Tinn_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tinn_komm.svg"
+    },
+    "AO_08-27": {
+      "tittel": "Hjartdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ed/Hjartdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hjartdal_komm.svg"
+    },
+    "AO_08-28": {
+      "tittel": "Seljord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c0/Seljord_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Seljord_komm.svg"
+    },
+    "AO_08-29": {
+      "tittel": "Kviteseid",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f2/Kviteseid_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Kviteseid_komm.svg"
+    },
+    "AO_08-30": {
+      "tittel": "Nissedal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/8a/Nissedal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nissedal_komm.svg"
+    },
+    "AO_08-31": {
+      "tittel": "Fyresdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/90/Fyresdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Fyresdal_komm.svg"
+    },
+    "AO_08-33": {
+      "tittel": "Tokke",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/97/Tokke_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tokke_komm.svg"
+    },
+    "AO_08-34": {
+      "tittel": "Vinje",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/3c/Vinje_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Vinje_komm.svg"
+    },
+    "AO_09-01": {
+      "tittel": "Risør",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f6/Ris%C3%B8r_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Ris%C3%B8r_komm.svg"
+    },
+    "AO_09-04": {
+      "tittel": "Grimstad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/53/Grimstad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Grimstad_komm.svg"
+    },
+    "AO_09-06": {
+      "tittel": "Arendal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/3f/Arendal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Arendal_komm.svg"
+    },
+    "AO_09-11": {
+      "tittel": "Gjerstad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a1/Gjerstad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Gjerstad_komm.svg"
+    },
+    "AO_09-12": {
+      "tittel": "Vegårshei",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/84/Veg%C3%A5rshei_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Veg%C3%A5rshei_komm.svg"
+    },
+    "AO_09-14": {
+      "tittel": "Tvedestrand",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/5b/Tvedestrand_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Tvedestrand_komm.svg"
+    },
+    "AO_09-19": {
+      "tittel": "Froland",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/d4/Froland_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Froland_komm.svg"
+    },
+    "AO_09-26": {
+      "tittel": "Lillesand",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/2d/Lillesand_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Lillesand_komm.svg"
+    },
+    "AO_09-28": {
+      "tittel": "Birkenes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/07/Birkenes_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Birkenes_komm.svg"
+    },
+    "AO_09-29": {
+      "tittel": "Åmli",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/19/%C3%85mli_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%85mli_komm.svg"
+    },
+    "AO_09-35": {
+      "tittel": "Iveland",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ee/Iveland_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Iveland_komm.svg"
+    },
+    "AO_09-37": {
+      "tittel": "Evje og Hornnes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/e6/Evje_og_Hornnes_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Evje_og_Hornnes_komm.svg"
+    },
+    "AO_09-38": {
+      "tittel": "Bygland",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/25/Bygland_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Bygland_komm.svg"
+    },
+    "AO_09-40": {
+      "tittel": "Valle",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/52/Valle_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Valle_komm.svg"
+    },
+    "AO_09-41": {
+      "tittel": "Bykle",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/bb/Bykle_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bykle_komm.svg"
+    },
+    "AO_10-01": {
+      "tittel": "Kristiansand",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/bc/Kristiansand_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Kristiansand_komm.svg"
+    },
+    "AO_10-02": {
+      "tittel": "Mandal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/3d/Mandal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Mandal_komm.svg"
+    },
+    "AO_10-03": {
+      "tittel": "Farsund",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b6/Farsund_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Farsund_komm.svg"
+    },
+    "AO_10-04": {
+      "tittel": "Flekkefjord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f8/Flekkefjord_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Flekkefjord_komm.svg"
+    },
+    "AO_10-14": {
+      "tittel": "Vennesla",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/99/Vennesla_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Vennesla_komm.svg"
+    },
+    "AO_10-17": {
+      "tittel": "Songdalen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/76/Songdalen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Songdalen_komm.svg"
+    },
+    "AO_10-18": {
+      "tittel": "Søgne",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/4a/S%C3%B8gne_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:S%C3%B8gne_komm.svg"
+    },
+    "AO_10-21": {
+      "tittel": "Marnardal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/44/Marnardal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Marnardal_komm.svg"
+    },
+    "AO_10-26": {
+      "tittel": "Åseral",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/ae/%C3%85seral_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%85seral_komm.svg"
+    },
+    "AO_10-27": {
+      "tittel": "Audnedal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/de/Audnedal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Audnedal_komm.svg"
+    },
+    "AO_10-29": {
+      "tittel": "Lindesnes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/6d/Lindesnes_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Lindesnes_komm.svg"
+    },
+    "AO_10-32": {
+      "tittel": "Lyngdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/29/Lyngdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Lyngdal_komm.svg"
+    },
+    "AO_10-34": {
+      "tittel": "Hægebostad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/21/H%C3%A6gebostad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:H%C3%A6gebostad_komm.svg"
+    },
+    "AO_10-37": {
+      "tittel": "Kvinesdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/e4/Kvinesdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Kvinesdal_komm.svg"
+    },
+    "AO_10-46": {
+      "tittel": "Sirdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/9f/Sirdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sirdal_komm.svg"
+    },
+    "AO_11-01": {
+      "tittel": "Eigersund",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/27/Eigersund_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Eigersund_komm.svg"
+    },
+    "AO_11-02": {
+      "tittel": "Sandnes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/9e/Sandnes_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sandnes_komm.svg"
+    },
+    "AO_11-03": {
+      "tittel": "Stavanger",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ee/Stavanger_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Stavanger_komm.svg"
+    },
+    "AO_11-06": {
+      "tittel": "Haugesund",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/fd/Haugesund_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Haugesund_komm.svg"
+    },
+    "AO_11-11": {
+      "tittel": "Sokndal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/96/Sokndal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sokndal_komm.svg"
+    },
+    "AO_11-12": {
+      "tittel": "Lund",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/dd/Lund_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lund_komm.svg"
+    },
+    "AO_11-14": {
+      "tittel": "Bjerkreim",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a6/Bjerkreim_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Bjerkreim_komm.svg"
+    },
+    "AO_11-19": {
+      "tittel": "Hå",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/69/H%C3%A5_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:H%C3%A5_komm.svg"
+    },
+    "AO_11-20": {
+      "tittel": "Klepp",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/6c/Klepp_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Klepp_komm.svg"
+    },
+    "AO_11-21": {
+      "tittel": "Time",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/1f/Time_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Time_komm.svg"
+    },
+    "AO_11-22": {
+      "tittel": "Gjesdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/05/Gjesdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Gjesdal_komm.svg"
+    },
+    "AO_11-24": {
+      "tittel": "Sola",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a2/Sola_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sola_komm.svg"
+    },
+    "AO_11-27": {
+      "tittel": "Randaberg",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a7/Randaberg_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Randaberg_komm.svg"
+    },
+    "AO_11-29": {
+      "tittel": "Forsand",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/04/Forsand_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Forsand_komm.svg"
+    },
+    "AO_11-30": {
+      "tittel": "Strand",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ee/Strand_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Strand_komm.svg"
+    },
+    "AO_11-33": {
+      "tittel": "Hjelmeland",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/90/Hjelmeland_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hjelmeland_komm.svg"
+    },
+    "AO_11-34": {
+      "tittel": "Suldal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/27/Suldal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Suldal_komm.svg"
+    },
+    "AO_11-35": {
+      "tittel": "Sauda",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/fc/Sauda_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sauda_komm.svg"
+    },
+    "AO_11-41": {
+      "tittel": "Finnøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c8/Finn%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Finn%C3%B8y_komm.svg"
+    },
+    "AO_11-42": {
+      "tittel": "Rennesøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/9a/Rennes%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Rennes%C3%B8y_komm.svg"
+    },
+    "AO_11-44": {
+      "tittel": "Kvitsøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/4c/Kvits%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Kvits%C3%B8y_komm.svg"
+    },
+    "AO_11-45": {
+      "tittel": "Bokn",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/94/Bokn_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bokn_komm.svg"
+    },
+    "AO_11-46": {
+      "tittel": "Tysvær",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/00/Tysv%C3%A6r_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Tysv%C3%A6r_komm.svg"
+    },
+    "AO_11-49": {
+      "tittel": "Karmøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/75/Karm%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Karm%C3%B8y_komm.svg"
+    },
+    "AO_11-51": {
+      "tittel": "Utsira",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/68/Utsira_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Utsira_komm.svg"
+    },
+    "AO_11-60": {
+      "tittel": "Vindafjord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c7/Vindafjord_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Vindafjord_komm.svg"
+    },
+    "AO_12-01": {
+      "tittel": "Bergen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/76/Bergen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Bergen_komm.svg"
+    },
+    "AO_12-11": {
+      "tittel": "Etne",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/57/Etne_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Etne_komm.svg"
+    },
+    "AO_12-16": {
+      "tittel": "Sveio",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/99/Sveio_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sveio_komm.svg"
+    },
+    "AO_12-19": {
+      "tittel": "Bømlo",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/77/B%C3%B8mlo_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:B%C3%B8mlo_komm.svg"
+    },
+    "AO_12-21": {
+      "tittel": "Stord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/62/Stord_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Stord_komm.svg"
+    },
+    "AO_12-22": {
+      "tittel": "Fitjar",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/74/Fitjar_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Fitjar_komm.svg"
+    },
+    "AO_12-23": {
+      "tittel": "Tysnes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b4/Tysnes_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Tysnes_komm.svg"
+    },
+    "AO_12-24": {
+      "tittel": "Kvinnherad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0a/Kvinnherad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Kvinnherad_komm.svg"
+    },
+    "AO_12-27": {
+      "tittel": "Jondal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/fa/Jondal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Jondal_komm.svg"
+    },
+    "AO_12-28": {
+      "tittel": "Odda",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/8f/Odda_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Odda_komm.svg"
+    },
+    "AO_12-31": {
+      "tittel": "Ullensvang",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Ullensvang_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Ullensvang_komm.svg"
+    },
+    "AO_12-32": {
+      "tittel": "Eidfjord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a2/Eidfjord_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Eidfjord_komm.svg"
+    },
+    "AO_12-33": {
+      "tittel": "Ulvik",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/93/Ulvik_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ulvik_komm.svg"
+    },
+    "AO_12-34": {
+      "tittel": "Granvin",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/83/Granvin_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Granvin_komm.svg"
+    },
+    "AO_12-35": {
+      "tittel": "Voss",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/75/Voss_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Voss_komm.svg"
+    },
+    "AO_12-38": {
+      "tittel": "Kvam",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/1c/Kvam_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Kvam_komm.svg"
+    },
+    "AO_12-41": {
+      "tittel": "Fusa",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/47/Fusa_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Fusa_komm.svg"
+    },
+    "AO_12-42": {
+      "tittel": "Samnanger",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/4e/Samnanger_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Samnanger_komm.svg"
+    },
+    "AO_12-43": {
+      "tittel": "Os",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/3d/Os_Hordaland_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Os_Hordaland_komm.svg"
+    },
+    "AO_12-44": {
+      "tittel": "Austevoll",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/1e/Austevoll_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Austevoll_komm.svg"
+    },
+    "AO_12-45": {
+      "tittel": "Sund",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0a/Sund_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sund_komm.svg"
+    },
+    "AO_12-46": {
+      "tittel": "Fjell",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0d/Fjell_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Fjell_komm.svg"
+    },
+    "AO_12-47": {
+      "tittel": "Askøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/96/Ask%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Ask%C3%B8y_komm.svg"
+    },
+    "AO_12-51": {
+      "tittel": "Vaksdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/34/Vaksdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Vaksdal_komm.svg"
+    },
+    "AO_12-52": {
+      "tittel": "Modalen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/fd/Modalen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Modalen_komm.svg"
+    },
+    "AO_12-53": {
+      "tittel": "Osterøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c4/Oster%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Oster%C3%B8y_komm.svg"
+    },
+    "AO_12-56": {
+      "tittel": "Meland",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0e/Meland_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Meland_komm.svg"
+    },
+    "AO_12-59": {
+      "tittel": "Øygarden",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/67/%C3%98ygarden_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%98ygarden_komm.svg"
+    },
+    "AO_12-60": {
+      "tittel": "Radøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ed/Rad%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Rad%C3%B8y_komm.svg"
+    },
+    "AO_12-63": {
+      "tittel": "Lindås",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b8/Lind%C3%A5s_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Lind%C3%A5s_komm.svg"
+    },
+    "AO_12-64": {
+      "tittel": "Austrheim",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/cb/Austrheim_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Austrheim_komm.svg"
+    },
+    "AO_12-65": {
+      "tittel": "Fedje",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c5/Fedje_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Fedje_komm.svg"
+    },
+    "AO_12-66": {
+      "tittel": "Masfjorden",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/61/Masfjorden_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Masfjorden_komm.svg"
+    },
+    "AO_14-01": {
+      "tittel": "Flora",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ed/Flora_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Flora_komm.svg"
+    },
+    "AO_14-11": {
+      "tittel": "Gulen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b7/Gulen_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gulen_komm.svg"
+    },
+    "AO_14-12": {
+      "tittel": "Solund",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/6b/Solund_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Solund_komm.svg"
+    },
+    "AO_14-13": {
+      "tittel": "Hyllestad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/22/Hyllestad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hyllestad_komm.svg"
+    },
+    "AO_14-16": {
+      "tittel": "Høyanger",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/5d/H%C3%B8yanger_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:H%C3%B8yanger_komm.svg"
+    },
+    "AO_14-17": {
+      "tittel": "Vik",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Vik_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Vik_komm.svg"
+    },
+    "AO_14-18": {
+      "tittel": "Balestrand",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/53/Balestrand_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Balestrand_komm.svg"
+    },
+    "AO_14-19": {
+      "tittel": "Leikanger",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/4a/Leikanger_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Leikanger_komm.svg"
+    },
+    "AO_14-20": {
+      "tittel": "Sogndal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/8e/Sogndal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sogndal_komm.svg"
+    },
+    "AO_14-21": {
+      "tittel": "Aurland",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a7/Aurland_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Aurland_komm.svg"
+    },
+    "AO_14-22": {
+      "tittel": "Lærdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ec/L%C3%A6rdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:L%C3%A6rdal_komm.svg"
+    },
+    "AO_14-24": {
+      "tittel": "Årdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/df/%C3%85rdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%85rdal_komm.svg"
+    },
+    "AO_14-26": {
+      "tittel": "Luster",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c8/Luster_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Luster_komm.svg"
+    },
+    "AO_14-28": {
+      "tittel": "Askvoll",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/de/Askvoll_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Askvoll_komm.svg"
+    },
+    "AO_14-29": {
+      "tittel": "Fjaler",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/19/Fjaler_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Fjaler_komm.svg"
+    },
+    "AO_14-30": {
+      "tittel": "Gaular",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/8c/Gaular_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Gaular_komm.svg"
+    },
+    "AO_14-31": {
+      "tittel": "Jølster",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f4/J%C3%B8lster_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:J%C3%B8lster_komm.svg"
+    },
+    "AO_14-32": {
+      "tittel": "Førde",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/36/F%C3%B8rde_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:F%C3%B8rde_komm.svg"
+    },
+    "AO_14-33": {
+      "tittel": "Naustdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/5a/Naustdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Naustdal_komm.svg"
+    },
+    "AO_14-38": {
+      "tittel": "Bremanger",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b6/Bremanger_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Bremanger_komm.svg"
+    },
+    "AO_14-39": {
+      "tittel": "Vågsøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/91/V%C3%A5gs%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:V%C3%A5gs%C3%B8y_komm.svg"
+    },
+    "AO_14-41": {
+      "tittel": "Selje",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/5d/Selje_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Selje_komm.svg"
+    },
+    "AO_14-43": {
+      "tittel": "Eid",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Eid_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Eid_komm.svg"
+    },
+    "AO_14-44": {
+      "tittel": "Hornindal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a2/Hornindal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hornindal_komm.svg"
+    },
+    "AO_14-45": {
+      "tittel": "Gloppen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/53/Gloppen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Gloppen_komm.svg"
+    },
+    "AO_14-49": {
+      "tittel": "Stryn",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/02/Stryn_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Stryn_komm.svg"
+    },
+    "AO_15-02": {
+      "tittel": "Molde",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/5b/Molde_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Molde_komm.svg"
+    },
+    "AO_15-04": {
+      "tittel": "Ålesund",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/e1/%C3%85lesund_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%85lesund_komm.svg"
+    },
+    "AO_15-05": {
+      "tittel": "Kristiansund",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/34/Kristiansund_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Kristiansund_komm.svg"
+    },
+    "AO_15-11": {
+      "tittel": "Vanylven",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/ad/Vanylven_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Vanylven_komm.svg"
+    },
+    "AO_15-14": {
+      "tittel": "Sande",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/28/Sande_M%C3%B8re_og_Romsdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sande_M%C3%B8re_og_Romsdal_komm.svg"
+    },
+    "AO_15-15": {
+      "tittel": "Herøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/83/Her%C3%B8y_M%C3%B8re_og_Romsdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Her%C3%B8y_M%C3%B8re_og_Romsdal_komm.svg"
+    },
+    "AO_15-16": {
+      "tittel": "Ulstein",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/d7/Ulstein_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Ulstein_komm.svg"
+    },
+    "AO_15-17": {
+      "tittel": "Hareid",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/17/Hareid_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hareid_komm.svg"
+    },
+    "AO_15-19": {
+      "tittel": "Volda",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/14/Volda_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Volda_komm.svg"
+    },
+    "AO_15-20": {
+      "tittel": "Ørsta",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/57/%C3%98rsta_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%98rsta_komm.svg"
+    },
+    "AO_15-23": {
+      "tittel": "Ørskog",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/7a/%C3%98rskog_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%98rskog_komm.svg"
+    },
+    "AO_15-24": {
+      "tittel": "Norddal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/92/Norddal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Norddal_komm.svg"
+    },
+    "AO_15-25": {
+      "tittel": "Stranda",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/ac/Stranda_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Stranda_komm.svg"
+    },
+    "AO_15-26": {
+      "tittel": "Stordal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c2/Stordal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Stordal_komm.svg"
+    },
+    "AO_15-28": {
+      "tittel": "Sykkylven",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/ca/Sykkylven_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sykkylven_komm.svg"
+    },
+    "AO_15-29": {
+      "tittel": "Skodje",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/5a/Skodje_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Skodje_komm.svg"
+    },
+    "AO_15-31": {
+      "tittel": "Sula",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/97/Sula_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sula_komm.svg"
+    },
+    "AO_15-32": {
+      "tittel": "Giske",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f6/Giske_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Giske_komm.svg"
+    },
+    "AO_15-34": {
+      "tittel": "Haram",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/21/Haram_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Haram_komm.svg"
+    },
+    "AO_15-35": {
+      "tittel": "Vestnes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/3a/Vestnes_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Vestnes_komm.svg"
+    },
+    "AO_15-39": {
+      "tittel": "Rauma",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f1/Rauma_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Rauma_komm.svg"
+    },
+    "AO_15-43": {
+      "tittel": "Nesset",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b6/Nesset_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nesset_komm.svg"
+    },
+    "AO_15-45": {
+      "tittel": "Midsund",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c4/Midsund_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Midsund_komm.svg"
+    },
+    "AO_15-46": {
+      "tittel": "Sandøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/79/Sand%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sand%C3%B8y_komm.svg"
+    },
+    "AO_15-47": {
+      "tittel": "Aukra",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/91/Aukra_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Aukra_komm.svg"
+    },
+    "AO_15-48": {
+      "tittel": "Fræna",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/8e/Fr%C3%A6na_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Fr%C3%A6na_komm.svg"
+    },
+    "AO_15-51": {
+      "tittel": "Eide",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Eide_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Eide_komm.svg"
+    },
+    "AO_15-54": {
+      "tittel": "Averøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/54/Aver%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Aver%C3%B8y_komm.svg"
+    },
+    "AO_15-57": {
+      "tittel": "Gjemnes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/99/Gjemnes_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Gjemnes_komm.svg"
+    },
+    "AO_15-60": {
+      "tittel": "Tingvoll",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/25/Tingvoll_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Tingvoll_komm.svg"
+    },
+    "AO_15-63": {
+      "tittel": "Sunndal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/fe/Sunndal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sunndal_komm.svg"
+    },
+    "AO_15-66": {
+      "tittel": "Surnadal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/84/Surnadal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Surnadal_komm.svg"
+    },
+    "AO_15-67": {
+      "tittel": "Rindal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/ce/Rindal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Rindal_komm.svg"
+    },
+    "AO_15-71": {
+      "tittel": "Halsa",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0e/Halsa_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Halsa_komm.svg"
+    },
+    "AO_15-73": {
+      "tittel": "Smøla",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b4/Sm%C3%B8la_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sm%C3%B8la_komm.svg"
+    },
+    "AO_15-76": {
+      "tittel": "Aure",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a6/Aure_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Aure_komm.svg"
+    },
+    "AO_18-04": {
+      "tittel": "Bodø",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/bd/Bod%C3%B8_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Bod%C3%B8_komm.svg"
+    },
+    "AO_18-05": {
+      "tittel": "Narvik",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/64/Narvik_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Narvik_komm.svg"
+    },
+    "AO_18-11": {
+      "tittel": "Bindal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0a/Bindal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Bindal_komm.svg"
+    },
+    "AO_18-12": {
+      "tittel": "Sømna",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/41/S%C3%B8mna_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:S%C3%B8mna_komm.svg"
+    },
+    "AO_18-13": {
+      "tittel": "Brønnøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b7/Br%C3%B8nn%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Br%C3%B8nn%C3%B8y_komm.svg"
+    },
+    "AO_18-15": {
+      "tittel": "Vega",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c5/Vega_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Vega_komm.svg"
+    },
+    "AO_18-16": {
+      "tittel": "Vevelstad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f5/Vevelstad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Vevelstad_komm.svg"
+    },
+    "AO_18-18": {
+      "tittel": "Herøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/e2/Her%C3%B8y_Nordland_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Her%C3%B8y_Nordland_komm.svg"
+    },
+    "AO_18-20": {
+      "tittel": "Alstahaug",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/62/Alstahaug_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Alstahaug_komm.svg"
+    },
+    "AO_18-22": {
+      "tittel": "Leirfjord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/08/Leirfjord_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Leirfjord_komm.svg"
+    },
+    "AO_18-24": {
+      "tittel": "Vefsn",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/4d/Vefsn_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Vefsn_komm.svg"
+    },
+    "AO_18-25": {
+      "tittel": "Grane",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/82/Grane_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Grane_komm.svg"
+    },
+    "AO_18-26": {
+      "tittel": "Hattfjelldal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/9d/Hattfjelldal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hattfjelldal_komm.svg"
+    },
+    "AO_18-27": {
+      "tittel": "Dønna",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/32/D%C3%B8nna_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:D%C3%B8nna_komm.svg"
+    },
+    "AO_18-28": {
+      "tittel": "Nesna",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f8/Nesna_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Nesna_komm.svg"
+    },
+    "AO_18-32": {
+      "tittel": "Hemnes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/46/Hemnes_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hemnes_komm.svg"
+    },
+    "AO_18-33": {
+      "tittel": "Rana",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/84/Rana_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Rana_komm.svg"
+    },
+    "AO_18-34": {
+      "tittel": "Lurøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/d7/Lur%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Lur%C3%B8y_komm.svg"
+    },
+    "AO_18-35": {
+      "tittel": "Træna",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/38/Tr%C3%A6na_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Tr%C3%A6na_komm.svg"
+    },
+    "AO_18-36": {
+      "tittel": "Rødøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f6/R%C3%B8d%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:R%C3%B8d%C3%B8y_komm.svg"
+    },
+    "AO_18-37": {
+      "tittel": "Meløy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mel%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Mel%C3%B8y_komm.svg"
+    },
+    "AO_18-38": {
+      "tittel": "Gildeskål",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/22/Gildesk%C3%A5l_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Gildesk%C3%A5l_komm.svg"
+    },
+    "AO_18-39": {
+      "tittel": "Beiarn",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/73/Beiarn_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Beiarn_komm.svg"
+    },
+    "AO_18-40": {
+      "tittel": "Saltdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/fd/Saltdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Saltdal_komm.svg"
+    },
+    "AO_18-41": {
+      "tittel": "Fauske",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/5d/Fauske_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Fauske_komm.svg"
+    },
+    "AO_18-45": {
+      "tittel": "Sørfold",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/77/S%C3%B8rfold_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:S%C3%B8rfold_komm.svg"
+    },
+    "AO_18-48": {
+      "tittel": "Steigen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Steigen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Steigen_komm.svg"
+    },
+    "AO_18-49": {
+      "tittel": "Hamarøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/3c/Hamar%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hamar%C3%B8y_komm.svg"
+    },
+    "AO_18-50": {
+      "tittel": "Tysfjord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f7/Tysfjord_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Tysfjord_komm.svg"
+    },
+    "AO_18-51": {
+      "tittel": "Lødingen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c0/L%C3%B8dingen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:L%C3%B8dingen_komm.svg"
+    },
+    "AO_18-52": {
+      "tittel": "Tjeldsund",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/41/Tjeldsund_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Tjeldsund_komm.svg"
+    },
+    "AO_18-53": {
+      "tittel": "Evenes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/bb/Evenes_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Evenes_komm.svg"
+    },
+    "AO_18-54": {
+      "tittel": "Ballangen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0b/Ballangen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Ballangen_komm.svg"
+    },
+    "AO_18-56": {
+      "tittel": "Røst",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/dc/R%C3%B8st_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:R%C3%B8st_komm.svg"
+    },
+    "AO_18-57": {
+      "tittel": "Værøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/20/V%C3%A6r%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:V%C3%A6r%C3%B8y_komm.svg"
+    },
+    "AO_18-59": {
+      "tittel": "Flakstad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/d3/Flakstad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Flakstad_komm.svg"
+    },
+    "AO_18-60": {
+      "tittel": "Vestvågøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ed/Vestv%C3%A5g%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Vestv%C3%A5g%C3%B8y_komm.svg"
+    },
+    "AO_18-65": {
+      "tittel": "Vågan",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/5d/V%C3%A5gan_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:V%C3%A5gan_komm.svg"
+    },
+    "AO_18-66": {
+      "tittel": "Hadsel",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/50/Hadsel_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hadsel_komm.svg"
+    },
+    "AO_18-67": {
+      "tittel": "Bø",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/13/B%C3%B8_Nordland_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:B%C3%B8_Nordland_komm.svg"
+    },
+    "AO_18-68": {
+      "tittel": "Øksnes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/97/%C3%98ksnes_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%98ksnes_komm.svg"
+    },
+    "AO_18-70": {
+      "tittel": "Sortland",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0d/Sortland_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sortland_komm.svg"
+    },
+    "AO_18-71": {
+      "tittel": "Andøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/aa/And%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:And%C3%B8y_komm.svg"
+    },
+    "AO_18-74": {
+      "tittel": "Moskenes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/5b/Moskenes_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Moskenes_komm.svg"
+    },
+    "AO_19-02": {
+      "tittel": "Tromsø",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/c3/Troms%C3%B8_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Troms%C3%B8_komm.svg"
+    },
+    "AO_19-03": {
+      "tittel": "Harstad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/19/Harstad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Harstad_komm.svg"
+    },
+    "AO_19-11": {
+      "tittel": "Kvæfjord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/db/Kv%C3%A6fjord_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Kv%C3%A6fjord_komm.svg"
+    },
+    "AO_19-13": {
+      "tittel": "Skånland",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/09/Sk%C3%A5nland_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sk%C3%A5nland_komm.svg"
+    },
+    "AO_19-17": {
+      "tittel": "Ibestad",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/79/Ibestad_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Ibestad_komm.svg"
+    },
+    "AO_19-19": {
+      "tittel": "Gratangen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/87/Gratangen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Gratangen_komm.svg"
+    },
+    "AO_19-20": {
+      "tittel": "Lavangen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/30/Lavangen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Lavangen_komm.svg"
+    },
+    "AO_19-22": {
+      "tittel": "Bardu",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/27/Bardu_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bardu_komm.svg"
+    },
+    "AO_19-23": {
+      "tittel": "Salangen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b7/Salangen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Salangen_komm.svg"
+    },
+    "AO_19-24": {
+      "tittel": "Målselv",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b9/M%C3%A5lselv_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:M%C3%A5lselv_komm.svg"
+    },
+    "AO_19-25": {
+      "tittel": "Sørreisa",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/50/S%C3%B8rreisa_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:S%C3%B8rreisa_komm.svg"
+    },
+    "AO_19-26": {
+      "tittel": "Dyrøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/ca/Dyr%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Dyr%C3%B8y_komm.svg"
+    },
+    "AO_19-27": {
+      "tittel": "Tranøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/62/Tran%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Tran%C3%B8y_komm.svg"
+    },
+    "AO_19-28": {
+      "tittel": "Torsken",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/e0/Torsken_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Torsken_komm.svg"
+    },
+    "AO_19-29": {
+      "tittel": "Berg",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/bb/Berg_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Berg_komm.svg"
+    },
+    "AO_19-31": {
+      "tittel": "Lenvik",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/bd/Lenvik_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Lenvik_komm.svg"
+    },
+    "AO_19-33": {
+      "tittel": "Balsfjord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/22/Balsfjord_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Balsfjord_komm.svg"
+    },
+    "AO_19-36": {
+      "tittel": "Karlsøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/3c/Karls%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Karls%C3%B8y_komm.svg"
+    },
+    "AO_19-38": {
+      "tittel": "Lyngen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/7e/Lyngen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Lyngen_komm.svg"
+    },
+    "AO_19-39": {
+      "tittel": "Storfjord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/15/Storfjord_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Storfjord_komm.svg"
+    },
+    "AO_19-40": {
+      "tittel": "Kåfjord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/50/K%C3%A5fjord_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:K%C3%A5fjord_komm.svg"
+    },
+    "AO_19-41": {
+      "tittel": "Skjervøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/d0/Skjerv%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Skjerv%C3%B8y_komm.svg"
+    },
+    "AO_19-42": {
+      "tittel": "Nordreisa",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/03/Nordreisa_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nordreisa_komm.svg"
+    },
+    "AO_19-43": {
+      "tittel": "Kvænangen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/1a/Kv%C3%A6nangen_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Kv%C3%A6nangen_komm.svg"
+    },
+    "AO_20-02": {
+      "tittel": "Vardø",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/dd/Vard%C3%B8_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Vard%C3%B8_komm.svg"
+    },
+    "AO_20-03": {
+      "tittel": "Vadsø",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b4/Vads%C3%B8_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Vads%C3%B8_komm.svg"
+    },
+    "AO_20-04": {
+      "tittel": "Hammerfest",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/08/Hammerfest_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hammerfest_komm.svg"
+    },
+    "AO_20-11": {
+      "tittel": "Kautokeino",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/29/Kautokeino_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Kautokeino_komm.svg"
+    },
+    "AO_20-12": {
+      "tittel": "Alta",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/1b/Alta_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Alta_komm.svg"
+    },
+    "AO_20-14": {
+      "tittel": "Loppa",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a2/Loppa_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Loppa_komm.svg"
+    },
+    "AO_20-15": {
+      "tittel": "Hasvik",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/26/Hasvik_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hasvik_komm.svg"
+    },
+    "AO_20-17": {
+      "tittel": "Kvalsund",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/66/Kvalsund_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Kvalsund_komm.svg"
+    },
+    "AO_20-18": {
+      "tittel": "Måsøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/7b/M%C3%A5s%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:M%C3%A5s%C3%B8y_komm.svg"
+    },
+    "AO_20-19": {
+      "tittel": "Nordkapp",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/7e/Nordkapp_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nordkapp_komm.svg"
+    },
+    "AO_20-20": {
+      "tittel": "Porsanger",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ec/Porsanger_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Porsanger_komm.svg"
+    },
+    "AO_20-21": {
+      "tittel": "Karasjok",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a3/Karasjok_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Karasjok_komm.svg"
+    },
+    "AO_20-22": {
+      "tittel": "Lebesby",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/09/Lebesby_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Lebesby_komm.svg"
+    },
+    "AO_20-23": {
+      "tittel": "Gamvik",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/6b/Gamvik_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Gamvik_komm.svg"
+    },
+    "AO_20-24": {
+      "tittel": "Berlevåg",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/5f/Berlev%C3%A5g_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Berlev%C3%A5g_komm.svg"
+    },
+    "AO_20-25": {
+      "tittel": "Tana",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tana_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tana_komm.svg"
+    },
+    "AO_20-27": {
+      "tittel": "Nesseby",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/d7/Nesseby_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nesseby_komm.svg"
+    },
+    "AO_20-28": {
+      "tittel": "Båtsfjord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/57/B%C3%A5tsfjord_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:B%C3%A5tsfjord_komm.svg"
+    },
+    "AO_20-30": {
+      "tittel": "Sør-Varanger",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/4e/S%C3%B8r-Varanger_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:S%C3%B8r-Varanger_komm.svg"
+    },
+    "AO_50-01": {
+      "tittel": "Trondheim",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/c/ce/Trondheim_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Trondheim_komm.svg"
+    },
+    "AO_50-04": {
+      "tittel": "Steinkjer",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/1a/Steinkjer_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Steinkjer_komm.svg"
+    },
+    "AO_50-05": {
+      "tittel": "Namsos",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/51/Namsos_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Namsos_komm.svg"
+    },
+    "AO_50-11": {
+      "tittel": "Hemne",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f9/Hemne_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hemne_komm.svg"
+    },
+    "AO_50-12": {
+      "tittel": "Snillfjord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/07/Snillfjord_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Snillfjord_komm.svg"
+    },
+    "AO_50-13": {
+      "tittel": "Hitra",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/20/Hitra_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hitra_komm.svg"
+    },
+    "AO_50-14": {
+      "tittel": "Frøya",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/86/Fr%C3%B8ya_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Fr%C3%B8ya_komm.svg"
+    },
+    "AO_50-15": {
+      "tittel": "Ørland",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f7/%C3%98rland_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%98rland_komm.svg"
+    },
+    "AO_50-16": {
+      "tittel": "Agdenes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/8e/Agdenes_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Agdenes_komm.svg"
+    },
+    "AO_50-17": {
+      "tittel": "Bjugn",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/9/9a/Bjugn_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bjugn_komm.svg"
+    },
+    "AO_50-18": {
+      "tittel": "Åfjord",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f7/%C3%85fjord_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%85fjord_komm.svg"
+    },
+    "AO_50-19": {
+      "tittel": "Roan",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/34/Roan_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Roan_komm.svg"
+    },
+    "AO_50-20": {
+      "tittel": "Osen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/82/Osen_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Osen_komm.svg"
+    },
+    "AO_50-21": {
+      "tittel": "Oppdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/73/Oppdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Oppdal_komm.svg"
+    },
+    "AO_50-22": {
+      "tittel": "Rennebu",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/30/Rennebu_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Rennebu_komm.svg"
+    },
+    "AO_50-23": {
+      "tittel": "Meldal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/63/Meldal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Meldal_komm.svg"
+    },
+    "AO_50-24": {
+      "tittel": "Orkdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/7d/Orkdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Orkdal_komm.svg"
+    },
+    "AO_50-25": {
+      "tittel": "Røros",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/2b/R%C3%B8ros_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:R%C3%B8ros_komm.svg"
+    },
+    "AO_50-26": {
+      "tittel": "Holtålen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a4/Holt%C3%A5len_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Holt%C3%A5len_komm.svg"
+    },
+    "AO_50-27": {
+      "tittel": "Midtre Gauldal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0d/Midtre_Gauldal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Midtre_Gauldal_komm.svg"
+    },
+    "AO_50-28": {
+      "tittel": "Melhus",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/80/Melhus_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Melhus_komm.svg"
+    },
+    "AO_50-29": {
+      "tittel": "Skaun",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/66/Skaun_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Skaun_komm.svg"
+    },
+    "AO_50-30": {
+      "tittel": "Klæbu",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/24/Kl%C3%A6bu_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Kl%C3%A6bu_komm.svg"
+    },
+    "AO_50-31": {
+      "tittel": "Malvik",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/7d/Malvik_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Malvik_komm.svg"
+    },
+    "AO_50-32": {
+      "tittel": "Selbu",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/5e/Selbu_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Selbu_komm.svg"
+    },
+    "AO_50-33": {
+      "tittel": "Tydal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/3d/Tydal_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tydal_komm.svg"
+    },
+    "AO_50-34": {
+      "tittel": "Meråker",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/38/Mer%C3%A5ker_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Mer%C3%A5ker_komm.svg"
+    },
+    "AO_50-35": {
+      "tittel": "Stjørdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/4a/Stj%C3%B8rdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Stj%C3%B8rdal_komm.svg"
+    },
+    "AO_50-36": {
+      "tittel": "Frosta",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/e6/Frosta_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Frosta_komm.svg"
+    },
+    "AO_50-37": {
+      "tittel": "Levanger",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/80/Levanger_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Levanger_komm.svg"
+    },
+    "AO_50-38": {
+      "tittel": "Verdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/13/Verdal_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Verdal_komm.svg"
+    },
+    "AO_50-39": {
+      "tittel": "Verran",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/5/57/Verran_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Verran_komm.svg"
+    },
+    "AO_50-40": {
+      "tittel": "Namdalseid",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/80/Namdalseid_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Namdalseid_komm.svg"
+    },
+    "AO_50-41": {
+      "tittel": "Snåsa",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/6c/Sn%C3%A5sa_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sn%C3%A5sa_komm.svg"
+    },
+    "AO_50-42": {
+      "tittel": "Lierne",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/b4/Lierne_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Lierne_komm.svg"
+    },
+    "AO_50-43": {
+      "tittel": "Røyrvik",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/7c/R%C3%B8yrvik_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:R%C3%B8yrvik_komm.svg"
+    },
+    "AO_50-44": {
+      "tittel": "Namsskogan",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/6a/Namsskogan_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Namsskogan_komm.svg"
+    },
+    "AO_50-45": {
+      "tittel": "Grong",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/4c/Grong_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Grong_komm.svg"
+    },
+    "AO_50-46": {
+      "tittel": "Høylandet",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/61/H%C3%B8ylandet_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:H%C3%B8ylandet_komm.svg"
+    },
+    "AO_50-47": {
+      "tittel": "Overhalla",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a6/Overhalla_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Overhalla_komm.svg"
+    },
+    "AO_50-48": {
+      "tittel": "Fosnes",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/3/34/Fosnes_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Fosnes_komm.svg"
+    },
+    "AO_50-49": {
+      "tittel": "Flatanger",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flatanger_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Flatanger_komm.svg"
+    },
+    "AO_50-50": {
+      "tittel": "Vikna",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a2/Vikna_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Vikna_komm.svg"
+    },
+    "AO_50-51": {
+      "tittel": "Nærøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/4b/N%C3%A6r%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:N%C3%A6r%C3%B8y_komm.svg"
+    },
+    "AO_50-52": {
+      "tittel": "Leka",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/65/Leka_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Leka_komm.svg"
+    },
+    "AO_50-53": {
+      "tittel": "Inderøy",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/d8/Inder%C3%B8y_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Inder%C3%B8y_komm.svg"
+    },
+    "AO_50-54": {
+      "tittel": "Indre Fosen",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a3/Leksvik_komm.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Leksvik_komm.svg"
+    },
+    "AO_01": {
+      "tittel": "Østfold",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/a2/%C3%98stfold_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:%C3%98stfold_v%C3%A5pen.svg"
+    },
+    "AO_02": {
+      "tittel": "Akershus",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/f/f2/Akershus_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Akershus_v%C3%A5pen.svg"
+    },
+    "AO_03": {
+      "tittel": "Oslo",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/da/Oslo_komm.svg",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Oslo_komm.svg"
+    },
+    "AO_04": {
+      "tittel": "Hedmark",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ea/Hedmark_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hedmark_v%C3%A5pen.svg"
+    },
+    "AO_05": {
+      "tittel": "Oppland",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/2/2c/Oppland_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Oppland_v%C3%A5pen.svg"
+    },
+    "AO_06": {
+      "tittel": "Buskerud",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/8c/Buskerud_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Buskerud_v%C3%A5pen.svg"
+    },
+    "AO_07": {
+      "tittel": "Vestfold",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/7/74/Vestfold_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Vestfold_v%C3%A5pen.svg"
+    },
+    "AO_08": {
+      "tittel": "Telemark",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/14/Telemark_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Telemark_v%C3%A5pen.svg"
+    },
+    "AO_09": {
+      "tittel": "Aust-Agder",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/6/62/Aust-Agder_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Aust-Agder_v%C3%A5pen.svg"
+    },
+    "AO_10": {
+      "tittel": "Vest-Agder",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/a/ab/Vest-Agder_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Vest-Agder_v%C3%A5pen.svg"
+    },
+    "AO_11": {
+      "tittel": "Rogaland",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/1/1c/Rogaland_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Rogaland_v%C3%A5pen.svg"
+    },
+    "AO_12": {
+      "tittel": "Hordaland",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/0/0f/Hordaland_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Hordaland_v%C3%A5pen.svg"
+    },
+    "AO_14": {
+      "tittel": "Sogn og Fjordane",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/e/ec/Sogn_og_Fjordane_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Sogn_og_Fjordane_v%C3%A5pen.svg"
+    },
+    "AO_15": {
+      "tittel": "Møre og Romsdal",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/db/M%C3%B8re_og_Romsdal_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:M%C3%B8re_og_Romsdal_v%C3%A5pen.svg"
+    },
+    "AO_18": {
+      "tittel": "Nordland",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/4c/Nordland_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Nordland_v%C3%A5pen.svg"
+    },
+    "AO_19": {
+      "tittel": "Troms",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/d/da/Troms_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Troms_v%C3%A5pen.svg"
+    },
+    "AO_20": {
+      "tittel": "Finnmark",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/4/40/Finnmark_v%C3%A5pen.svg",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Finnmark_v%C3%A5pen.svg"
+    },
+    "AO_50": {
+      "tittel": "Trøndelag",
+      "url":
+        "https://upload.wikimedia.org/wikipedia/commons/8/85/Tr%C3%B8ndelag_v%C3%A5pen.png",
+      "descriptionurl":
+        "https://commons.wikimedia.org/wiki/File:Tr%C3%B8ndelag_v%C3%A5pen.png"
+    }
+  }
+}

@@ -3,7 +3,7 @@ const config = require('./config')
 const { erKartleggingsnivå } = require('./lib/koder')
 const { capitalizeTittel } = require('./lib/koder')
 
-let koder = io.readJson(config.datafil.nin_koder)
+let koder = io.readJson(config.datafil.nin_koder).data
 
 function kodefix(kode) {
   if (!kode) return kode
@@ -12,7 +12,7 @@ function kodefix(kode) {
 
 async function importerGrunntypeKoblinger(kode, mineGrunntyper) {
   const url = config.datakilde.nin_api_graf + '/' + kode.replace('NA_', '')
-  const json = await io.getJsonFromCache(url, 'cache/' + kode + '.json')
+  const json = await io.getJsonFromCache(url, config.cachePath+'/' + kode + '.json')
   const klassifisering = json.Klassifisering[0].Grunntypeinndeling
   klassifisering.forEach(gtf => {
     const namespace = 'https://www.artsdatabanken.no/api/graph/NiN2.0/'
@@ -34,17 +34,13 @@ async function importerKoder() {
     if (erKartleggingsnivå(kode))
       await importerGrunntypeKoblinger(kode, mineGrunntyper)
     let o = { tittel: tittel }
-    if (forelder) o.forelder = forelder
+    o.foreldre = forelder ? [forelder] : []
     mineKoder[kode] = o
   }
   return { grunntyper: mineGrunntyper, koder: mineKoder }
 }
 
 importerKoder().then(imp => {
-  console.log(
-    'Importert ' + Object.keys(imp.grunntyper).length + ' grunntypekoblinger'
-  )
   io.writeJson(config.datafil.nin_grunntyper, imp.grunntyper)
-  console.log('Importert ' + Object.keys(imp.koder).length + ' NiN koder')
   io.writeJson(config.datafil.nin_koder_importert, imp.koder)
 })

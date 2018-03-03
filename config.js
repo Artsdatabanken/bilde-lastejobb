@@ -1,4 +1,5 @@
 const config = {
+  rotkode: 'sqrt(42)',
   datakilde: {
     nin_koder: 'http://webtjenester.artsdatabanken.no/NiN/v2b/koder/alleKoder',
     nin_variasjon:
@@ -7,7 +8,8 @@ const config = {
     nin_diagnostisk_art: 'input/diagnostiske arter.json',
     nin_api_graf: 'https://www.artsdatabanken.no/api/graph/NiN2.0/',
     bbox: 'input/bbox.json',
-    taxons: 'input/taxons.json'
+    taxons: 'input/taxons.json',
+    obsoletemetabase: 'input/grunnkart-export.json'
   },
   datafil: {
     nin_koder: 'data/nin_koder.json',
@@ -26,13 +28,25 @@ const config = {
     andre_koder: 'data/andre_koder.json',
     flettet: 'data/flettet.json',
     metabase: 'data/metabase.json',
-    kodetre: 'data/kodetre.json'
+    kodetre: 'data/kodetre.json',
+    koder_med_forfedre: 'data/koder_med_forfedre.json',
+    metagammel: 'data/metagammel.json',
+    våpenskjold_meta: 'data/110_våpenskjold_meta.json'
   },
+  cachePath: '../cache',
   prefix: {
     natursystem: 'NA_',
     taxon: 'TX_',
     administrativtOmråde: 'AO_'
   }
+}
+
+const isDebug = true
+if (!isDebug) console.log = function() {}
+
+function log(...args) {
+  console.log.apply(this, args)
+  return args
 }
 
 module.exports = config

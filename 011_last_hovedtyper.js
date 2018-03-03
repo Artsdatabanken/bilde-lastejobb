@@ -32,4 +32,3 @@ hovedtyper.forEach(ht => {
 })
 
 writeJson(config.datafil.nin_hovedtyper, r)
-console.log('Importert ' + Object.keys(r).length + ' hovedtyper')

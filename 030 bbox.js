@@ -3,8 +3,6 @@ const config = require('./config')
 
 let bboxIn = io.readJson(config.datakilde.bbox)
 
-console.log('Lest ' + Object.keys(bboxIn).length + ' bboxer')
-
 function prefixedKode(kode) {
   kode = kode.toUpperCase()
   if (kode[2] === '_') return kode
@@ -35,4 +33,3 @@ for (let kode of Object.keys(bbox)) {
 }
 
 io.writeJson(config.datafil.bbox_30, r)
-console.log('Importert ' + Object.keys(r).length + ' bboxer')
