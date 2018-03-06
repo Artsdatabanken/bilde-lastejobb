@@ -14,12 +14,13 @@ function nyKode(db, forelder, kode, tittel) {
 }
 
 const rot = config.rotkode
-nyKode(r, null, rot, 'Katalog')
-nyKode(r, rot, 'NA', 'Natursystem')
+nyKode(r, null, '', 'Katalog')
+nyKode(r, rot, 'AR', 'Art')
 nyKode(r, rot, 'MI', 'Miljø')
 nyKode(r, rot, 'BS', 'Beskrivelse')
 nyKode(r, rot, 'AO', 'Fylke & kommune')
 nyKode(r, rot, 'RL', 'Truet art')
+nyKode(r, rot, 'LI', 'Livsmedium')
 nyKode(r, 'RL', 'RL_EN', 'Sterkt truet')
 nyKode(r, 'RL', 'RL_VU', 'Sårbar')
 nyKode(r, 'RL', 'RL_RE', 'Regionalt utdødd')

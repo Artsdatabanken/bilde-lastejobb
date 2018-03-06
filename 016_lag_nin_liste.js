@@ -1,4 +1,5 @@
 const io = require('./lib/io')
+const log = require('./lib/log')
 const config = require('./config')
 
 let koder = io.readJson(config.datafil.nin_koder_importert).data
@@ -27,18 +28,13 @@ for (let kode of Object.keys(alle)) {
   const node = alle[kode]
   node.kode = kode
 
-  if (node.kode === 'NA_T7-C-11') console.log(node)
   if (overrides[kode]) node.foreldre = overrides[kode]
   noder[kode] = node
-  if (node.kode === 'NA_T7-C-11') console.log(node)
   for (let forelder of node.foreldre) {
     if (!p2c[forelder]) p2c[forelder] = []
     p2c[forelder].push(node)
   }
 }
-
-//console.log(alle['NA_T7-C-11'])
-//console.log(p2c['NA_T7'])
 
 function leggTilBarn(node) {
   noder[node.kode] = node
@@ -50,6 +46,6 @@ function leggTilBarn(node) {
 
 for (let kode of Object.keys(alle)) leggTilBarn(alle[kode])
 
-console.log('Fjernet ' + fjernet)
+log.i('Fjernet ' + fjernet)
 
 io.writeJson(config.datafil.nin_liste, noder)

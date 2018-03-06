@@ -25,6 +25,7 @@ function importerKoder() {
     const tittel = capitalizeTittel(node.Navn)
     let o = { tittel: { nb: tittel } }
     o.foreldre = forelder ? [forelder] : []
+    o.kode = kode
     mineKoder[kode] = o
   }
   return mineKoder

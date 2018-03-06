@@ -1,18 +1,19 @@
 const io = require('./lib/io')
+const log = require('./lib/log')
 const config = require('./config')
 
 r = {}
 
 function flett(jsonPath) {
   var data = io.readJson(jsonPath).data
-  if (data['NA_T34-C-6']) console.log(data['NA_T34-C-6'])
-  Object.assign(r, data)
+  for (let key of Object.keys(data))
+    r[key] = Object.assign({}, r[key], data[key])
 }
 
 function flettHvisEksisterer(jsonPath) {
-  var data = io.readJson(jsonPath)
-  for (let kode of Object.keys(data)) {
-    if (r[kode]) Object.assign(r[kode], data[kode])
+  var data = io.readJson(jsonPath).data
+  for (let key of Object.keys(data)) {
+    if (r[key]) Object.assign(r[key], data[key])
   }
 }
 
@@ -26,11 +27,11 @@ function settHvisEksisterer(kilde, mål, nøkkel) {
 skipped = []
 function flettCustom(jsonPath) {
   var data = io.readJson(jsonPath).data
-  Object.keys(data).forEach(kode => {
-    const src = data[kode]
-    const dst = r[kode]
+  Object.keys(data).forEach(key => {
+    const src = data[key]
+    const dst = r[key]
     if (!dst) {
-      skipped.push(kode)
+      skipped.push(key)
     } else {
       settHvisEksisterer(src, dst, 'bin')
       settHvisEksisterer(src, dst, 'prosedyrekatetgori')
@@ -64,5 +65,13 @@ flett(config.datafil.taxon_50)
 flett(config.datafil.andre_koder)
 flettHvisEksisterer(config.datafil.bbox_30)
 flettCustom(config.datafil.metagammel)
+
+for (let key of Object.keys(r)) {
+  const node = r[key]
+  if (!node.se) {
+    if (!r[key].tittel) log.w('Mangler tittel: ', key)
+    if (!r[key].kode) log.w('Mangler kode: ', key)
+  }
+}
 
 io.writeJson(config.datafil.flettet, r)

@@ -42,7 +42,7 @@ for (let ckode of Object.keys(grunntyper)) {
     }
   }
   if (ckode.match(/-E-/gi)) {
-    foreldre[ckode] = hovedtype(ckode)
+    foreldre[ckode] = [hovedtype(ckode)]
   }
 }
 

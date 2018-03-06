@@ -2,8 +2,6 @@ const path = require('path')
 const io = require('./lib/io')
 const config = require('./config')
 
-process.env.LOGLEVEL = 1
-
 const kommuner = io.readJson(config.datafil.kommune_60).data
 const fylker = io.readJson(config.datafil.fylke_61).data
 const områder = Object.assign({}, kommuner, fylker)
@@ -36,7 +34,7 @@ async function downloadImageMeta(nøkkel, suffiks = 'komm', filtype = 'svg') {
     return null
   }
   const ii = imageinfos[0]
-  return { url: ii.url, descriptionurl: ii.descriptionurl }
+  return { url: ii.url, filtype: filtype, descriptionurl: ii.descriptionurl }
 }
 
 async function lastEn(r, kode) {

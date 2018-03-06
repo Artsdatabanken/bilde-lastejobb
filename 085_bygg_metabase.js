@@ -6,48 +6,71 @@ var data = io.readJson(config.datafil.flettet).data
 function kopierAlias() {
   Object.keys(data).forEach(kode => {
     const node = data[kode]
-    if (node.alias) data[node.alias] = node
+    if (node.alias) {
+      console.log(kode, '=>', node.alias)
+      //     data[node.alias] = node
+    }
   })
 }
 
 var p2c = {},
   c2p = {}
+
 function mapForeldreTilBarn() {
   Object.keys(data).forEach(kode => {
     const node = data[kode]
-    if (!node.foreldre) console.warn('Mangler forelder: ', kode)
-    else {
-      let foreldre = Object.assign([], node.foreldre, node.foreldreAlias)
-      foreldre.forEach(forelder => {
-        if (!p2c[forelder]) p2c[forelder] = []
-        p2c[forelder].push(kode)
-        if (!c2p[kode]) c2p[kode] = []
-        c2p[kode].push(forelder)
+    if (!c2p[kode]) c2p[kode] = []
+    if (!node.foreldre) {
+      if (!node.se) console.warn('Mangler forelder: ', kode)
+    } else {
+      //      let foreldre = Object.assign([], node.foreldre, node.foreldreAlias)
+      let foreldre = node.foreldre
+      foreldre.forEach(forelderkode => {
+        const forelder = data[forelderkode]
+        if (forelder.se) forelderkode = forelder.se
+        if (!p2c[forelderkode]) p2c[forelderkode] = []
+        p2c[forelderkode].push(kode)
+        if (!c2p[kode].includes(forelderkode)) c2p[kode].push(forelderkode)
       })
     }
   })
 }
 
-console.log(c2p['NA_T'])
 kopierAlias()
 mapForeldreTilBarn()
 
+//console.log(data['NA_I1'])
+//console.log(c2p['NA_I1'])
+//throw new Error()
+
 function tittel(node) {
+  console.log(node)
   const tittel = node.tittel
   if (!tittel) console.error('titt', node)
   if (tittel.nb) return tittel.nb
   if (tittel.la) return tittel.la
   return node.kode
 }
-function nøstOppForfedre(fnode) {
-  if (!fnode) return []
-  let forelderkode = fnode[0]
+
+function hentKey(key) {
+  let node = data[key]
+  if (node.se) return node.se
+  return key
+}
+
+function nøstOppForfedre(forelderkey) {
   let r = []
-  forelderkode = c2p[forelderkode]
-  while (forelderkode) {
-    const forelder = data[forelderkode]
-    r.push({ [forelderkode]: tittel(forelder) })
-    forelderkode = c2p[forelderkode]
+  while (forelderkey) {
+    forelderkey = hentKey(forelderkey)
+    let forelder = data[forelderkey]
+    /*    console.log(
+      forelderkey,
+      '=>',
+      forelder && forelder.foreldre ? forelder.foreldre[0] : '?'
+    )*/
+    r.push({ [forelderkey]: { kode: forelder.kode, tittel: forelder.tittel } })
+    //    console.log(forelderkey)
+    forelderkey = c2p[forelderkey][0]
   }
   return r
 }
@@ -58,34 +81,44 @@ function fjernPrefiks(kode, rotkode) {
   return kode
 }
 
-let count = 0
-function byggTreFra(rotkode) {
-  let rot = data[rotkode]
-  if (!rot) console.warn('Finner ikke ' + rotkode)
-  rot.kode = rotkode
-  if (!rot.foreldre) console.log(rotkode)
-  console.log('r', rot.foreldre)
-  rot.foreldre = nøstOppForfedre(rot.foreldre)
-  console.log('r', rot.foreldre)
+function byggTreFra(key) {
+  let rot = data[key]
+  if (!rot) console.warn('Finner ikke ' + key)
+  rot.kode = key
+  if (!rot.foreldre) console.log(key)
+  rot.overordnet =
+    rot.foreldre && rot.foreldre.length > 0
+      ? nøstOppForfedre(rot.foreldre[0])
+      : ''
   let node = { '@': rot }
   let barn = {}
-  if (p2c[rotkode])
-    p2c[rotkode].forEach(kode => {
-      barn[kode] = {
-        kode: kode,
-        tittel: data[kode].tittel,
-        relasjoner: data[kode].relasjoner
+  if (p2c[key]) {
+    p2c[key].forEach(ckey => {
+      const cnode = data[ckey]
+      const ckode = cnode.kode
+      barn[ckey] = {
+        kode: ckode,
+        tittel: cnode.tittel,
+        relasjoner: cnode.relasjoner
       }
-      node[fjernPrefiks(kode, rotkode)] = byggTreFra(kode)
+      node[fjernPrefiks(ckode, rot.kode)] = byggTreFra(ckey)
     })
+  }
   node['@'].barn = barn
+  if (key === 'NA') console.log('rotnode', node)
+  if (key === config.rotkode) console.log('rotnode', node)
+  delete node['@'].foreldre
   return node
 }
 
-//console.log(nøstOppForfedre(['NA_T44']))
+console.log(fjernPrefiks('NA', config.rotkode))
+console.log(p2c['AR'])
 const r = byggTreFra(config.rotkode)
+//console.log(JSON.stringify(byggTreFra('AR_Animalia_Chordata_Tunicata')))
+//console.log('NA_T44', nøstOppForfedre(['NA_T44']))
 //console.log(r['NA']['T']['1'])
 //console.log(r.TX['@'])
-console.log(r.AO['01'])
-
+//console.log(r['@'])
+//console.log(r.AR['@'])
+//console.log(data['AR_Animalia_Chordata_Tunicata'])
 io.writeJson(config.datafil.metabase, r)

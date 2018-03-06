@@ -1,6 +1,8 @@
 const io = require('./lib/io')
+const log = require('./lib/log')
 const config = require('./config')
 const { kodkode, splittKode, lookup } = require('./lib/koder')
+const { artskode } = require('./lib/koder')
 
 let diagArt = io.readJson(config.datakilde.nin_diagnostisk_art)
 let arter = io.readJson(config.datafil.taxon_50).data
@@ -39,12 +41,16 @@ diagArt.forEach(art => {
       ? ukjenteKoder[na_kode] + 1
       : 1
   else {
-    const tx_kode = config.prefix.taxon + parseInt(art.scientificNameID)
-    let e = {}
-    linkBoth(na_kode, tx_kode, art['Funksjon1'], art['tags1'])
-    linkBoth(na_kode, tx_kode, art['Funksjon2'], art['tags2'])
-    linkBoth(na_kode, tx_kode, art['Funksjon3'], art['tags3'])
-    linkBoth(na_kode, tx_kode, art['Funksjon 4'], art['tags4'])
+    const idkode = artskode(art.scientificNameID, art.Scientificname)
+    console.log(idkode)
+    if (arter[idkode]) {
+      const tx_kode = arter[idkode].se
+      let e = {}
+      linkBoth(na_kode, tx_kode, art['Funksjon1'], art['tags1'])
+      linkBoth(na_kode, tx_kode, art['Funksjon2'], art['tags2'])
+      linkBoth(na_kode, tx_kode, art['Funksjon3'], art['tags3'])
+      linkBoth(na_kode, tx_kode, art['Funksjon 4'], art['tags4'])
+    } else log.w('Fant ikke ' + idkode)
   }
 })
 

@@ -4,21 +4,27 @@ const config = require('./config')
 var data = io.readJson(config.datafil.flettet).data
 
 function settInn(kode, forelder, tittel) {
-    r.push({ kode: kode, forelder: forelder, tittel: tittel })
+  r.push({ kode: kode, forelder: forelder, tittel: tittel })
 }
 
 let r = []
-Object.keys(data).forEach(kode => {
-  const node = data[kode]
-  let foreldre = node.foreldre
-  if (!foreldre) foreldre = []
-  const tittel = node.tittel ? node.tittel.nb || node.tittel.la : '?'
-  if (kode === config.rotkode)
-    settInn(kode,  null, tittel )
-  if (foreldre.length > 0) {
-    foreldre.forEach(forelder =>
-    settInn(kode,  forelder, tittel )
-    )
+Object.keys(data).forEach(key => {
+  const node = data[key]
+  if (node.se) {
+  } else {
+    const kode = node.kode
+    if (!kode) console.warn(node)
+    let foreldre = node.foreldre
+    if (!foreldre) foreldre = []
+    if (!kode) {
+      console.error(node)
+      throw new Error()
+    }
+    const tittel = node.tittel ? node.tittel.nb || node.tittel.la : '?'
+    if (kode === config.rotkode) settInn(kode, null, tittel)
+    if (foreldre.length > 0) {
+      foreldre.forEach(forelder => settInn(kode, forelder, tittel))
+    }
   }
 })
 
@@ -34,7 +40,8 @@ function valider(kode) {
 
 valider('NA')
 
-console.log(data['NA_T34-C-6'])
-console.log(finn('NA_T34-C-6'))
+console.log(data['NA_T44'])
+console.log(finn('NA_T44'))
+console.log(finn('BS_1'))
 
 io.writeJson(config.datafil.kodetre, r)

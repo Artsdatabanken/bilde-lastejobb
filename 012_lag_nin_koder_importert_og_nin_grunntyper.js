@@ -12,7 +12,10 @@ function kodefix(kode) {
 
 async function importerGrunntypeKoblinger(kode, mineGrunntyper) {
   const url = config.datakilde.nin_api_graf + '/' + kode.replace('NA_', '')
-  const json = await io.getJsonFromCache(url, config.cachePath+'/' + kode + '.json')
+  const json = await io.getJsonFromCache(
+    url,
+    config.getCachePath('nin_api_graf') + '/' + kode + '.json'
+  )
   const klassifisering = json.Klassifisering[0].Grunntypeinndeling
   klassifisering.forEach(gtf => {
     const namespace = 'https://www.artsdatabanken.no/api/graph/NiN2.0/'
@@ -34,7 +37,7 @@ async function importerKoder() {
     if (erKartleggingsnivå(kode))
       await importerGrunntypeKoblinger(kode, mineGrunntyper)
     let o = { tittel: tittel }
-    o.foreldre = forelder ? [forelder] : []
+    o.foreldre = forelder ? [forelder] : [config.rotkode]
     mineKoder[kode] = o
   }
   return { grunntyper: mineGrunntyper, koder: mineKoder }
