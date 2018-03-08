@@ -2,48 +2,49 @@ const io = require('./lib/io')
 const config = require('./config')
 const log = require('./lib/log')
 const path = require('path')
-const { execFile } = require('child_process')
+const { spawnSync } = require('child_process')
 
-async function convertAll() {
-  const files = io.findFiles(config.imagePath.source, '.svg')
-  log.e(files.length)
-  for (var i = 0; i < files.length; i++) {
-    const file = files[i]
-    const r = await svg2png(file)
-  }
-}
-
-function convert(kildesti, målsti, format, maxWidth, maxHeight = '') {
-  //    const args = `-resize 408x408 -background transparent -format png -density 600 -path ..${målsti}/kode/${pixelSize} ${kildesti}`
+function convertSync(kildesti, målsti, format, maxWidth, maxHeight = '') {
   const max = Math.min(maxWidth, maxHeight)
   const args = [
     '-resize',
     maxWidth + 'x' + maxHeight,
     '-background',
     'transparent',
-    '-format',
-    format,
+    //    '-format',
+    //    format,
     '-density',
     '600',
     //    '-verbose',
     '-debug',
     'user',
     '-path',
-    `${målsti}/kode/${maxWidth}/`,
-    kildesti + '/*'
+    målsti,
+    kildesti
   ]
-  console.log(args.join(' '))
-  const child = execFile('mogrify', args)
-  child.stdout.on('data', function(data) {
-    console.log(data)
-  })
-  child.stderr.on('data', function(data) {
-    console.log(data) // Normal output ends up here for some reason..
-  })
-  child.on('close', function(code) {
-    console.log('#exit code: ' + code)
-  })
+  const r = spawnSync('mogrify', args)
+  log.d(r.output.toString())
+  if (r.status > 0) throw new Error(r.error.toString())
 }
 
-convert(config.imagePath.source, config.imagePath.processed, 'png', 40, 40)
-convert(config.imagePath.source, config.imagePath.processed, 'jpg', 408)
+function konverterAlle(kildesti, målsti, format, maxWidth, maxHeight) {
+  const files = io.findFiles(kildesti, '.' + format)
+  console.log('found ' + files.length + ' files..')
+  for (var kildefil of files) {
+    const målfil = `${målsti}/kode/${maxWidth}/`
+    const målfil2 = `${målsti}/kode/${maxWidth}/${
+      path.parse(kildefil).name
+    }.${format}`
+    console.log(målfil)
+    convertSync(kildefil, målfil, format, maxWidth, maxHeight)
+  }
+}
+
+konverterAlle(config.imagePath.source, config.imagePath.processed, 'jpg', 408, 297)
+konverterAlle(
+  config.imagePath.source,
+  config.imagePath.processed,
+  'png',
+  40,
+  40
+)

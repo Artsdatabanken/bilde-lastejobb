@@ -9,6 +9,7 @@ function kopierAlias() {
     if (node.alias) {
       console.log(kode, '=>', node.alias)
       //     data[node.alias] = node
+      throw new Error('')
     }
   })
 }
@@ -44,7 +45,7 @@ mapForeldreTilBarn()
 //throw new Error()
 
 function tittel(node) {
-  console.log(node)
+  // console.log(node)
   const tittel = node.tittel
   if (!tittel) console.error('titt', node)
   if (tittel.nb) return tittel.nb
@@ -76,9 +77,11 @@ function nøstOppForfedre(forelderkey) {
 }
 
 function fjernPrefiks(kode, rotkode) {
+  const før = kode
   if (data[kode].se) kode = data[kode].se
   kode = kode.replace(rotkode, '')
-  if ('_-'.indexOf(kode[0]) >= 0) return kode.substring(1)
+  if ('_-'.indexOf(kode[0]) >= 0) kode = kode.substring(1)
+  //  console.log(kode)
   return kode
 }
 
@@ -86,7 +89,7 @@ function byggTreFra(key) {
   let rot = data[key]
   if (!rot) console.warn('Finner ikke ' + key)
   rot.kode = key
-  if (!rot.foreldre) console.log(key)
+  if (!rot.foreldre) console.log('noparent', key)
   rot.overordnet =
     rot.foreldre && rot.foreldre.length > 0
       ? nøstOppForfedre(rot.foreldre[0])
@@ -108,14 +111,14 @@ function byggTreFra(key) {
     })
   }
   node['@'].barn = barn
-  if (key === 'NA') console.log('rotnode', node)
-  if (key === config.rotkode) console.log('rotnode', node)
+  //  if (key === 'NA') console.log('rotnode', node)
+  //  if (key === config.rotkode) console.log('rotnode', node)
   delete node['@'].foreldre
   return node
 }
 
-console.log(fjernPrefiks('NA', config.rotkode))
-console.log(p2c['AR'])
+//console.log(fjernPrefiks('NA', config.rotkode))
+//console.log(p2c['AR'])
 const r = byggTreFra(config.rotkode)
 //console.log(JSON.stringify(byggTreFra('AR_Animalia_Chordata_Tunicata')))
 //console.log('NA_T44', nøstOppForfedre(['NA_T44']))
@@ -123,4 +126,5 @@ const r = byggTreFra(config.rotkode)
 //console.log(r['@'])
 //console.log(r.AR['@'])
 io.writeJson(config.datafil.metabase, r)
-console.log(data['AR']['Animalia']['Chordata']['Tunicata'])
+//console.log(data['AR']['Animalia']['Chordata']['Tunicata'])
+console.log(Object.keys(data['AR']))

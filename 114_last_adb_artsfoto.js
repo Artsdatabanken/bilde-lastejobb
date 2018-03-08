@@ -7,7 +7,8 @@ const record = io.readCsv(config.datakilde.taxon_adb_photos)
 const taxons = io.readJson(config.datafil.taxon_50).data
 const sciNameId2Name = {}
 Object.keys(taxons).forEach(key => {
-  const t = taxons[key]
+  let t = taxons[key]
+  if (!t.se)
   sciNameId2Name[t.navnSciId] = t.tittel.la
 })
 
@@ -20,15 +21,14 @@ async function download(x) {
   const filename = x.filename
   const fileExtension = path.extname(filename)
   const scientificNameId = parseInt(x.scientificNameId)
-  const oldTag = 'TX_' + scientificNameId.toString(36).toUpperCase()
   const sciName = sciNameId2Name[scientificNameId]
   if (!sciName) log.w('Finner ikke sciNameId #' + x.scientificNameId)
   else {
-    const kode =
-      config.prefix.taxon + sciNameId2Name[scientificNameId].replace(' ', '_')
+    const kode = config.prefix.taxon + scientificNameId
     const url = `https://www.artsdatabanken.no/Media/F${mediaId}`
     const targetFile = config.imagePath.source + '/' + kode + fileExtension
     //    const fn = config.imagePath + '' + kode + fileExtension
+    if(!io.fileExists(targetFile))
     await downloadFile(url, targetFile)
     /*    console.log(
         `curl https://www.artsdatabanken.no/Media/F${mediaId} -o ${oldTag}${fileExtension}`
