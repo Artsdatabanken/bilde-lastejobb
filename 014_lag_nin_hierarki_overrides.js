@@ -28,7 +28,6 @@ function link(ckode) {
   }
   if (ckode === 'NA_T44') console.log('==========e', ckode, ekoder)
   foreldre[ckode] = ekoder
-  //  console.log(ckode + '\t' + ekoder.join('\t'))
 }
 
 for (let ckode of Object.keys(grunntyper)) {

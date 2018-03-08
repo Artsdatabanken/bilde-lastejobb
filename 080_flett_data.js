@@ -33,17 +33,11 @@ function flettCustom(jsonPath) {
     if (!dst) {
       skipped.push(key)
     } else {
+      if (src.beskrivelse) src.ingress = src.beskrivelse
+      settHvisEksisterer(src, dst, 'ingress')
       settHvisEksisterer(src, dst, 'bin')
-      settHvisEksisterer(src, dst, 'prosedyrekatetgori')
       settHvisEksisterer(src, dst, 'relasjon')
       settHvisEksisterer(src, dst, 'statistikk')
-      settHvisEksisterer(src, dst, 'beskrivelse')
-      settHvisEksisterer(src, dst, 'definisjonsgrunnlag')
-      settHvisEksisterer(src, dst, 'kunnskap')
-      settHvisEksisterer(src, dst, 'lkm')
-      settHvisEksisterer(src, dst, 'nin1')
-      settHvisEksisterer(src, dst, 'nivå')
-
       Object.keys(src).forEach(key => {
         if (!counts[key]) counts[key] = 0
         counts[key]++
@@ -74,4 +68,16 @@ for (let key of Object.keys(r)) {
   }
 }
 
+hash = {}
+Object.keys(r).forEach(key => {
+  const node = r[key]
+  if (!node.se) {
+    if (!node.tittel) console.log(node)
+    const tittel = node.tittel.nb || node.tittel.la
+    if (!hash[tittel]) hash[tittel] = []
+    else hash[tittel].push(key)
+  }
+})
+
+console.log(JSON.stringify(r['NA_M11'].definisjonsgrunnlag))
 io.writeJson(config.datafil.flettet, r)

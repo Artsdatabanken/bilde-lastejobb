@@ -76,6 +76,7 @@ function nøstOppForfedre(forelderkey) {
 }
 
 function fjernPrefiks(kode, rotkode) {
+  if (data[kode].se) kode = data[kode].se
   kode = kode.replace(rotkode, '')
   if ('_-'.indexOf(kode[0]) >= 0) return kode.substring(1)
   return kode
@@ -95,13 +96,15 @@ function byggTreFra(key) {
   if (p2c[key]) {
     p2c[key].forEach(ckey => {
       const cnode = data[ckey]
-      const ckode = cnode.kode
-      barn[ckey] = {
-        kode: ckode,
-        tittel: cnode.tittel,
-        relasjoner: cnode.relasjoner
+      if (!cnode.se) {
+        const ckode = cnode.kode
+        barn[ckey] = {
+          kode: ckode,
+          tittel: cnode.tittel,
+          relasjoner: cnode.relasjoner
+        }
+        node[fjernPrefiks(ckode, rot.kode)] = byggTreFra(ckey)
       }
-      node[fjernPrefiks(ckode, rot.kode)] = byggTreFra(ckey)
     })
   }
   node['@'].barn = barn
@@ -117,8 +120,7 @@ const r = byggTreFra(config.rotkode)
 //console.log(JSON.stringify(byggTreFra('AR_Animalia_Chordata_Tunicata')))
 //console.log('NA_T44', nøstOppForfedre(['NA_T44']))
 //console.log(r['NA']['T']['1'])
-//console.log(r.TX['@'])
 //console.log(r['@'])
 //console.log(r.AR['@'])
-//console.log(data['AR_Animalia_Chordata_Tunicata'])
 io.writeJson(config.datafil.metabase, r)
+console.log(data['AR']['Animalia']['Chordata']['Tunicata'])

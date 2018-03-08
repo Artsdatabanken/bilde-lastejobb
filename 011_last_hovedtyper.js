@@ -24,7 +24,7 @@ hovedtyper.forEach(ht => {
     u: fromCsv(ht.uLKM)
   }
   me.definisjonsgrunnlag = {}
-  me.definisjonsgrunnlag[parseInt(ht['GrL'])] = ht['Definisjonsgrunnlag-tekst']
+  me.definisjonsgrunnlag[ht['GrL']] = ht['Definisjonsgrunnlag-tekst']
   me.prosedyrekategori = {}
   me.prosedyrekategori[ht['PrK']] = ht['PrK-tekst']
   me.nin1 = ht['NiN[1] ']

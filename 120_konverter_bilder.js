@@ -15,6 +15,7 @@ async function convertAll() {
 
 function convert(kildesti, målsti, format, maxWidth, maxHeight = '') {
   //    const args = `-resize 408x408 -background transparent -format png -density 600 -path ..${målsti}/kode/${pixelSize} ${kildesti}`
+  const max = Math.min(maxWidth, maxHeight)
   const args = [
     '-resize',
     maxWidth + 'x' + maxHeight,
@@ -28,7 +29,7 @@ function convert(kildesti, målsti, format, maxWidth, maxHeight = '') {
     '-debug',
     'user',
     '-path',
-    `${målsti}/kode/${pixelSize}/`,
+    `${målsti}/kode/${maxWidth}/`,
     kildesti + '/*'
   ]
   console.log(args.join(' '))
