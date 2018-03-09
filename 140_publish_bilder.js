@@ -1,6 +1,15 @@
 
-// File or Blob named mountains.jpg
-var file = ...
+ var config = {
+  apiKey: '<your-api-key>',
+  authDomain: '<your-auth-domain>',
+  databaseURL: '<your-database-url>',
+  storageBucket: '<your-storage-bucket>'
+};
+firebase.initializeApp(config);
+
+var storageRef = firebase.storage().ref();
+
+var mountainsRef = storageRef.child('mountains.jpg');
 
 // Create the file metadata
 var metadata = {

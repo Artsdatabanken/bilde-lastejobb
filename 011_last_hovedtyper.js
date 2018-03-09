@@ -6,7 +6,7 @@ let hovedtyper = readJson(config.datakilde.nin_hovedtyper)
 function fromCsv(csv) {
   csv = csv.trim()
   if (!csv) return []
-  return csv.split(',')
+  return csv.split(',').map(kode => config.prefix.miljøvariabel + kode)
 }
 
 r = {}

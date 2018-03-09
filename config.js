@@ -42,6 +42,7 @@ const config = {
   },
   prefix: {
     natursystem: 'NA_',
+    miljøvariabel: 'MI_',
     taxon: 'AR_',
     fremmedArt: 'FA_',
     truet: 'RL_',

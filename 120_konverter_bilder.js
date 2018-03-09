@@ -5,14 +5,24 @@ const path = require('path')
 const { spawnSync } = require('child_process')
 
 function convertSync(kildesti, målsti, format, maxWidth, maxHeight = '') {
+  log.v(
+    'converting',
+    kildesti,
+    ' to ',
+    maxWidth,
+    'x',
+    maxHeight,
+    ' in ',
+    format
+  )
   const max = Math.min(maxWidth, maxHeight)
   const args = [
     '-resize',
     maxWidth + 'x' + maxHeight,
     '-background',
     'transparent',
-    //    '-format',
-    //    format,
+    '-format',
+    format,
     '-density',
     '600',
     //    '-verbose',
@@ -24,27 +34,30 @@ function convertSync(kildesti, målsti, format, maxWidth, maxHeight = '') {
   ]
   const r = spawnSync('mogrify', args)
   log.d(r.output.toString())
-  if (r.status > 0) throw new Error(r.error.toString())
+  if (r.status > 0) throw new Error(r.stderr.toString())
 }
 
-function konverterAlle(kildesti, målsti, format, maxWidth, maxHeight) {
-  const files = io.findFiles(kildesti, '.' + format)
-  console.log('found ' + files.length + ' files..')
+function konverterAlle(kildesti, målsti, maxWidth, maxHeight) {
+  const files = io.findFiles(kildesti)
+  console.log('Found ' + files.length + ' files..')
   for (var kildefil of files) {
-    const målfil = `${målsti}/kode/${maxWidth}/`
-    const målfil2 = `${målsti}/kode/${maxWidth}/${
-      path.parse(kildefil).name
-    }.${format}`
-    console.log(målfil)
-    convertSync(kildefil, målfil, format, maxWidth, maxHeight)
+    const kildePath = path.parse(kildefil)
+    const format = '.svg.png'.indexOf(kildePath.ext) >= 0 ? 'png' : 'jpg'
+    const målstiwidth = `${målsti}/${maxWidth}`
+    const målfil = `${målstiwidth}/${kildePath.name}.${format}`
+    if (io.fileExists(målfil)) log.v('skip', målfil)
+    else convertSync(kildefil, målstiwidth, format, maxWidth, maxHeight)
   }
 }
 
-konverterAlle(config.imagePath.source, config.imagePath.processed, 'jpg', 408, 297)
 konverterAlle(
   config.imagePath.source,
-  config.imagePath.processed,
-  'png',
+  config.imagePath.processed + '/kode',
+  408
+)
+konverterAlle(
+  config.imagePath.source,
+  config.imagePath.processed + '/kode',
   40,
   40
 )

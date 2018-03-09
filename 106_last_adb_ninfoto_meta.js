@@ -1,7 +1,7 @@
 const io = require('./lib/io')
 const config = require('./config')
 const log = require('./lib/log')
-var deasync = require('deasync');
+var deasync = require('deasync')
 
 log.logLevel = 5
 
@@ -23,7 +23,7 @@ function hentfotolink(item, callback) {
   console.log(wwwkode)
   //  if (wwwkode != 'T1') return
   log.d('READ', ninkode)
-   osmosis
+  osmosis
     .get('https://www.artsdatabanken.no/NiN2.0/' + wwwkode)
     .find('form a')
     .set({
@@ -38,30 +38,31 @@ function hentfotolink(item, callback) {
       log.v('Fant foto: ', foto)
       const url = www.foto ? `https://artsdatabanken.no${foto}` : undefined
       r[ninkode] = { foto: url }
-//      io.writeJson(config.datafil.nin_foto, r)
-return callback()
-})
+      //      io.writeJson(config.datafil.nin_foto, r)
+      return callback()
+    })
     .error(error => {
       log.e(error)
       return callback()
     })
     .log(console.log)
     .debug(log.d)
-    //.debug(console.log)
+  //.debug(console.log)
 }
 
 function hentfotolinker(nin_liste) {
   const keys = Object.keys(nin_liste)
   for (let i = 0; i < keys.length; i++) {
     const key = keys[i]
-    if(key.indexOf(config.prefix.natursystem)===0)
-    {
+    if (key.indexOf(config.prefix.natursystem) === 0) {
       let done = false
-     hentfotolink(nin_liste[key], ()=> {
-       done = true
-     })
-     deasync.loopWhile(function(){return !done;});
-     io.writeJson(config.datafil.nin_foto, r)
+      hentfotolink(nin_liste[key], () => {
+        done = true
+      })
+      deasync.loopWhile(function() {
+        return !done
+      })
+      io.writeJson(config.datafil.nin_foto, r)
     }
   }
   log.v('Lagrer')

@@ -2,7 +2,7 @@ const io = require('./lib/io')
 const log = require('./lib/log')
 const config = require('./config')
 const { kodkode, splittKode, lookup } = require('./lib/koder')
-const { artskode } = require('./lib/koder')
+const koder = require('./lib/koder')
 
 let diagArt = io.readJson(config.datakilde.nin_diagnostisk_art)
 let arter = io.readJson(config.datafil.taxon_50).data
@@ -10,25 +10,31 @@ let nin_liste = io.readJson(config.datafil.nin_liste).data
 
 let r = {}
 
-function linkOne(kodeFra, kodeTil, funksjon, tag) {
+function linkOne(nodeFra, nodeTil, funksjon, tag) {
   const variabel = funksjon
     .replace(tag, '')
     .replace('[', '')
     .replace(']', '')
 
+  const kodeFra = nodeFra.kode
+  const kodeTil = nodeTil.kode
   if (!r[kodeFra]) r[kodeFra] = { relasjon: {} }
   const relasjon = r[kodeFra].relasjon
   if (!relasjon[tag]) relasjon[tag] = {}
-  relasjon[tag][kodeTil] = { variabel: variabel }
+  relasjon[tag][kodeTil] = {
+    kode: kodeTil,
+    tittel: nodeTil.tittel,
+    variabel: variabel
+  }
 }
 
-function linkBoth(kode1, kode2, funksjon, tag) {
+function linkBoth(node1, node2, funksjon, tag) {
   if (!tag) return
   if (!funksjon) return
-  tag = tag.trim()
+  tag = tag.trim().replace(' ', '_')
   funksjon = funksjon.trim()
-  linkOne(kode1, kode2, funksjon, tag)
-  linkOne(kode2, kode1, funksjon, tag)
+  linkOne(node1, node2, funksjon, tag)
+  linkOne(node2, node1, funksjon, tag)
 }
 
 let ukjenteKoder = {}
@@ -41,16 +47,18 @@ diagArt.forEach(art => {
       ? ukjenteKoder[na_kode] + 1
       : 1
   else {
-    const idkode = artskode(art.scientificNameID, art.Scientificname)
-    console.log(idkode)
+    const idkode = koder.artskode(art.scientificNameID, art.Scientificname)
     if (arter[idkode]) {
-      const tx_kode = arter[idkode].se
+      //      const tx_kode = arter[idkode].se
+      const na = nin_liste[na_kode]
+      tx = arter[idkode]
+      if (tx.se) tx = arter[tx.se]
       let e = {}
-      linkBoth(na_kode, tx_kode, art['Funksjon1'], art['tags1'])
-      linkBoth(na_kode, tx_kode, art['Funksjon2'], art['tags2'])
-      linkBoth(na_kode, tx_kode, art['Funksjon3'], art['tags3'])
-      linkBoth(na_kode, tx_kode, art['Funksjon 4'], art['tags4'])
-    } else log.w('Fant ikke ' + idkode)
+      linkBoth(na, tx, art['Funksjon1'], art['tags1'])
+      linkBoth(na, tx, art['Funksjon2'], art['tags2'])
+      linkBoth(na, tx, art['Funksjon3'], art['tags3'])
+      linkBoth(na, tx, art['Funksjon 4'], art['tags4'])
+    } else log.w('Fant ikke art ' + idkode)
   }
 })
 
