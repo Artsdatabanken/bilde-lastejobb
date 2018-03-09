@@ -4,18 +4,21 @@ const { splittKode } = require('./lib/koder')
 
 let r = {}
 
-function nyKode(db, forelder, kode, tittel) {
+function nyKode(db, forelder, kode, tittel, tittelLa, url) {
   const node = {
     kode: kode,
-    foreldre: forelder ? [forelder] : [],
+    foreldre: forelder !== null ? [forelder] : [],
     tittel: { nb: tittel }
   }
+  if (tittelLa) node.tittel.la = tittelLa
+  if (url) node.url = url
   r[kode] = node
 }
 
 const rot = config.rotkode
-nyKode(r, null, '', 'Katalog')
-nyKode(r, rot, 'AR', 'Art')
+nyKode(r, null, rot, 'Katalog')
+nyKode(r, rot, 'AR', 'Art', 'Biota', 'Biota')
+nyKode(r, rot, 'NA', 'Natursystem')
 nyKode(r, rot, 'MI', 'Miljø')
 nyKode(r, rot, 'BS', 'Beskrivelse')
 nyKode(r, rot, 'AO', 'Fylke & kommune')

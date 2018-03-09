@@ -6,8 +6,9 @@ r = {}
 
 function flett(jsonPath) {
   var data = io.readJson(jsonPath).data
-  for (let key of Object.keys(data))
+  for (let key of Object.keys(data)) {
     r[key] = Object.assign({}, r[key], data[key])
+  }
 }
 
 function flettHvisEksisterer(jsonPath) {
@@ -80,4 +81,5 @@ Object.keys(r).forEach(key => {
 })
 
 console.log(JSON.stringify(r['NA_M11'].definisjonsgrunnlag))
+console.log(JSON.stringify(r['sqrt(42)']))
 io.writeJson(config.datafil.flettet, r)

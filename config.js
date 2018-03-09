@@ -1,6 +1,5 @@
 const config = {
-  rotkode: 'sqrt(42)',
-  rotkey: '',
+  rotkode: '~',
   datakilde: {
     nin_koder: 'http://webtjenester.artsdatabanken.no/NiN/v2b/koder/alleKoder',
     nin_variasjon:

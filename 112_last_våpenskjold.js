@@ -1,14 +1,13 @@
-const io = require('./lib/io')
 const config = require('./config')
+const io = require('./lib/io')
 
 const meta = io.readJson(config.datafil.våpenskjold_meta).data
 
 async function lastEn(kode) {
   const node = meta[kode]
-  const json = await io.getBinaryFromCache(
-    node.url,
-    config.imagePath.source + '/' + kode + '.' + node.filtype
-  )
+  const targetFile = config.imagePath.source + '/' + kode + '.' + node.filtype
+  if (io.fileExists(targetFile)) return
+  const json = await io.getBinaryFromCache(node.url, targetFile)
 }
 
 async function lastVåpen() {

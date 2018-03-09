@@ -24,13 +24,16 @@ taxons.forEach(c => {
 })
 
 function artFullSti(c) {
-  return config.prefix.taxon + artFullStiSub(c)
+  const sub = artFullStiSub(c)
+  if (sub) return 'Biota' + '/' + artFullStiSub(c)
+  return 'Biota'
 }
+
 function artFullStiSub(c) {
   if (!c.ParentTaxonId) return c.ScientificName
   return (
     artFullStiSub(taxon2Data[c.ParentTaxonId]) +
-    '_' +
+    '/' +
     medGyldigeTegn(c.ScientificName)
   )
 }
@@ -56,35 +59,33 @@ function alleForeldre(c) {
 
 let koder = {}
 taxons.forEach(c => {
-  const sti = artFullSti(c)
-  const kortkode = artskode(c.ScientificNameId, c.ScientificName)
-  const sciIdKode = config.prefix.taxon + c.ScientificNameId
+  const kode = artskode(c.ScientificNameId, c.ScientificName)
   const e = {
-    kode: kortkode,
-    tittel: {}
+    kode: kode,
+    tittel: { la: c.ScientificName },
+    navnSciId: c.ScientificNameId,
+    taxonId: c.TaxonId,
+    taxonIdParent: c.ParentTaxonId,
+    relasjon: [],
+    foreldre: [forelder(c)],
+    infoUrl: 'https://artsdatabanken.no/Taxon/x/' + c.ScientificNameId
   }
 
-  if (c.PopularName) e.tittel.nb = capitalizeFirstLetter(c.PopularName)
-  e.tittel.la = c.ScientificName
-  e.navnSciId = c.ScientificNameId
-  e.taxonId = c.TaxonId
-  e.taxonIdParent = c.ParentTaxonId
-  e.relasjon = []
-  e.foreldre = [forelder(c)]
-  //  e.foreldre = alleForeldre(c)
-  // e.foreldreAlias = [taxonId2Kode[c.ParentTaxonId]]
-  e.infoUrl = 'https://artsdatabanken.no/Taxon/x/' + c.ScientificNameId
+  if (c.PopularName) {
+    e.tittel.nb = capitalizeFirstLetter(c.PopularName)
+  }
   if (c.NatureAreaTypeCodes)
-    e.relasjon.push(...c.NatureAreaTypeCodes.map(kode => config.prefix.natursystem + kode))
+    e.relasjon.push(
+      ...c.NatureAreaTypeCodes.map(kode => config.prefix.natursystem + kode)
+    )
   if (c.BlacklistCategory)
     e.relasjon.push(config.prefix.fremmedArt + c.BlacklistCategory)
   if (c.RedlistCategories)
-    e.relasjon.push(...c.RedlistCategories.map(kode => config.prefix.truet + kode))
-  if (kortkode === 'AR_Animalia') console.log(kortkode, e)
-  if (sciIdKode === 'AR_Animalia') console.log(kortkode, e)
-  koder[sti] = e
-  if (sti !== kortkode) koder[kortkode] = { se: sti }
-  koder[sciIdKode] = { se: sti }
+    e.relasjon.push(
+      ...c.RedlistCategories.map(kode => config.prefix.truet + kode)
+    )
+  e.url = artFullSti(c)
+  koder[kode] = e
 })
 
 const output = koder
