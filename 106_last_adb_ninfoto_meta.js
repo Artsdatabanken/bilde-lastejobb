@@ -8,7 +8,7 @@ log.logLevel = 5
 var osmosis = require('osmosis')
 const fs = require('fs')
 
-let nin_liste = io.readJson(config.datafil.nin_liste).data
+let nin_liste = io.readJson(config.datafil.nin_liste)
 let r = {}
 
 function hentfotolink(item, callback) {
@@ -50,6 +50,14 @@ function hentfotolink(item, callback) {
   //.debug(console.log)
 }
 
+function addCustom(r) {
+  r['LA'] = { foto: 'https://www.artsdatabanken.no/Media/F1168' }
+  r['NA'] = { foto: 'https://www.artsdatabanken.no/Media/F1395' }
+  r['LD'] = { foto: 'https://www.artsdatabanken.no/Media/F1182' }
+  r['LI'] = { foto: 'https://www.artsdatabanken.no/Media/F1307' }
+  r[config.rotkode] = { foto: 'https://www.artsdatabanken.no/Media/F21489' }
+}
+
 function hentfotolinker(nin_liste) {
   const keys = Object.keys(nin_liste)
   for (let i = 0; i < keys.length; i++) {
@@ -62,6 +70,7 @@ function hentfotolinker(nin_liste) {
       deasync.loopWhile(function() {
         return !done
       })
+      addCustom(r)
       io.writeJson(config.datafil.nin_foto, r)
     }
   }
@@ -70,6 +79,4 @@ function hentfotolinker(nin_liste) {
   log.v('Ferdig.')
 }
 
-hentfotolinker(nin_liste).then(() => {
-  log.w('OK')
-})
+hentfotolinker(nin_liste)

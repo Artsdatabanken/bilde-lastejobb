@@ -4,21 +4,17 @@ const log = require('./lib/log')
 const path = require('path')
 const { spawnSync } = require('child_process')
 
-function convertSync(kildesti, målsti, format, maxWidth, maxHeight = '') {
-  log.v(
-    'converting',
-    kildesti,
-    ' to ',
-    maxWidth,
-    'x',
-    maxHeight,
-    ' in ',
-    format
-  )
-  const max = Math.min(maxWidth, maxHeight)
+function convertSync(kildesti, målsti, format, width, height = '') {
+  log.v('converting', kildesti, ' to ', width, 'x', height, ' in ', format)
+  const max = Math.min(width, height)
   const args = [
     '-resize',
-    maxWidth + 'x' + maxHeight,
+    width + 'x' + height + '^',
+    '-gravity',
+    'center',
+    '+repage',
+    '-crop',
+    width + 'x' + height + '+0+0',
     '-background',
     'transparent',
     '-format',
@@ -32,6 +28,8 @@ function convertSync(kildesti, målsti, format, maxWidth, maxHeight = '') {
     målsti,
     kildesti
   ]
+  //  console.log(args.join(' '))
+  //  throw new Error()
   const r = spawnSync('mogrify', args)
   log.d(r.output.toString())
   if (r.status > 0) throw new Error(r.stderr.toString())
@@ -53,11 +51,13 @@ function konverterAlle(kildesti, målsti, maxWidth, maxHeight) {
 konverterAlle(
   config.imagePath.source,
   config.imagePath.processed + '/kode',
-  408
+  408,
+  297
 )
-konverterAlle(
-  config.imagePath.source,
-  config.imagePath.processed + '/kode',
-  40,
-  40
-)
+if (false)
+  konverterAlle(
+    config.imagePath.source,
+    config.imagePath.processed + '/kode',
+    40,
+    40
+  )

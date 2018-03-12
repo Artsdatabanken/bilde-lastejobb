@@ -5,14 +5,14 @@ const config = require('./config')
 r = {}
 
 function flett(jsonPath) {
-  var data = io.readJson(jsonPath).data
+  var data = io.readJson(jsonPath)
   for (let key of Object.keys(data)) {
     r[key] = Object.assign({}, r[key], data[key])
   }
 }
 
 function flettHvisEksisterer(jsonPath) {
-  var data = io.readJson(jsonPath).data
+  var data = io.readJson(jsonPath)
   for (let key of Object.keys(data)) {
     if (r[key]) Object.assign(r[key], data[key])
   }
@@ -27,7 +27,7 @@ function settHvisEksisterer(kilde, mål, nøkkel) {
 
 skipped = []
 function flettCustom(jsonPath) {
-  var data = io.readJson(jsonPath).data
+  var data = io.readJson(jsonPath)
   Object.keys(data).forEach(key => {
     const src = data[key]
     const dst = r[key]
@@ -52,7 +52,7 @@ function flettCustom(jsonPath) {
 flett(config.datafil.fylke_61)
 flett(config.datafil.kommune_60)
 flett(config.datafil.nin_diagnostisk_art)
-flett(config.datafil.nin_grunntyper)
+//flett(config.datafil.nin_grunntyper)
 flett(config.datafil.nin_hovedtyper)
 flett(config.datafil.nin_liste)
 flett(config.datafil.nin_variasjon_importert)
@@ -80,6 +80,4 @@ Object.keys(r).forEach(key => {
   }
 })
 
-console.log(JSON.stringify(r['NA_M11'].definisjonsgrunnlag))
-console.log(JSON.stringify(r['sqrt(42)']))
 io.writeJson(config.datafil.flettet, r)

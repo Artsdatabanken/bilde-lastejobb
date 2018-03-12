@@ -4,8 +4,8 @@ const config = require('./config')
 const log = require('./lib/log')
 
 log.logLevel = 5
-const kommuner = io.readJson(config.datafil.kommune_60).data
-const fylker = io.readJson(config.datafil.fylke_61).data
+const kommuner = io.readJson(config.datafil.kommune_60)
+const fylker = io.readJson(config.datafil.fylke_61)
 const områder = Object.assign({}, kommuner, fylker)
 //const områder = Object.assign({}, fylker)
 
@@ -72,6 +72,6 @@ async function lastVåpen() {
   return r
 }
 
-let r = {}
-lastEn(r, 'AO_07-29').then(() => console.log(r))
-//lastVåpen().then(r => io.writeJson(config.datafil.våpenskjold_meta, r))
+//let r = {}
+//lastEn(r, 'AO_07-29').then(() => console.log(r))
+lastVåpen().then(r => io.writeJson(config.datafil.våpenskjold_meta, r))

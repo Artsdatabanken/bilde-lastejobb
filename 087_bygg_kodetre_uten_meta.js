@@ -1,7 +1,7 @@
 const io = require('./lib/io')
 const config = require('./config')
 
-var data = io.readJson(config.datafil.flettet).data
+var data = io.readJson(config.datafil.flettet)
 
 function settInn(kode, forelder, tittel) {
   r.push({ kode: kode, forelder: forelder, tittel: tittel })

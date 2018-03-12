@@ -2,7 +2,7 @@ const io = require('./lib/io')
 const config = require('./config')
 
 const dummySuperRoot = '##'
-var data = io.readJson(config.datafil.flettet).data
+var data = io.readJson(config.datafil.flettet)
 let r = []
 
 Object.keys(data).forEach(forelder => {

@@ -1,7 +1,7 @@
 const config = require('./config')
 const io = require('./lib/io')
 
-const meta = io.readJson(config.datafil.våpenskjold_meta).data
+const meta = io.readJson(config.datafil.våpenskjold_meta)
 
 async function lastEn(kode) {
   const node = meta[kode]

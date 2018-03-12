@@ -3,7 +3,7 @@ const config = require('./config')
 const { erKartleggingsnivå } = require('./lib/koder')
 const { hovedtype } = require('./lib/koder')
 
-let grunntyper = io.readJson(config.datafil.nin_grunntyper).data
+let grunntyper = io.readJson(config.datafil.nin_grunntyper)
 let foreldre = {}
 
 function harSammeGrunntyper(ckode, ekode) {

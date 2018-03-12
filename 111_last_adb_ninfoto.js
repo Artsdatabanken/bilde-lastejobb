@@ -2,13 +2,16 @@ const io = require('./lib/io')
 const config = require('./config')
 const log = require('./lib/log')
 
-const fotos = io.readJson(config.datafil.nin_foto).data
+const fotos = io.readJson(config.datafil.nin_foto)
 
 async function download(kode) {
   const url = fotos[kode].foto
   console.log(kode, url)
   const targetFile = config.imagePath.source + '/' + kode + '.jpg'
-  if (!io.fileExists(targetFile)) await io.getBinaryFromCache(url, targetFile)
+  if (!io.fileExists(targetFile)) {
+    log.v('not in cache', targetFile)
+    await io.getBinaryFromCache(url, targetFile)
+  }
 }
 
 async function downThemAll() {

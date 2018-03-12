@@ -4,12 +4,11 @@ const config = require('./config')
 const log = require('./lib/log')
 
 const record = io.readCsv(config.datakilde.taxon_adb_photos)
-const taxons = io.readJson(config.datafil.taxon_50).data
+const taxons = io.readJson(config.datafil.taxon_50)
 const sciNameId2Name = {}
 Object.keys(taxons).forEach(key => {
   let t = taxons[key]
-  if (!t.se)
-  sciNameId2Name[t.navnSciId] = t.tittel.la
+  if (!t.se) sciNameId2Name[t.navnSciId] = t.tittel.la
 })
 
 async function downloadFile(url, targetFile) {
@@ -28,13 +27,12 @@ async function download(x) {
     const url = `https://www.artsdatabanken.no/Media/F${mediaId}`
     const targetFile = config.imagePath.source + '/' + kode + fileExtension
     //    const fn = config.imagePath + '' + kode + fileExtension
-    if(!io.fileExists(targetFile))
-    await downloadFile(url, targetFile)
-    /*    console.log(
-        `curl https://www.artsdatabanken.no/Media/F${mediaId} -o ${oldTag}${fileExtension}`
-        //    `convert -resize x408 ../raw/${tag}.jpg ${tag}.jpg`
-        //`convert -resize x40 ../raw/${tag}.jpg ${tag}.png`
-      )*/
+    if (!io.fileExists(targetFile)) {
+      log.v('Cache miss', targetFile)
+      await downloadFile(url, targetFile)
+    } else {
+      log.v('Cache hit', targetFile)
+    }
   }
 }
 

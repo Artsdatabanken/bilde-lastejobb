@@ -5,8 +5,8 @@ const { kodkode, splittKode, lookup } = require('./lib/koder')
 const koder = require('./lib/koder')
 
 let diagArt = io.readJson(config.datakilde.nin_diagnostisk_art)
-let arter = io.readJson(config.datafil.taxon_50).data
-let nin_liste = io.readJson(config.datafil.nin_liste).data
+let arter = io.readJson(config.datafil.taxon_50)
+let nin_liste = io.readJson(config.datafil.nin_liste)
 
 let r = {}
 

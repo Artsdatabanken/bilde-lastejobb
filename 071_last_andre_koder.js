@@ -16,7 +16,7 @@ function nyKode(db, forelder, kode, tittel, tittelLa, url) {
 }
 
 const rot = config.rotkode
-nyKode(r, null, rot, 'Katalog')
+nyKode(r, null, rot, 'Økologisk grunnkart')
 nyKode(r, rot, 'AR', 'Art', 'Biota', 'Biota')
 nyKode(r, rot, 'NA', 'Natursystem')
 nyKode(r, rot, 'MI', 'Miljø')

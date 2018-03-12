@@ -3,7 +3,7 @@ const log = require('./lib/log')
 const config = require('./config')
 const koder = require('./lib/koder')
 
-var data = io.readJson(config.datafil.flettet).data
+var data = io.readJson(config.datafil.flettet)
 
 function settPrimærUrler() {
   Object.keys(data).forEach(kode => {
@@ -49,7 +49,7 @@ function tittel(node) {
 
 function hentKey(key) {
   let node = data[key]
-  if (node.se) return node.se
+  //  if (node.se) return node.se
   return key
 }
 
@@ -58,7 +58,7 @@ function nøstOppForfedre(forelderkey) {
   while (forelderkey) {
     forelderkey = hentKey(forelderkey)
     let forelder = data[forelderkey]
-    r.push({ [forelderkey]: { kode: forelder.kode, tittel: forelder.tittel } })
+    r.push({ kode: forelder.kode, tittel: forelder.tittel, url: forelder.url })
     forelderkey = c2p[forelderkey][0]
   }
   return r
@@ -93,12 +93,7 @@ function byggTreFra(tre, key) {
         tittel: cnode.tittel,
         relasjoner: cnode.relasjoner
       }
-      //      settInn(tre, cnode)
-      //        const subUrl = fjernPrefiks(cnode.url, rot.url)
-      //       node[subUrl] = byggTreFra(ckey)
-      //        node[fjernPrefiks(ckode, rot.kode)] = byggTreFra(ckey)
       const child = byggTreFra(tre, ckey)
-      //settInn(tre, child)
     })
   }
   node['@'].barn = barn
@@ -110,52 +105,43 @@ function byggTreFra(tre, key) {
 }
 
 function settInn(tre, targetNode, kode, node) {
-  if (targetNode.url.length === 0) {
-    if (kode === 'NA') console.log('NONONO')
+  const url = targetNode.url.toLowerCase()
+  if (url.length === 0) {
     Object.keys(targetNode).forEach(key => {
-      if (key === 'NA') console.log('NONONO')
       tre[key] = Object.assign({}, tre[key], targetNode[key])
     })
     return
   }
-  const segments = targetNode.url.split('/')
+  const segments = url.split('/')
 
   for (let i = 0; i < segments.length - 1; i++) {
-    if (kode === 'NA') console.log('NONONO')
     const subKey = segments[i]
     if (!tre[subKey]) tre[subKey] = {}
     tre = tre[subKey]
   }
 
   const leafKey = segments[segments.length - 1]
-  if (kode === 'NA') {
-    console.log('leafkey', leafKey)
-    console.log('tre', JSON.stringify(Object.keys(tre)))
-    console.log('node', JSON.stringify(Object.keys(node)))
-  }
-  //  if (tre[leafKey]) log.w('Duplicate key ' + leafKey)
-
   tre[leafKey] = Object.assign({}, tre[leafKey], targetNode)
 }
 
 function injectAlias(from, targetNode, tre) {
+  if (targetNode.url.toLowerCase() === from.join('/').toLowerCase()) return
+  if (from[0].toLowerCase() === 'mi_ka') console.log(from)
   for (let i = 0; i < from.length - 1; i++) {
-    const subKey = from[i]
+    const subKey = from[i].toLowerCase()
     if (!tre[subKey]) tre[subKey] = {}
     tre = tre[subKey]
-    if ('$#[]/.'.indexOf(subKey) >= 0) throw new Error(JSON.stringify(from))
     if (!subKey) throw new Error(JSON.stringify(from))
   }
-  const leafKey = from[from.length - 1]
-  if ('$#[]/.'.indexOf(leafKey) >= 0) throw new Error(JSON.stringify(from))
+  const leafKey = from[from.length - 1].toLowerCase()
   if (!leafKey) throw new Error(JSON.stringify(from))
   if (!tre[leafKey]) tre[leafKey] = {}
   const leafNode = tre[leafKey]
-  if (!leafNode.se) leafNode.se = {}
-  if (targetNode.kode && '$#[]/.'.indexOf(targetNode.kode) >= 0)
-    throw new Error(JSON.stringify(from))
+  if (!leafNode['@']) leafNode['@'] = {}
+  const me = leafNode['@']
+  if (!me.se) me.se = {}
   if (!targetNode.kode) throw new Error(JSON.stringify(from))
-  leafNode.se[targetNode.kode] = {
+  me.se[targetNode.kode] = {
     tittel: targetNode.tittel,
     url: targetNode.url
   }
@@ -164,26 +150,25 @@ function injectAlias(from, targetNode, tre) {
 function injectKodeAliases(tre) {
   Object.keys(data).forEach(kode => {
     const node = data[kode]
-    const kodePath = koder.splittKode(kode)
-    if (node.url !== kodePath.join('/')) {
-      injectAlias(kodePath, node, tre)
-    }
+    const kodePath = koder.splittKode(kode.toLowerCase())
+    injectAlias(kodePath, node, tre) // mi/ka
+    injectAlias([kode], node, tre) // mi_ka
+    if (kode.toLowerCase() === 'mi_ka') console.log(kode, tre['mi_ka'])
   })
 }
 
 let acc = {}
 function injectNamedAlias(tre, node, tittel) {
   if (!tittel) return
-  const kodePath = koder.medGyldigeTegn(tittel) //.split('_')
+  const kodePath = koder.medGyldigeTegn(tittel.toLowerCase())
   kodePath.split('').forEach(c => {
     if (!acc[c]) acc[c] = 1
     else acc[c] = acc[c] + 1
   })
   if (kodePath.length === 0) throw new Error(tittel)
-  if (node.url !== kodePath) {
-    injectAlias([kodePath], node, tre)
-  }
+  injectAlias([kodePath], node, tre)
 }
+
 function injectNamedAliases(tre) {
   Object.keys(data).forEach(kode => {
     const node = data[kode]
@@ -221,6 +206,8 @@ injectNamedAliases(tre)
 //console.log(r['NA']['T']['1'])
 //console.log(r['@'])
 //console.log(r.AR['@'])
+console.log(tre['mi_ka'])
+tre = { katalog: tre }
 io.writeJson(config.datafil.metabase, tre)
 //console.log(data['AR']['Animalia']['Chordata']['Tunicata'])
 //console.log(Object.keys(data['AR']))

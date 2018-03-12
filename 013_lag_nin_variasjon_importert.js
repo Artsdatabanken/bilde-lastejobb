@@ -3,7 +3,7 @@ const config = require('./config')
 const { erKartleggingsnivå } = require('./lib/koder')
 const { capitalizeTittel } = require('./lib/koder')
 
-let koder = io.readJson(config.datafil.nin_variasjon).data
+let koder = io.readJson(config.datafil.nin_variasjon)
 
 function kodefix(kode) {
   if (!kode) return kode

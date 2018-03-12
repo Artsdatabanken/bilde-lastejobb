@@ -2,9 +2,9 @@ const io = require('./lib/io')
 const log = require('./lib/log')
 const config = require('./config')
 
-let koder = io.readJson(config.datafil.nin_koder_importert).data
-let variasjon = io.readJson(config.datafil.nin_variasjon_importert).data
-let overrides = io.readJson(config.datafil.nin_hierarki_overrides).data
+let koder = io.readJson(config.datafil.nin_koder_importert)
+let variasjon = io.readJson(config.datafil.nin_variasjon_importert)
+let overrides = io.readJson(config.datafil.nin_hierarki_overrides)
 
 const alle = Object.assign({}, koder, variasjon)
 let noder = {}
@@ -30,6 +30,7 @@ for (let kode of Object.keys(alle)) {
 
   if (overrides[kode]) node.foreldre = overrides[kode]
   noder[kode] = node
+  console.log(node)
   for (let forelder of node.foreldre) {
     if (!p2c[forelder]) p2c[forelder] = []
     p2c[forelder].push(node)
