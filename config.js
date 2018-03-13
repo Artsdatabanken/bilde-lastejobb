@@ -37,7 +37,9 @@ const config = {
   },
   imagePath: {
     source: '../image/source',
-    processed: '../image/processed'
+    processed: '../image/processed',
+    custom_avatar: '../input/avatar',
+    custom_omslag: '../input/omslag'
   },
   prefix: {
     natursystem: 'NA_',

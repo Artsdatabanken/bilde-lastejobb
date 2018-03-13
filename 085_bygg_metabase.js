@@ -71,11 +71,29 @@ function fjernPrefiks(kode, rotkode) {
   return kode
 }
 
+let tempCounter = 0
+let tempColors = [
+  '#d53e4f',
+  '#f46d43',
+  '#fdae61',
+  '#fee08b',
+  '#e6f598',
+  '#abdda4',
+  '#66c2a5',
+  '#3288bd'
+]
+
+function tilfeldigFarge() {
+  const i = tempCounter++ % tempColors.length
+  return tempColors[i]
+}
+
 function byggTreFra(tre, key) {
   log.d('bygger', key)
   let rot = data[key]
   if (!rot) throw new Error('Finner ikke ' + key)
   rot.kode = key
+  rot.farge = tilfeldigFarge()
   if (!rot.foreldre) console.log('noparent', key)
   rot.overordnet =
     rot.foreldre && rot.foreldre.length > 0
@@ -91,6 +109,7 @@ function byggTreFra(tre, key) {
         url: cnode.url,
         kode: ckode,
         tittel: cnode.tittel,
+        farge: tilfeldigFarge(),
         relasjoner: cnode.relasjoner
       }
       const child = byggTreFra(tre, ckey)
