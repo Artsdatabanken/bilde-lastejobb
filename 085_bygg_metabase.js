@@ -2,6 +2,7 @@ const io = require('./lib/io')
 const log = require('./lib/log')
 const config = require('./config')
 const koder = require('./lib/koder')
+const tinyColor = require('tinycolor2')
 
 var data = io.readJson(config.datafil.flettet)
 
@@ -88,6 +89,14 @@ function tilfeldigFarge() {
   return tempColors[i]
 }
 
+function tilordneFarger(barn, rotFarge) {
+  let farge = new tinyColor(rotFarge)
+  Object.keys(barn).forEach(b => {
+    farge = farge.spin(15)
+    barn[b].farge = farge.toHexString()
+  })
+}
+
 function byggTreFra(tre, key) {
   log.d('bygger', key)
   let rot = data[key]
@@ -109,12 +118,12 @@ function byggTreFra(tre, key) {
         url: cnode.url,
         kode: ckode,
         tittel: cnode.tittel,
-        farge: tilfeldigFarge(),
         relasjoner: cnode.relasjoner
       }
       const child = byggTreFra(tre, ckey)
     })
   }
+  tilordneFarger(barn, rot.farge)
   node['@'].barn = barn
   delete node['@'].foreldre
   settInn(tre, node, key, rot)

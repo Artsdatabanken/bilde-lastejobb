@@ -20,10 +20,9 @@ Object.keys(data).forEach(key => {
       console.error(node)
       throw new Error()
     }
-    const tittel = node.tittel ? node.tittel.nb || node.tittel.la : '?'
-    if (kode === config.rotkode) settInn(kode, null, tittel)
+    if (kode === config.rotkode) settInn(kode, null, node.tittel)
     if (foreldre.length > 0) {
-      foreldre.forEach(forelder => settInn(kode, forelder, tittel))
+      foreldre.forEach(forelder => settInn(kode, forelder, node.tittel))
     }
   }
 })
@@ -44,4 +43,4 @@ console.log(data['NA_T44'])
 console.log(finn('NA_T44'))
 console.log(finn('BS_1'))
 
-io.writeJson(config.datafil.kodetre, r)
+io.writeJson(config.datafil.kodetre, { data: r })
