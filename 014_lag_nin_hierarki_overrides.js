@@ -24,9 +24,7 @@ function link(ckode) {
 
   if (ekoder.length === 0) {
     ekoder = [hovedtype(ckode)]
-    console.log('xx', ckode, ekoder)
   }
-  if (ckode === 'NA_T44') console.log('==========e', ckode, ekoder)
   foreldre[ckode] = ekoder
 }
 
@@ -35,7 +33,6 @@ for (let ckode of Object.keys(grunntyper)) {
     link(ckode)
     for (let grunntype of grunntyper[ckode]) {
       if (hovedtype(grunntype) !== grunntype) {
-        console.log(grunntype, ckode)
         foreldre[grunntype] = [ckode]
       }
     }

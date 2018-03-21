@@ -51,6 +51,7 @@ function flettCustom(jsonPath) {
 
 flett(config.datafil.fylke_61)
 flett(config.datafil.kommune_60)
+flett(config.datafil.organisasjon)
 flett(config.datafil.nin_diagnostisk_art)
 //flett(config.datafil.nin_grunntyper)
 flett(config.datafil.nin_hovedtyper)
@@ -58,6 +59,8 @@ flett(config.datafil.nin_liste)
 flett(config.datafil.nin_variasjon_importert)
 flett(config.datafil.taxon_50)
 flett(config.datafil.andre_koder)
+flett(config.datafil.nin_prosedyrekategori)
+flett(config.datafil.nin_definisjonsgrunnlag)
 flettHvisEksisterer(config.datafil.bbox_30)
 flettCustom(config.datafil.metagammel)
 
@@ -66,6 +69,7 @@ for (let key of Object.keys(r)) {
   if (!node.se) {
     if (!r[key].tittel) log.w('Mangler tittel: ', key)
     if (!r[key].kode) log.w('Mangler kode: ', key)
+    if (key.indexOf('OR') === 0) log.i(r[key])
   }
 }
 

@@ -6,11 +6,11 @@ const tinyColor = require('tinycolor2')
 
 var data = io.readJson(config.datafil.flettet)
 
-function settPrimærUrler() {
+function settPrimærSti() {
   Object.keys(data).forEach(kode => {
     const node = data[kode]
-    if (!node.url) {
-      node.url = koder.splittKode(kode).join('/')
+    if (!node.sti) {
+      node.sti = koder.splittKode(kode).join('/')
     }
   })
 }
@@ -23,21 +23,30 @@ function mapForeldreTilBarn() {
     const node = data[kode]
     if (!c2p[kode]) c2p[kode] = []
     if (!node.foreldre) {
-      if (!node.se) console.warn('Mangler forelder: ', kode)
+      if (!node.se) {
+        log.w(node)
+        throw new Error('Mangler forelder: ', kode)
+      }
     } else {
-      //      let foreldre = Object.assign([], node.foreldre, node.foreldreAlias)
       let foreldre = node.foreldre
       foreldre.forEach(forelderkode => {
-        const forelder = data[forelderkode]
         if (!p2c[forelderkode]) p2c[forelderkode] = []
         p2c[forelderkode].push(kode)
         if (!c2p[kode].includes(forelderkode)) c2p[kode].push(forelderkode)
       })
+      if (node.barn)
+        node.barn.forEach(barnkode => {
+          if (!p2c[kode]) p2c[kode] = []
+          if (!c2p[barnkode]) c2p[barnkode] = []
+          if (!c2p[barnkode].includes(kode)) c2p[barnkode].push(kode)
+          if (!p2c[kode].includes(barnkode)) c2p[kode].push(barnkode)
+          p2c[kode].push(barnkode)
+        })
     }
   })
 }
 
-settPrimærUrler()
+settPrimærSti()
 mapForeldreTilBarn()
 
 function tittel(node) {
@@ -59,7 +68,7 @@ function nøstOppForfedre(forelderkey) {
   while (forelderkey) {
     forelderkey = hentKey(forelderkey)
     let forelder = data[forelderkey]
-    r.push({ kode: forelder.kode, tittel: forelder.tittel, url: forelder.url })
+    r.push({ kode: forelder.kode, tittel: forelder.tittel, sti: forelder.sti })
     forelderkey = c2p[forelderkey][0]
   }
   return r
@@ -91,9 +100,11 @@ function tilfeldigFarge() {
 
 function tilordneFarger(barn, rotFarge) {
   let farge = new tinyColor(rotFarge)
-  Object.keys(barn).forEach(b => {
-    farge = farge.spin(15)
-    barn[b].farge = farge.toHexString()
+  Object.keys(barn).forEach(bkode => {
+    const minFarge = data[bkode].farge
+    if (!barn[bkode].farge) {
+      barn[bkode].farge = minFarge ? minFarge : farge.spin(15).toHexString()
+    }
   })
 }
 
@@ -102,20 +113,26 @@ function byggTreFra(tre, key) {
   let rot = data[key]
   if (!rot) throw new Error('Finner ikke ' + key)
   rot.kode = key
-  rot.farge = tilfeldigFarge()
-  if (!rot.foreldre) console.log('noparent', key)
-  rot.overordnet =
-    rot.foreldre && rot.foreldre.length > 0
-      ? nøstOppForfedre(rot.foreldre[0])
-      : ''
-  let node = { '@': rot, url: rot.url }
+  if (!rot.farge) rot.farge = tilfeldigFarge()
+  if (!rot.overordnet) {
+    if (!rot.foreldre) {
+      log.w(rot)
+      throw new Error('mangler forelder:', key)
+    }
+    rot.overordnet =
+      rot.foreldre && rot.foreldre.length > 0
+        ? nøstOppForfedre(rot.foreldre[0])
+        : ''
+    delete rot.foreldre
+  }
+  let node = { '@': rot, sti: rot.sti.toLowerCase() }
   let barn = {}
   if (p2c[key]) {
     p2c[key].forEach(ckey => {
       const cnode = data[ckey]
       const ckode = cnode.kode
       barn[ckey] = {
-        url: cnode.url,
+        sti: cnode.sti,
         kode: ckode,
         tittel: cnode.tittel,
         relasjoner: cnode.relasjoner
@@ -125,22 +142,27 @@ function byggTreFra(tre, key) {
   }
   tilordneFarger(barn, rot.farge)
   node['@'].barn = barn
-  delete node['@'].foreldre
   settInn(tre, node, key, rot)
-  if (key === 'NA') console.log(key)
-  if (key === 'NA') console.log(node)
   return node
 }
 
+function erLovligNøkkel(key) {
+  const invalid = '$#[]/.'.split('')
+  for (let c of invalid) if (key.indexOf(c) >= 0) return false
+  return true
+}
+
 function settInn(tre, targetNode, kode, node) {
-  const url = targetNode.url.toLowerCase()
-  if (url.length === 0) {
+  const sti = targetNode.sti.toLowerCase()
+  if (sti.length === 0) {
     Object.keys(targetNode).forEach(key => {
       tre[key] = Object.assign({}, tre[key], targetNode[key])
+      if (!erLovligNøkkel(key))
+        throw new Error('kode ' + kode + ' har ulovlig nøkkel ' + key)
     })
     return
   }
-  const segments = url.split('/')
+  const segments = sti.split('/')
 
   for (let i = 0; i < segments.length - 1; i++) {
     const subKey = segments[i]
@@ -153,7 +175,7 @@ function settInn(tre, targetNode, kode, node) {
 }
 
 function injectAlias(from, targetNode, tre) {
-  if (targetNode.url.toLowerCase() === from.join('/').toLowerCase()) return
+  if (targetNode.sti.toLowerCase() === from.join('/').toLowerCase()) return
   if (from[0].toLowerCase() === 'mi_ka') console.log(from)
   for (let i = 0; i < from.length - 1; i++) {
     const subKey = from[i].toLowerCase()
@@ -171,7 +193,7 @@ function injectAlias(from, targetNode, tre) {
   if (!targetNode.kode) throw new Error(JSON.stringify(from))
   me.se[targetNode.kode] = {
     tittel: targetNode.tittel,
-    url: targetNode.url
+    sti: targetNode.sti
   }
 }
 
@@ -205,15 +227,13 @@ function injectNamedAliases(tre) {
   })
 }
 
-const invalid = '$#[]/.'.split('')
 function validateKeys(tre, path) {
   if (tre instanceof Object && tre.constructor === Object)
     Object.keys(tre).forEach(key => {
-      const newPath = path + ' ' + key
+      const newPath = path + '.' + key
       if (!newPath) console.log('####', path)
-      invalid.forEach(c => {
-        if (key.indexOf(c) >= 0) console.log('==========', newPath)
-      })
+      if (!erLovligNøkkel(key)) log.e('invalid key:', newPath)
+      //        if (key.indexOf(c) >= 0) log.e(JSON.stringify(tre))
       if (!key) console.log('!!!!!!', path, Object.keys(tre))
       validateKeys(tre[key], newPath)
     })
@@ -234,11 +254,9 @@ injectNamedAliases(tre)
 //console.log(r['NA']['T']['1'])
 //console.log(r['@'])
 //console.log(r.AR['@'])
-console.log(tre['mi_ka'])
 tre = { katalog: tre }
 io.writeJson(config.datafil.metabase, tre)
 //console.log(data['AR']['Animalia']['Chordata']['Tunicata'])
 //console.log(Object.keys(data['AR']))
 
 validateKeys(tre, '')
-//console.log(acc)

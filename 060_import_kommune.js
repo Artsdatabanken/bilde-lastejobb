@@ -53,7 +53,7 @@ async function importKommuner() {
       r[kode] = {
         kode: kode,
         foreldre: [fylke],
-        tittel: { nb: parseSpråk(ci.name) }
+        tittel: { nb: parseSpråk(ci.name) },
       }
     }
   })

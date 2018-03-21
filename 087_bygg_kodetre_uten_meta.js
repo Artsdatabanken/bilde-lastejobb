@@ -39,8 +39,4 @@ function valider(kode) {
 
 valider('NA')
 
-console.log(data['NA_T44'])
-console.log(finn('NA_T44'))
-console.log(finn('BS_1'))
-
 io.writeJson(config.datafil.kodetre, { data: r })
