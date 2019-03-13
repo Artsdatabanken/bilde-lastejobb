@@ -7,17 +7,17 @@ let r = {}
 
 function dekod(kode, meta) {
   if (meta.navnSciId) return 'TX_' + meta.navnSciId.toString()
-  if (kode==='GEO_FY') return 'AO'
-    if (kode.startsWith('GEO_FY')) {
-      let fylke = kode.split('-')[1].padStart(2,'0')
-      return 'AO_'+fylke
+  if (kode === 'GEO_FY') return 'AO'
+  if (kode.startsWith('GEO_FY')) {
+    let fylke = kode.split('-')[1].padStart(2, '0')
+    return 'AO_' + fylke
   }
 
   if (kode.startsWith('GEO_KO')) {
     const code = parseInt(kode.substring(7, 11))
-    const fylke = Math.floor(code/100)
-    const kommune = (code%100).toString().padStart(2, '0')
-    const r = 'AO_'  + fylke.toString().padStart(2,'0') + '-' + kommune
+    const fylke = Math.floor(code / 100)
+    const kommune = (code % 100).toString().padStart(2, '0')
+    const r = 'AO_' + fylke.toString().padStart(2, '0') + '-' + kommune
     console.log(r)
     return r
   }
@@ -26,7 +26,7 @@ function dekod(kode, meta) {
   if (parts.length !== 2) return kode
   if (parts[0] === 'GEO_FY') return kode
   const sciId = parseInt(kode[1], 36)
-//  console.log(sciId)
+  //  console.log(sciId)
   return 'TX_' + sciId.toString()
 }
 
@@ -37,11 +37,20 @@ function flatut(pk, o) {
   delete meta.bbox
   delete meta.prefiks
   delete meta.taxonId
+  delete meta.navnSciId
+  delete meta.navnSci
+  delete meta.navn
+  delete meta.tittel
+  delete meta.undertittel
+  delete meta.kode
+  delete meta.bin
+  delete meta.relasjon
+  delete meta.filter
   if (meta) {
     const mk = meta.kode || ''
     const fpk = mk.length > pk.length ? mk : pk
-    meta.kode = dekod(fpk, meta)
-    r[meta.kode] = meta
+    const kode = dekod(fpk, meta)
+    r[kode] = meta
     Object.keys(o).forEach(kode => {
       if (kode !== '@') flatut(kode, o[kode])
     })

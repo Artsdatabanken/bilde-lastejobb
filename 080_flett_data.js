@@ -2,6 +2,8 @@ const io = require('./lib/io')
 const log = require('./lib/log')
 const config = require('./config')
 
+// TODO: Organisasjon forelder - default forelder = prefix
+// TODO: 50,55
 r = {}
 
 function flett(jsonPath) {
