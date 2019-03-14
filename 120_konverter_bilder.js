@@ -56,7 +56,7 @@ const cfg = config.imagePath;
 //konverterAlle("ut/", "ut2", 408, 297);
 //return;
 konverterAlle(cfg.source, cfg.processed + "/kode", 408, 297);
-return
+  return
 konverterAlle(cfg.source, cfg.processed + "/kode", 612, 446);
 konverterAlle(cfg.source, cfg.processed + "/kode", 816, 594);
 konverterAlle(cfg.source, cfg.processed + "/kode", 40, 40);

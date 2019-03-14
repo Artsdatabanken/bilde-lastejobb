@@ -9,6 +9,7 @@ var data = io.readJson(config.datakilde.metabase);
 const imagePath = config.imagePath.processed + "/kode/408";
 Object.keys(data).forEach(kode => {
   const fn = path.join(imagePath, kode + ".jpg");
+  if (kode.startsWith("LA")) debugger;
   const node = data[kode];
   if (fs.existsSync(fn))
     console.log(
