@@ -43,7 +43,7 @@ function konverterAlle(kildesti, målsti, maxWidth, maxHeight) {
   console.log("Found " + files.length + " files..");
   for (var kildefil of files) {
     const kildePath = path.parse(kildefil);
-    if (".png.svg.jpg".indexOf(kildePath.ext||'xxxx') < 0) continue;
+    if (".png.svg.jpg".indexOf(kildePath.ext || "xxxx") < 0) continue;
     const format = ".svg.png".indexOf(kildePath.ext) >= 0 ? "png" : "jpg";
     const målfil = `${målstiwidth}/${kildePath.name}.${format}`;
     if (io.fileExists(målfil)) log.v("skip", målfil);
@@ -56,7 +56,8 @@ const cfg = config.imagePath;
 //konverterAlle("ut/", "ut2", 408, 297);
 //return;
 konverterAlle(cfg.source, cfg.processed + "/kode", 408, 297);
-  return
+konverterAlle(cfg.source, cfg.processed + "/kode", 950, 300);
+return;
 konverterAlle(cfg.source, cfg.processed + "/kode", 612, 446);
 konverterAlle(cfg.source, cfg.processed + "/kode", 816, 594);
 konverterAlle(cfg.source, cfg.processed + "/kode", 40, 40);

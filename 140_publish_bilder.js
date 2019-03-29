@@ -6,13 +6,22 @@ const { spawnSync } = require("child_process");
 
 var data = io.readJson(config.datakilde.metabase);
 
-const imagePath = config.imagePath.processed + "/kode/408";
+const imagePath = config.imagePath.processed + "/kode/";
+const widths = [408, 950];
+
 Object.keys(data).forEach(kode => {
-  const fn = path.join(imagePath, kode + ".jpg");
   if (kode.startsWith("LA")) debugger;
   const node = data[kode];
-  if (fs.existsSync(fn))
-    console.log(
-      `scp "${fn}" "grunnkart@hydra:~/tilesdata/${node.url}/forside_408.jpg"`
-    );
+  widths.forEach(width => {
+    deploy("png", node, width);
+    deploy("jpg", node, width);
+  });
 });
+
+function deploy(ext, { kode, url }, width) {
+  const fn = path.join(imagePath + width, kode + "." + ext);
+  if (!fs.existsSync(fn)) return;
+  console.log(
+    `scp "${fn}" "grunnkart@hydra:~/tilesdata/${url}/forside_${width}.${ext}"`
+  );
+}
