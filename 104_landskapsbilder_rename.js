@@ -4,17 +4,32 @@ const io = require("./lib/io");
 const config = require("./config");
 const log = require("./lib/log");
 
-const sourcePath = "../image/la";
 const destPath = "../image/source/";
-const files = fs.readdirSync(sourcePath); //input/la/");
-files.forEach(fn => {
-  if (!fn.startsWith("LA_")) return;
-  const spar = fn.split("_");
-  const dest = path.join(
-    destPath,
-    "NN-LA-" + fn[3] + "-" + fn[4] + "-" + spar[2] + ".jpg"
-  );
-  if (fs.existsSync(dest)) debugger;
-  const src = path.join(sourcePath, fn);
-  fs.copyFileSync(src, dest);
-});
+
+//rename("../image/la/fradrupal");
+rename("../../bilder/landskap/landskapstype");
+rename("../../bilder/landskap/landskapsgradient");
+
+function rename(sourcePath) {
+  const files = fs.readdirSync(sourcePath); //input/la/");
+  files.forEach(fn => {
+    const ufn = fn.toUpperCase();
+    if (!ufn.startsWith("LA")) return;
+    const destFn = mapTilKode(ufn) + path.extname(ufn).toLowerCase();
+    const dest = path.join(destPath, destFn);
+    if (fs.existsSync(dest)) return;
+    debugger;
+    const src = path.join(sourcePath, fn);
+    fs.copyFileSync(src, dest);
+  });
+}
+
+function mapTilKode(fn) {
+  const ufn = fn.toUpperCase();
+  const spar = ufn.replace("_", "-").split("-");
+  if(fn.indexOf('REIDKF')>0)debugger
+  if (spar[1] === "KLG") return "NN-LA-KLG-" + spar[2];
+  let dfn = "NN-LA-TI-" + ufn[3] + "-" + ufn[4];
+  if (parseInt(spar[2]) > 0) dfn += "-" + spar[2];
+  return dfn;
+}
