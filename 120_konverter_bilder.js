@@ -7,11 +7,15 @@ const { spawnSync } = require("child_process");
 function convertSync(kildesti, målsti, format, width, height = "") {
   log.v("converting", kildesti, " to ", width, "x", height, " in ", format);
   const max = Math.min(width, height);
+  const erFylke = kildesti.indexOf("/AO") >= 0;
+  const erBanner = width > 1.5 * height;
   const args = [
     "-resize",
-    width + "x" + height + "^",
+    width + "x" + height + (erFylke ? "" : "^"),
     "-gravity",
-    "center",
+    erBanner ? "west" : "center",
+    erBanner ? "-extent" : "",
+    erBanner ? width + "x" + height : "",
     "+repage",
     "-crop",
     width + "x" + height + "+0+0",
@@ -28,8 +32,7 @@ function convertSync(kildesti, målsti, format, width, height = "") {
     målsti,
     kildesti
   ];
-  //  console.log(args.join(' '))
-  //  throw new Error()
+  console.log("mogrify " + args.join(" "));
   const r = spawnSync("mogrify", args);
   log.d(r.output.toString());
   if (r.status > 0) throw new Error(r.stderr.toString());
@@ -53,11 +56,9 @@ function konverterAlle(kildesti, målsti, maxWidth, maxHeight) {
 
 const cfg = config.imagePath;
 
-//konverterAlle("ut/", "ut2", 408, 297);
-//return;
-konverterAlle(cfg.source, cfg.processed + "/kode", 408, 297);
 konverterAlle(cfg.source, cfg.processed + "/kode", 950, 300);
 return;
+konverterAlle(cfg.source, cfg.processed + "/kode", 408, 297);
 konverterAlle(cfg.source, cfg.processed + "/kode", 612, 446);
 konverterAlle(cfg.source, cfg.processed + "/kode", 816, 594);
 konverterAlle(cfg.source, cfg.processed + "/kode", 40, 40);

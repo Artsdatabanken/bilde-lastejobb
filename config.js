@@ -10,7 +10,7 @@ const config = {
     bbox: "../input/bbox.json",
     taxons: "../input/taxons.json",
     taxon_adb_photos: "../input/scientificNameId-fileId.txt",
-    metabase: "../data/metabase.json"
+    metabase: "../data/metadata_med_undertyper.json"
   },
   datafil: {
     nin_koder: "../data/nin_koder.json",
