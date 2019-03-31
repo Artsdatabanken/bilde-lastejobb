@@ -33,6 +33,7 @@ function convertSync(kildesti, målsti, format, width, height = "") {
     kildesti
   ];
   console.log("mogrify " + args.join(" "));
+  debugger;
   const r = spawnSync("mogrify", args);
   log.d(r.output.toString());
   if (r.status > 0) throw new Error(r.stderr.toString());
@@ -56,13 +57,13 @@ function konverterAlle(kildesti, målsti, maxWidth, maxHeight) {
 
 const cfg = config.imagePath;
 
-konverterAlle(cfg.source, cfg.processed + "/kode", 950, 300);
+konverterAlle(cfg.source, cfg.processed, 950, 300);
 return;
-konverterAlle(cfg.source, cfg.processed + "/kode", 408, 297);
-konverterAlle(cfg.source, cfg.processed + "/kode", 612, 446);
-konverterAlle(cfg.source, cfg.processed + "/kode", 816, 594);
-konverterAlle(cfg.source, cfg.processed + "/kode", 40, 40);
+konverterAlle(cfg.source, cfg.processed, 408, 297);
+konverterAlle(cfg.source, cfg.processed, 612, 446);
+konverterAlle(cfg.source, cfg.processed, 816, 594);
+konverterAlle(cfg.source, cfg.processed, 40, 40);
 
-konverterAlle(cfg.custom_avatar, cfg.processed + "/kode", 24, 24);
-konverterAlle(cfg.custom_avatar, cfg.processed + "/kode", 40, 40);
-konverterAlle(cfg.custom_omslag, cfg.processed + "/kode", 408, 297);
+konverterAlle(cfg.custom_avatar, cfg.processed, 24, 24);
+konverterAlle(cfg.custom_avatar, cfg.processed, 40, 40);
+konverterAlle(cfg.custom_omslag, cfg.processed, 408, 297);

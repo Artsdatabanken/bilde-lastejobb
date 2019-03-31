@@ -6,7 +6,7 @@ const { spawnSync } = require("child_process");
 
 var data = io.readJson(config.datakilde.metabase);
 
-const imagePath = config.imagePath.processed + "/kode/";
+const imagePath = config.imagePath.processed + "/";
 const widths = [408, 950];
 
 Object.keys(data).forEach(kode => {
@@ -20,6 +20,7 @@ Object.keys(data).forEach(kode => {
 
 function deploy(ext, { kode, url }, width) {
   const fn = path.join(imagePath + width, kode + "." + ext);
+  debugger;
   if (!fs.existsSync(fn)) return;
   console.log(
     `scp "${fn}" "grunnkart@hydra:~/tilesdata/${url}/forside_${width}.${ext}"`
