@@ -10,19 +10,19 @@ const imagePath = config.imagePath.processed + "/";
 const widths = [408, 950];
 
 Object.keys(data).forEach(kode => {
-  if (kode.startsWith("LA")) debugger;
   const node = data[kode];
+  const foto = node.foto;
   widths.forEach(width => {
-    deploy("png", node, width);
-    deploy("jpg", node, width);
+    deploy("png", node, width, foto);
+    deploy("jpg", node, width, foto);
   });
 });
 
-function deploy(ext, { kode, url }, width) {
+function deploy(ext, { kode, url }, width, foto) {
   const fn = path.join(imagePath + width, kode + "." + ext);
-  debugger;
   if (!fs.existsSync(fn)) return;
-  console.log(
-    `scp "${fn}" "grunnkart@hydra:~/tilesdata/${url}/forside_${width}.${ext}"`
-  );
+  const destFn = `forside_${width}.${ext}`;
+  if (foto.forside && foto.forside.url.indexOf(destFn) >= 0) return;
+  if (foto.banner && foto.banner.url.indexOf(destFn) >= 0) return;
+  console.log(`scp "${fn}" "grunnkart@hydra:~/tilesdata/${url}/${destFn}"`);
 }
