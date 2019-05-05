@@ -6,12 +6,11 @@ const { spawnSync } = require("child_process");
 
 function convertSync(kildesti, målsti, format, width, height = "") {
   log.v("converting", kildesti, " to ", width, "x", height, " in ", format);
-  const max = Math.min(width, height);
-  const erFylke = kildesti.indexOf("/AO") >= 0;
+  const ikkeCrop = kildesti.indexOf("/AO") >= 0 || kildesti.indexOf("/OR") >= 0;
   const erBanner = width > 1.5 * height;
   const args = [
     "-resize",
-    width + "x" + height + (erFylke ? "" : "^"),
+    width + "x" + height + (ikkeCrop ? "" : "^"),
     "-gravity",
     erBanner ? "west" : "center",
     erBanner ? "-extent" : "",
