@@ -3,6 +3,7 @@
     "deasync": "^0.1.12",
     "node-fetch": "^2.0.0",
     "osmosis": "^1.1.6",
+    "tar": "^4.4.8",
     "tinycolor2": "^1.4.1"
   }
 }
