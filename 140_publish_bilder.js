@@ -2,7 +2,6 @@ const io = require("./lib/io");
 const fs = require("fs");
 const path = require("path");
 const config = require("./config");
-const { spawnSync } = require("child_process");
 
 var data = io.readJson(config.datakilde.metabase);
 
