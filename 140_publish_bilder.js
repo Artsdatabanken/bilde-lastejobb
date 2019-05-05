@@ -21,6 +21,7 @@ function deploy(ext, { kode, url }, width, foto) {
   const fn = path.join(imagePath + width, kode + "." + ext);
   if (!fs.existsSync(fn)) return;
   const destFn = `forside_${width}.${ext}`;
+  if (kode === "AO") debugger;
   if (foto.forside && foto.forside.url.indexOf(destFn) >= 0) return;
   if (foto.banner && foto.banner.url.indexOf(destFn) >= 0) return;
   console.log(`scp "${fn}" "grunnkart@hydra:~/tilesdata/${url}/${destFn}"`);
