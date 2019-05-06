@@ -1,11 +1,10 @@
-const io = require("./lib/io");
 const config = require("./config");
-const log = require("./lib/log");
 const path = require("path");
 const { spawnSync } = require("child_process");
+const { io, log } = require("lastejobb");
 
 function convertSync(kildesti, målsti, format, width, height = "") {
-  log.v("converting", kildesti, " to ", width, "x", height, " in ", format);
+  log.info("converting", kildesti, " to ", width, "x", height, " in ", format);
   const ikkeCrop = kildesti.indexOf("/AO") >= 0 || kildesti.indexOf("/OR") >= 0;
   const erBanner = width > 1.5 * height;
   const args = [
@@ -32,9 +31,8 @@ function convertSync(kildesti, målsti, format, width, height = "") {
     kildesti
   ];
   console.log("mogrify " + args.join(" "));
-  debugger;
   const r = spawnSync("mogrify", args);
-  log.d(r.output.toString());
+  log.debug(r.output.toString());
   if (r.status > 0) throw new Error(r.stderr.toString());
 }
 
@@ -48,9 +46,17 @@ function konverterAlle(kildesti, målsti, maxWidth, maxHeight) {
     const kildePath = path.parse(kildefil);
     if (".png.svg.jpg".indexOf(kildePath.ext || "xxxx") < 0) continue;
     const format = ".svg.png".indexOf(kildePath.ext) >= 0 ? "png" : "jpg";
-    const målfil = `${målstiwidth}/${kildePath.name}.${format}`;
-    if (io.fileExists(målfil)) log.v("skip", målfil);
-    else convertSync(kildefil, målstiwidth, format, maxWidth, maxHeight);
+    //    const målfil = `${målstiwidth}/${kildePath.name}.${format}`;
+    const målfil = kildefil
+      .replace(kildesti, målstiwidth)
+      .replace(kildePath.ext, "." + format);
+    if (io.fileExists(målfil)) {
+      log.info("skip", målfil);
+      continue;
+    }
+    const målpath = path.parse(målfil);
+    io.mkdir(målpath.dir);
+    convertSync(kildefil, målpath.dir, format, maxWidth, maxHeight);
   }
 }
 
