@@ -1,8 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const io = require("./lib/io");
-const config = require("./config");
-const log = require("./lib/log");
 
 const destPath = "../image/source/";
 
@@ -27,7 +24,7 @@ function rename(sourcePath) {
 function mapTilKode(fn) {
   const ufn = fn.toUpperCase();
   const spar = ufn.replace("_", "-").split("-");
-  if(fn.indexOf('REIDKF')>0)debugger
+  if (fn.indexOf("REIDKF") > 0) debugger;
   if (spar[1] === "KLG") return "NN-LA-KLG-" + spar[2];
   let dfn = "NN-LA-TI-" + ufn[3] + "-" + ufn[4];
   if (parseInt(spar[2]) > 0) dfn += "-" + spar[2];
