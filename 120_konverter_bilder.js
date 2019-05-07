@@ -3,9 +3,15 @@ const path = require("path");
 const { spawnSync } = require("child_process");
 const { io, log } = require("lastejobb");
 
+function ikkeCrop2(kildesti) {
+  if (kildesti.indexOf("/OR") >= 0) return true;
+  if (kildesti.indexOf("/AO") < 0) return false;
+  return kildesti.indexOf("banner") < 0;
+}
+
 function convertSync(kildesti, målsti, format, width, height = "") {
   log.info("converting", kildesti, " to ", width, "x", height, " in ", format);
-  const ikkeCrop = kildesti.indexOf("/AO") >= 0 || kildesti.indexOf("/OR") >= 0;
+  const ikkeCrop = ikkeCrop2(kildesti);
   const erBanner = width > 1.5 * height;
   const args = [
     "-resize",
@@ -33,7 +39,7 @@ function convertSync(kildesti, målsti, format, width, height = "") {
   console.log("mogrify " + args.join(" "));
   const r = spawnSync("mogrify", args);
   log.debug(r.output.toString());
-  if (r.status > 0) throw new Error(r.stderr.toString());
+  if (r.status > 0) log.error(r.stderr.toString());
 }
 
 function konverterAlle(kildesti, målsti, maxWidth, maxHeight) {
