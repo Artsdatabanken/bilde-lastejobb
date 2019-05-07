@@ -1,6 +1,6 @@
 const path = require("path");
 const config = require("./config");
-const { http, log, io } = require("lastejobb");
+const { log, io } = require("lastejobb");
 const fetch = require("node-fetch");
 
 var data = io.readJson(config.datakilde.metabase);
@@ -18,13 +18,11 @@ processQueue();
 
 async function processQueue() {
   const pending = queue.pop();
-  log.info("Download " + pending.kode);
   await download(pending.kode, pending.mediakilde);
-  await sleep(9000);
   if (queue.length > 0) processQueue();
 }
 
-function download(kode, mediakilde) {
+async function download(kode, mediakilde) {
   if (!mediakilde) return;
   Object.keys(mediakilde).forEach(key => {
     let urls = mediakilde[key];
@@ -34,9 +32,9 @@ function download(kode, mediakilde) {
       //      const ext = url.endsWith(".png") ? ".png" : ".jpg";
       const ext = path.extname(url);
       const dir = path.join(config.imagePath.source, key + "/");
-      io.mkdir(dir);
       const fn = dir + kode + ext;
       if (io.fileExists(fn)) return;
+      io.mkdir(dir);
       downloadBinary(url, fn);
     });
   });
@@ -47,6 +45,7 @@ async function downloadBinary(url, targetFile) {
   const response = await fetch(url).then();
   const buffer = await response.buffer();
   io.writeBinary(targetFile, buffer);
+  await sleep(9000);
 }
 
 function sleep(ms) {
