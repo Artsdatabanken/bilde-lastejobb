@@ -3,6 +3,8 @@ const path = require("path");
 const { spawnSync } = require("child_process");
 const { io, log } = require("lastejobb");
 
+const cfg = config.imagePath;
+
 function ikkeCrop2(kildesti) {
   if (kildesti.indexOf("/OR") >= 0) return true;
   if (kildesti.indexOf("/AO") < 0) return false;
@@ -37,12 +39,15 @@ function convertSync(kildesti, målsti, format, width, height = "") {
     kildesti
   ];
   console.log("mogrify " + args.join(" "));
-  const r = spawnSync("mogrify", args);
-  log.debug(r.output.toString());
-  if (r.status > 0) log.error(r.stderr.toString());
+  //  const r = spawnSync("mogrify", args);
+  //  log.debug(r.output.toString());
+  // if (r.status > 0) log.error(r.stderr.toString());
 }
 
-function konverterAlle(kildesti, målsti, maxWidth, maxHeight) {
+function konverterAlle(subdirectory, maxWidth, maxHeight) {
+  const kildesti = path.join(cfg.source, subdirectory);
+  const målsti = path.join(cfg.processed, subdirectory);
+
   const målstiwidth = `${målsti}/${maxWidth}`;
   io.mkdir(målstiwidth);
   console.log("Konverterer", kildesti);
@@ -66,15 +71,8 @@ function konverterAlle(kildesti, målsti, maxWidth, maxHeight) {
   }
 }
 
-const cfg = config.imagePath;
-
-konverterAlle(cfg.source, cfg.processed, 950, 300);
-return;
-konverterAlle(cfg.source, cfg.processed, 408, 297);
-konverterAlle(cfg.source, cfg.processed, 612, 446);
-konverterAlle(cfg.source, cfg.processed, 816, 594);
-konverterAlle(cfg.source, cfg.processed, 40, 40);
-
-konverterAlle(cfg.custom_avatar, cfg.processed, 24, 24);
-konverterAlle(cfg.custom_avatar, cfg.processed, 40, 40);
-konverterAlle(cfg.custom_omslag, cfg.processed, 408, 297);
+konverterAlle("banner", 950, 300);
+konverterAlle("foto", 408, 297);
+//konverterAlle(cfg.source, cfg.processed, 612, 446);
+//konverterAlle(cfg.source, cfg.processed, 816, 594);
+konverterAlle("logo", 40, 40);
