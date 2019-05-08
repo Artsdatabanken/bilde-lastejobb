@@ -1,34 +1,61 @@
-const { io } = require("lastejobb");
+const { io, log } = require("lastejobb");
 const fs = require("fs");
 const path = require("path");
 const config = require("./config");
 
-const imagePath = config.imagePath.processed + "/";
-const widths = [40, 408, 950];
+const widths = [24, 48, 408, 950];
 
+let script = "";
+
+const c2p = {};
+const p2c = {};
 var data = io.readJson(config.datakilde.metabase);
+Object.keys(data).forEach(kode => {
+  const node = data[kode];
+  if (node.overordnet.length > 0) {
+    const parent = node.overordnet[0].kode;
+    c2p[node.kode] = parent;
+    p2c[parent] = p2c[parent] || [];
+    p2c[parent].push(node.kode);
+  }
+});
 
 deployFrom("logo");
 deployFrom("foto");
 deployFrom("banner");
+io.skrivBuildfil("publish.sh", script);
 
 function deployFrom(subdir) {
   Object.keys(data).forEach(kode => {
     const node = data[kode];
     const foto = node.foto;
     widths.forEach(width => {
-      const srcPath = path.join(imagePath, subdir, width.toString());
-      deploy(subdir, srcPath, "png", node, width, foto);
-      deploy(subdir, srcPath, "jpg", node, width, foto);
+      const srcPath = path.join("build", subdir, width.toString());
+      deploy(subdir, srcPath, node, width, foto);
     });
   });
 }
 
-function deploy(subdir, srcPath, ext, { kode, url }, width, foto) {
-  const fn = path.join(srcPath, kode + "." + ext);
-  if (!fs.existsSync(fn)) return;
-  const destFn = `${subdir}_${width}.${ext}`;
-  if (foto[subdir] && foto[subdir].url.indexOf(destFn) >= 0) return;
-  //  if (foto.banner && foto.banner.url.indexOf(destFn) >= 0) return;
-  console.log(`scp "${fn}" "grunnkart@hydra:~/tilesdata/${url}/${destFn}"`);
+function deploy(subdir, srcPath, { kode, url }, width, foto) {
+  let image = findImage(srcPath, kode, p2c);
+  if (!image) image = findImage(srcPath, kode, c2p);
+  if (!image) return;
+  const destFn = `${subdir}_${width}.${image.ext}`;
+  const cmd = `scp "${
+    image.path
+  }" "grunnkart@hydra:~/tilesdata/${url}/${destFn}"\n`;
+  log.info(cmd);
+}
+
+function findImage(srcPath, kode, reserve) {
+  const r = {};
+  const formats = ["png", "jpg"];
+  for (var format of formats) {
+    r.ext = format;
+    r.path = path.join(srcPath, kode + "." + format);
+    if (fs.existsSync(r.path)) return r;
+  }
+  const parent = reserve[kode];
+  if (!parent) return null;
+  return findImage(srcPath, parent, reserve);
 }

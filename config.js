@@ -18,10 +18,6 @@ const config = {
     nin_foto: "../data/nin_foto.json",
     taxon_50: "../data/taxon_50.json"
   },
-  imagePath: {
-    source: "../image/source",
-    processed: "../image/processed"
-  },
   prefix: {
     natursystem: "NA_",
     miljøvariabel: "MI_",
