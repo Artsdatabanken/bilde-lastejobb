@@ -26,7 +26,6 @@ async function download(kode, mediakilde) {
   if (!mediakilde) return;
   Object.keys(mediakilde).forEach(key => {
     let urls = mediakilde[key];
-    if (!urls) debugger;
     if (!Array.isArray(urls)) urls = [urls];
     urls.forEach(url => {
       //      const ext = url.endsWith(".png") ? ".png" : ".jpg";

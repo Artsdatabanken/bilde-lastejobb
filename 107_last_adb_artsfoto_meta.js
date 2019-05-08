@@ -6,7 +6,6 @@ var deasync = require("deasync");
 log.logLevel = 5;
 
 var osmosis = require("osmosis");
-const fs = require("fs");
 
 let artsliste = io.readJson(config.datafil.nin_diagnostisk_art);
 let r = [];
