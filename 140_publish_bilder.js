@@ -17,6 +17,8 @@ Object.keys(data).forEach(kode => {
     c2p[node.kode] = [parent];
     p2c[parent] = p2c[parent] || [];
     p2c[parent].push(node.kode);
+    // Prioriter barn først i sorteringsrekkefølge da de typiske bedre
+    // representerer kategorien som helhet
     p2c[parent] = p2c[parent].sort();
   }
 });
