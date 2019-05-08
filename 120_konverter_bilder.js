@@ -1,19 +1,15 @@
-const config = require("./config");
 const path = require("path");
 const { spawnSync } = require("child_process");
 const { io, log } = require("lastejobb");
 
-const cfg = config.imagePath;
+const cfg = {
+  source: "data",
+  processed: "build"
+};
 
-function ikkeCrop2(kildesti) {
-  if (kildesti.indexOf("/OR") >= 0) return true;
-  if (kildesti.indexOf("/AO") < 0) return false;
-  return kildesti.indexOf("banner") < 0;
-}
-
-function convertSync(kildesti, målsti, format, width, height = "") {
+function convertSync(kildesti, målsti, format, width, height = "", bildetype) {
   log.info("converting", kildesti, " to ", width, "x", height, " in ", format);
-  const ikkeCrop = ikkeCrop2(kildesti);
+  const ikkeCrop = bildetype === "logo";
   const erBanner = width > 1.5 * height;
   const args = [
     "-resize",
@@ -44,9 +40,9 @@ function convertSync(kildesti, målsti, format, width, height = "") {
   // if (r.status > 0) log.error(r.stderr.toString());
 }
 
-function konverterAlle(subdirectory, maxWidth, maxHeight) {
-  const kildesti = path.join(cfg.source, subdirectory);
-  const målsti = path.join(cfg.processed, subdirectory);
+function konverterAlle(bildetype, maxWidth, maxHeight) {
+  const kildesti = path.join(cfg.source, bildetype);
+  const målsti = path.join(cfg.processed, bildetype);
 
   const målstiwidth = `${målsti}/${maxWidth}`;
   io.mkdir(målstiwidth);
@@ -66,13 +62,16 @@ function konverterAlle(subdirectory, maxWidth, maxHeight) {
       continue;
     }
     const målpath = path.parse(målfil);
-    io.mkdir(målpath.dir);
-    convertSync(kildefil, målpath.dir, format, maxWidth, maxHeight);
+    if (kildefil === "data/logo/VV.svg") debugger;
+    convertSync(kildefil, målpath.dir, format, maxWidth, maxHeight, bildetype);
   }
 }
 
+konverterAlle("logo", 24, 24);
+konverterAlle("logo", 48, 48);
+konverterAlle("logo", 408, 297);
+konverterAlle("logo", 950, 300);
 konverterAlle("banner", 950, 300);
 konverterAlle("foto", 408, 297);
 //konverterAlle(cfg.source, cfg.processed, 612, 446);
 //konverterAlle(cfg.source, cfg.processed, 816, 594);
-konverterAlle("logo", 40, 40);
