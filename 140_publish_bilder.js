@@ -14,9 +14,10 @@ Object.keys(data).forEach(kode => {
   const node = data[kode];
   if (node.overordnet.length > 0) {
     const parent = node.overordnet[0].kode;
-    c2p[node.kode] = parent;
+    c2p[node.kode] = [parent];
     p2c[parent] = p2c[parent] || [];
     p2c[parent].push(node.kode);
+    p2c[parent] = p2c[parent].sort();
   }
 });
 
@@ -48,14 +49,17 @@ function deploy(subdir, srcPath, { kode, url }, width, foto) {
 }
 
 function findImage(srcPath, kode, reserve) {
-  const r = {};
+  let r = {};
   const formats = ["png", "jpg"];
   for (var format of formats) {
     r.ext = format;
     r.path = path.join(srcPath, kode + "." + format);
     if (fs.existsSync(r.path)) return r;
   }
-  const parent = reserve[kode];
-  if (!parent) return null;
-  return findImage(srcPath, parent, reserve);
+  const reservekoder = reserve[kode];
+  if (!reservekoder) return null;
+  for (kandidat of reservekoder) {
+    r = findImage(srcPath, kandidat, reserve);
+    if (r) return r;
+  }
 }
