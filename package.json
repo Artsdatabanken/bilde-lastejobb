@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "lastejobb": "^1.20.2",
     "deasync": "^0.1.12",
+    "lastejobb": "^1.21.0",
     "node-fetch": "^2.5.0",
     "tar": "^4.4.8",
     "tinycolor2": "^1.4.1"
