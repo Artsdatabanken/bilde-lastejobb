@@ -52,13 +52,14 @@ function konverterAlle(bildetype, maxWidth, maxHeight) {
   for (var kildefil of files) {
     const kildePath = path.parse(kildefil);
     if (".png.svg.jpg".indexOf(kildePath.ext || "xxxx") < 0) continue;
-    const format = ".svg.png".indexOf(kildePath.ext) >= 0 ? "png" : "jpg";
+    let format = ".svg.png".indexOf(kildePath.ext) >= 0 ? "png" : "jpg";
+    if (bildetype === "logo") format = "png";
     //    const målfil = `${målstiwidth}/${kildePath.name}.${format}`;
     const målfil = kildefil
       .replace(kildesti, målstiwidth)
       .replace(kildePath.ext, "." + format);
     if (io.fileExists(målfil)) {
-      log.info("skip", målfil);
+      //      log.info("skip", målfil);
       continue;
     }
     const målpath = path.parse(målfil);
