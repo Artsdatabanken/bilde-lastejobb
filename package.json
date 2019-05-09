@@ -19,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Artsdatabanken/lastejobb-bilder.git"
+    "url": "git+https://github.com/Artsdatabanken/bilder-lastejobb.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Artsdatabanken/lastejobb-bilder/issues"
+    "url": "https://github.com/Artsdatabanken/bilder-lastejobb/issues"
   },
-  "homepage": "https://github.com/Artsdatabanken/lastejobb-bilder#readme",
+  "homepage": "https://github.com/Artsdatabanken/bilder-lastejobb#readme",
   "description": ""
 }
