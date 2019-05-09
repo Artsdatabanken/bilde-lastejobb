@@ -44,10 +44,12 @@ function deploy(subdir, srcPath, { kode, url }, width, foto) {
   if (!image) image = findImage(srcPath, kode, c2p);
   if (!image) return;
   const destFn = `${subdir}_${width}.${image.ext}`;
+  const urlok = url.replace("(", "\\(").replace(")", "\\)");
   const cmd = `scp "${
     image.path
-  }" "grunnkart@hydra:~/tilesdata/${url}/${destFn}"\n`;
+  }" "grunnkart@hydra:~/tilesdata/${urlok}/${destFn}"\n`;
   log.info(cmd);
+  console.log(cmd);
 }
 
 function findImage(srcPath, kode, reserve) {
