@@ -70,8 +70,8 @@ function konverterAlle(bildetype, maxWidth, maxHeight) {
 
 konverterAlle("logo", 24, 24);
 konverterAlle("logo", 48, 48);
-konverterAlle("logo", 408, 297);
-konverterAlle("logo", 950, 300);
+//konverterAlle("logo", 408, 297);
+//konverterAlle("logo", 950, 300);
 konverterAlle("banner", 950, 300);
 konverterAlle("foto", 408, 297);
 //konverterAlle(cfg.source, cfg.processed, 612, 446);
