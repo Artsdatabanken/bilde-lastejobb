@@ -3,7 +3,7 @@ const config = require("./config");
 
 // Metadata fra kartet
 http
-  .downloadJson(
+  .downloadBinary(
     `http://data.artsdatabanken.no/metadata_med_undertyper.json`,
     config.datakilde.metabase
   )

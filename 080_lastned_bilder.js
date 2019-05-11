@@ -3,12 +3,11 @@ const config = require("./config");
 const { log, io } = require("lastejobb");
 const fetch = require("node-fetch");
 
-var data = io.readJson(config.datakilde.metabase);
+var kilder = io.lesDatafil("mediakilde.json").items;
 
 const queue = [];
 
-Object.keys(data).forEach(kode => {
-  const node = data[kode];
+kilder.forEach(node => {
   const mediakilde = node.mediakilde;
   if (mediakilde) queue.push({ kode: node.kode, mediakilde: mediakilde });
 });
@@ -30,7 +29,7 @@ async function download(kode, mediakilde) {
     urls.forEach(url => {
       //      const ext = url.endsWith(".png") ? ".png" : ".jpg";
       const ext = path.extname(url);
-      const dir = path.join(config.imagePath.source, key + "/");
+      const dir = path.join("data/" + key + "/");
       const fn = dir + kode + ext;
       if (io.fileExists(fn)) return;
       io.mkdir(dir);
