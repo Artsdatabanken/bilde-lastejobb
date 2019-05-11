@@ -1,10 +1,14 @@
 {
   "dependencies": {
     "deasync": "^0.1.12",
-    "lastejobb": "^1.21.0",
+    "lastejobb": "^1.21.1",
     "node-fetch": "^2.5.0",
+    "osmosis": "^1.1.10",
     "tar": "^4.4.8",
     "tinycolor2": "^1.4.1"
+  },
+  "engines": {
+    "node": ">=10.0.0 <11.0.0"
   },
   "name": "lastejobb-bilder",
   "version": "1.0.0",
