@@ -8,7 +8,7 @@ rename("../../bilder/landskap/landskapstype");
 rename("../../bilder/landskap/landskapsgradient");
 
 function rename(sourcePath) {
-  const files = fs.readdirSync(sourcePath); //input/la/");
+  const files = fs.readdirSync(sourcePath);
   files.forEach(fn => {
     const ufn = fn.toUpperCase();
     if (!ufn.startsWith("LA")) return;
