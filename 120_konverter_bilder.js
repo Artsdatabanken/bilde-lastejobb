@@ -12,6 +12,7 @@ function convertSync(kildesti, målsti, format, width, height = "", bildetype) {
   const ikkeCrop = bildetype === "logo";
   const erBanner = width > 1.5 * height;
   const args = [
+    "-auto-orient",
     "-resize",
     width + "x" + height + (ikkeCrop ? "" : "^"),
     "-gravity",
