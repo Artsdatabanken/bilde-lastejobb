@@ -31,15 +31,15 @@ io.skrivBuildfil("publish.sh", script);
 function deployFrom(subdir) {
   Object.keys(data).forEach(kode => {
     const node = data[kode];
-    const foto = node.foto;
     widths.forEach(width => {
       const srcPath = path.join("build", subdir, width.toString());
-      deploy(subdir, srcPath, node, width, foto);
+      deploy(subdir, srcPath, node, width);
     });
   });
 }
 
-function deploy(subdir, srcPath, { kode, url }, width, foto) {
+function deploy(subdir, srcPath, { kode, url }, width) {
+  if (kode == "NN-LA") debugger;
   let image = findImage(srcPath, kode, p2c);
   if (!image) image = findImage(srcPath, kode, c2p);
   if (!image) return;
