@@ -5,6 +5,9 @@ const config = require("./config");
 
 const widths = [24, 48, 408, 950];
 
+// Foretrekk bilder fra typeinndeling
+const sortkey = a => a.replace("-TI", "AAATI");
+
 let script = "";
 
 const c2p = {};
@@ -19,7 +22,9 @@ Object.keys(data).forEach(kode => {
     p2c[parent].push(node.kode);
     // Prioriter barn først i sorteringsrekkefølge da de typiske bedre
     // representerer kategorien som helhet
-    p2c[parent] = p2c[parent].sort();
+    p2c[parent] = p2c[parent].sort((a, b) =>
+      sortkey(a) > sortkey(b) ? 1 : -1
+    );
   }
 });
 
