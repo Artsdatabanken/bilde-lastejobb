@@ -1,5 +1,4 @@
 const { http, log } = require("lastejobb");
-const config = require("./config");
 
 // Pekere til bilder
 http
