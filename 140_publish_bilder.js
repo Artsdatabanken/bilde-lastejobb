@@ -6,7 +6,7 @@ const config = require("./config");
 const widths = [24, 48, 408, 950];
 
 // Foretrekk bilder fra typeinndeling
-const sortkey = a => a.replace("-TI", "AAATI");
+const sortkey = a => a.replace("-TI", "-AAATI");
 
 let script = "";
 
@@ -44,7 +44,6 @@ function deployFrom(subdir) {
 }
 
 function deploy(subdir, srcPath, { kode, url }, width) {
-  if (kode == "NN-LA") debugger;
   let image = findImage(srcPath, kode, p2c);
   if (!image) image = findImage(srcPath, kode, c2p);
   if (!image) return;
