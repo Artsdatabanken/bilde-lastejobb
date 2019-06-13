@@ -1,10 +1,10 @@
 {
   "dependencies": {
     "deasync": "^0.1.12",
-    "lastejobb": "^1.21.1",
-    "node-fetch": "^2.5.0",
+    "lastejobb": "^1.21.3",
+    "node-fetch": "^2.6.0",
     "osmosis": "^1.1.10",
-    "tar": "^4.4.8",
+    "tar": "^4.4.10",
     "tinycolor2": "^1.4.1"
   },
   "engines": {
