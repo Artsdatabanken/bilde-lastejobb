@@ -1,7 +1,8 @@
 const path = require("path");
-const config = require("./config");
 const { log, io } = require("lastejobb");
 const fetch = require("node-fetch");
+
+throw new Error("Hvorfor laster vi fra output katalogen?");
 
 var kilder = io.lesDatafil("mediakilde.json").items;
 
