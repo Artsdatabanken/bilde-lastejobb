@@ -45,9 +45,4 @@ const config = {
 const isDebug = true;
 if (!isDebug) console.log = function() {};
 
-function log(...args) {
-  console.log.apply(this, args);
-  return args;
-}
-
 module.exports = config;
