@@ -23,5 +23,5 @@ function finnBilderSomKanGjenbrukesForLandskap(basename) {
 
 function dupliser(basename, kildeUrl, målUrl) {
   script.push(`cp -n ${basename}/${kildeUrl}.jpg ${basename}/${målUrl}.jpg`);
-  log.warn(`cp -n ${basename}/${kildeUrl}.jpg ${basename}/${målUrl}.jpg`);
+  console.log(`cp -n ${basename}/${kildeUrl}.jpg ${basename}/${målUrl}.jpg`);
 }
