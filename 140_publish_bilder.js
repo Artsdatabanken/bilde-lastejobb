@@ -12,7 +12,7 @@ let script = "";
 
 const c2p = {};
 const p2c = {};
-var data = io.readJson(config.datakilde.metabase);
+var data = io.lesDatafil("metadata_med_undertyper.json").items;
 Object.keys(data).forEach(kode => {
   const node = data[kode];
   if (node.overordnet.length > 0) {
@@ -49,9 +49,7 @@ function deploy(subdir, srcPath, { kode, url }, width) {
   if (!image) return;
   const destFn = `${subdir}_${width}.${image.ext}`;
   const urlok = url.replace("(", "\\(").replace(")", "\\)");
-  const cmd = `scp "${
-    image.path
-  }" "grunnkart@hydra:~/tilesdata/${urlok}/${destFn}"\n`;
+  const cmd = `scp "${image.path}" "grunnkart@hydra:~/tilesdata/${urlok}/${destFn}"\n`;
   log.info(cmd);
   console.log(cmd);
 }
