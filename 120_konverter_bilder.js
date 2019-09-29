@@ -8,7 +8,8 @@ const cfg = {
 
 function convertSync(kildesti, målsti, format, width, height = "", bildetype) {
   log.info("converting", kildesti, " to ", width, "x", height, " in ", format);
-  const ikkeCrop = bildetype === "logo";
+  const erLogo = bildetype === "logo";
+  const ikkeCrop = erLogo;
   const erBanner = width > 1.5 * height;
   const args = [
     "-auto-orient",
@@ -27,6 +28,11 @@ function convertSync(kildesti, målsti, format, width, height = "", bildetype) {
     format,
     "-density",
     "600",
+    "-channel",
+    "A",
+    "-evaluate",
+    "multiply",
+    erLogo ? "0.6" : "1.0",
     //    '-verbose',
     "-debug",
     "user",
