@@ -10,6 +10,7 @@ function convertSync(kildesti, målsti, format, width, height = "", bildetype) {
   log.info("converting", kildesti, " to ", width, "x", height, " in ", format);
   const erLogo = bildetype === "logo";
   const ikkeCrop = erLogo;
+  const faded = erLogo && width < 100;
   const erBanner = width > 1.5 * height;
   const args = [
     "-auto-orient",
@@ -32,7 +33,7 @@ function convertSync(kildesti, målsti, format, width, height = "", bildetype) {
     "A",
     "-evaluate",
     "multiply",
-    erLogo ? "0.6" : "1.0",
+    faded ? "0.6" : "1.0",
     //    '-verbose',
     "-debug",
     "user",
@@ -76,7 +77,7 @@ function konverterAlle(bildetype, maxWidth, maxHeight) {
 
 konverterAlle("logo", 24, 24);
 konverterAlle("logo", 48, 48);
-//konverterAlle("logo", 408, 297);
+konverterAlle("logo", 408, 297);
 //konverterAlle("logo", 950, 300);
 konverterAlle("banner", 950, 300);
 konverterAlle("foto", 408, 297);
