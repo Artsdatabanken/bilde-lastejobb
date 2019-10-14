@@ -1,7 +1,6 @@
 const { io, log } = require("lastejobb");
 const fs = require("fs");
 const path = require("path");
-const config = require("./config");
 
 const widths = [24, 48, 408, 950];
 
@@ -29,6 +28,7 @@ Object.keys(data).forEach(kode => {
 });
 
 deployFrom("logo");
+deployFrom("phylopic");
 deployFrom("foto");
 deployFrom("banner");
 io.skrivBuildfil("publish.sh", script);
