@@ -8,7 +8,7 @@ const cfg = {
 
 function convertSync(kildesti, målsti, format, width, height = "", bildetype) {
   log.info("converting", kildesti, " to ", width, "x", height, " in ", format);
-  const erLogo = bildetype === "logo";
+  const erLogo = bildetype === "logo" || bildetype === "phylopic";
   const ikkeCrop = erLogo;
   const faded = erLogo && width < 100;
   const erBanner = width > 1.5 * height;
@@ -75,6 +75,7 @@ function konverterAlle(bildetype, maxWidth, maxHeight) {
   }
 }
 
+konverterAlle("phylopic", 48, 48);
 konverterAlle("logo", 24, 24);
 konverterAlle("logo", 48, 48);
 konverterAlle("logo", 408, 297);
