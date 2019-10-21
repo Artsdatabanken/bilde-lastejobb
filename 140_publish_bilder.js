@@ -2,7 +2,8 @@ const { io, log } = require("lastejobb");
 const fs = require("fs");
 const path = require("path");
 
-const widths = [24, 48, 408, 950];
+var widths = [24, 40, 48, 408, 560, 950];
+//widths = [40];
 
 // Foretrekk bilder fra typeinndeling
 const sortkey = a => a.replace("-TI", "-AAATI");
@@ -49,7 +50,8 @@ function deploy(subdir, srcPath, { kode, url }, width) {
   if (!image) return;
   const destFn = `${subdir}_${width}.${image.ext}`;
   const urlok = url.replace("(", "\\(").replace(")", "\\)");
-  const cmd = `scp "${image.path}" "grunnkart@hydra:~/tilesdata/${urlok}/${destFn}"\n`;
+  //  const cmd = `scp "${image.path}" "grunnkart@hydra:~/tilesdata${urlok}/${destFn}"\n`;
+  const cmd = `scp ${image.path} ~/tilesdata${urlok}/${destFn}\n`;
   log.info(cmd);
   console.log(cmd);
 }
