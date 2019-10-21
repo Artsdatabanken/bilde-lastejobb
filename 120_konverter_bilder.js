@@ -25,6 +25,8 @@ function convertSync(kildesti, målsti, format, width, height = "", bildetype) {
     width + "x" + height + "+0+0",
     "-background",
     "transparent",
+    "-transparent",
+    "white",
     "-format",
     format,
     "-density",
@@ -61,22 +63,21 @@ function konverterAlle(bildetype, maxWidth, maxHeight) {
     if (".png.svg.jpg".indexOf(kildePath.ext || "xxxx") < 0) continue;
     let format = ".svg.png".indexOf(kildePath.ext) >= 0 ? "png" : "jpg";
     if (bildetype === "logo") format = "png";
-    //    const målfil = `${målstiwidth}/${kildePath.name}.${format}`;
     const målfil = kildefil
       .replace(kildesti, målstiwidth)
       .replace(kildePath.ext, "." + format);
-    if (io.fileExists(målfil)) {
-      //      log.info("skip", målfil);
-      continue;
-    }
+    if (io.fileExists(målfil)) continue;
+
     const målpath = path.parse(målfil);
-    if (kildefil === "data/logo/VV.svg") debugger;
     convertSync(kildefil, målpath.dir, format, maxWidth, maxHeight, bildetype);
   }
 }
 
+konverterAlle("phylopic", 40, 40);
 konverterAlle("phylopic", 48, 48);
+konverterAlle("phylopic", 560, 560);
 konverterAlle("logo", 24, 24);
+konverterAlle("logo", 40, 40);
 konverterAlle("logo", 48, 48);
 konverterAlle("logo", 408, 297);
 //konverterAlle("logo", 950, 300);
