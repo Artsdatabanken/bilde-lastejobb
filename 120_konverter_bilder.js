@@ -1,5 +1,6 @@
 const path = require("path");
 const { io, log } = require("lastejobb");
+const Mogrify = require("./lib/mogrify");
 
 const cfg = {
   source: "data",
@@ -7,53 +8,32 @@ const cfg = {
 };
 
 function convertSync(kildesti, målsti, format, width, height = "", bildetype) {
+  mogrify = new Mogrify();
   log.info("converting", kildesti, " to ", width, "x", height, " in ", format);
   const erLogo = bildetype === "logo" || bildetype === "phylopic";
   const ikkeCrop = erLogo;
-  const faded = erLogo && width < 100;
   const erBanner = width > 1.5 * height;
-  var args = [
-    "-auto-orient",
-    "-gravity",
-    erBanner ? "west" : "center",
-    erBanner ? "-extent" : "",
-    erBanner ? width + "x" + height : "",
-    "+repage",
-    //    "-crop", width + "x" + height + "+0+0",
-    "-background",
-    "transparent",
-    "-transparent",
-    "white",
-    "-format",
-    format,
-    "-density",
-    "600",
-    "-channel",
-    "A",
-    "-evaluate",
-    "multiply",
-    faded ? "0.65" : "1.0",
-    //    '-verbose',
-    //"-debug", "user",
-    "-path",
-    målsti
-  ];
-  if (width === 40) {
-    args.push("-extent");
-    args.push("40x40+0+0");
-  }
+  mogrify.gravity(erBanner ? "west" : "center");
+  mogrify.repage();
+  mogrify.background("transparent");
+  mogrify.transparent("white");
+  mogrify.format(format);
+  mogrify.density(600);
+  //  const faded = erLogo && width < 100;
+  //"-channel","A","-evaluate","multiply",faded ? "0.65" : "1.0",
+  mogrify.autolevel();
+  mogrify.destPath(målsti);
+
   if (width === 40) {
     width = 30;
     height = 30;
   }
+  mogrify.resize(width + "x" + height + (ikkeCrop ? "" : "^"));
+  if (erBanner) mogrify.extent(width + "x" + height);
+  else mogrify.extent(width + "x" + height);
+  mogrify.border("5x5");
+  mogrify.convert(kildesti);
 
-  // mogrify -auto-orient -gravity center +repage -background transparent -transparent white -format png -density 600 -auto-level -path build/phylopic/40 -resize 30x30 -extent 30x30 -border 5x5 -bordercolor transparent -verbose data/phylopic/AR-123932.png && file build/phylopic/40/AR-123932.png && eog build/phylopic/40/AR-123932.png
-
-  args.push("-resize");
-  args.push(width + "x" + height + (ikkeCrop ? "" : "^"));
-  args.push(kildesti);
-
-  console.log("mogrify " + args.join(" "));
   //  const r = spawnSync("mogrify", args);
   //  log.debug(r.output.toString());
   // if (r.status > 0) log.error(r.stderr.toString());
