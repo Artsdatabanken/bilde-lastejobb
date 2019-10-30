@@ -51,11 +51,11 @@ function deploy(subdir, srcPath, { kode, url }, width) {
   const destFn = `${subdir}_${width}.${image.ext}`;
   // url = url.replace("(", "\\(").replace(")", "\\)");
   //  const cmd = `scp "${image.path}" "grunnkart@hydra:~/tilesdata${urlok}/${destFn}"\n`;
-  const cmd = `cp ${image.path.replace(
+  const cmd = `cp -n ${image.path.replace(
     "build/",
     ""
-  )} \"/home/grunnkart/tilesdata${url}/${destFn}\"\n`;
-  log.info(cmd);
+  )} \"/home/grunnkart/tilesdata${url}/${destFn}\"`;
+  //  log.info(cmd);
   console.log(cmd);
 }
 
