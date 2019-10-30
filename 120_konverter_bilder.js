@@ -54,6 +54,7 @@ function konverterAlle(bildetype, maxWidth, maxHeight) {
     if (".png.svg.jpg".indexOf(kildePath.ext || "xxxx") < 0) continue;
     let format = ".svg.png".indexOf(kildePath.ext) >= 0 ? "png" : "jpg";
     if (bildetype === "logo") format = "png";
+    if (bildetype === "foto") format = "jpg";
     const målfil = kildefil
       .replace(kildesti, målstiwidth)
       .replace(kildePath.ext, "." + format);
