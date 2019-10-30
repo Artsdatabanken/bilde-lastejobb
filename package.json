@@ -1,36 +1,40 @@
 {
-  "dependencies": {
-    "deasync": "^0.1.15",
-    "lastejobb": "^2.16.1",
-    "node-fetch": "^2.6.0",
-    "osmosis": "^1.1.10",
-    "tar": "^5.0.5",
-    "tinycolor2": "^1.4.1"
-  },
-  "engines": {
-    "node": ">=10.0.0 <11.0.0"
-  },
-  "name": "lastejobb-bilder",
-  "version": "1.0.0",
-  "main": "index.js",
-  "directories": {
-    "doc": "doc",
-    "lib": "lib"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Artsdatabanken/bilder-lastejobb.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Artsdatabanken/bilder-lastejobb/issues"
-  },
-  "homepage": "https://github.com/Artsdatabanken/bilder-lastejobb#readme",
-  "description": ""
+ "dependencies": {
+  "deasync": "^0.1.15",
+  "lastejobb": "^2.16.1",
+  "node-fetch": "^2.6.0",
+  "osmosis": "^1.1.10",
+  "tar": "^5.0.5",
+  "tinycolor2": "^1.4.1"
+ },
+ "engines": {
+  "node": ">=10.0.0 <11.0.0"
+ },
+ "name": "lastejobb-bilder",
+ "version": "1.0.0",
+ "main": "index.js",
+ "directories": {
+  "doc": "doc",
+  "lib": "lib"
+ },
+ "devDependencies": {},
+ "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "download": "node index download",
+  "transform": "node index transform",
+  "build": "npm run download && npm run transform",
+  "deploy": "node index deploy"
+ },
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/Artsdatabanken/bilder-lastejobb.git"
+ },
+ "keywords": [],
+ "author": "",
+ "license": "ISC",
+ "bugs": {
+  "url": "https://github.com/Artsdatabanken/bilder-lastejobb/issues"
+ },
+ "homepage": "https://github.com/Artsdatabanken/bilder-lastejobb#readme",
+ "description": ""
 }
