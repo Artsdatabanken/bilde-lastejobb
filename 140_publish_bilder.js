@@ -28,15 +28,15 @@ Object.keys(data).forEach(kode => {
   }
 });
 
-deployFrom("logo");
 deployFrom("phylopic");
+deployFrom("logo");
 deployFrom("foto");
 deployFrom("banner");
 io.skrivBuildfil("publish.sh", script);
 
 function deployFrom(subdir) {
-  Object.keys(data).forEach(kode => {
-    const node = data[kode];
+  data.forEach(node => {
+    //    if (node.kode !== "AR-1433") return;
     widths.forEach(width => {
       const srcPath = path.join("build", subdir, width.toString());
       deploy(subdir, srcPath, node, width);
@@ -45,7 +45,6 @@ function deployFrom(subdir) {
 }
 
 function deploy(subdir, srcPath, { kode, url }, width) {
-  if (kode === "AR-128965") debugger;
   let image = findImage(srcPath, kode, p2c);
   if (!image) image = findImage(srcPath, kode, c2p);
   if (!image) return;
