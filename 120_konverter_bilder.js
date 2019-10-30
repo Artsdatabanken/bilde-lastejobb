@@ -31,7 +31,8 @@ function convertSync(kildesti, målsti, format, width, height = "", bildetype) {
   mogrify.resize(width + "x" + height + (ikkeCrop ? "" : "^"));
   if (erBanner) mogrify.extent(width + "x" + height);
   else mogrify.extent(width + "x" + height);
-  mogrify.border("5x5");
+  if ("phylopic_logo".indexOf(bildetype) >= 0)
+    if (kildesti) mogrify.border("5x5");
   mogrify.convert(kildesti);
 
   //  const r = spawnSync("mogrify", args);
