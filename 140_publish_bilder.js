@@ -45,13 +45,17 @@ function deployFrom(subdir) {
 }
 
 function deploy(subdir, srcPath, { kode, url }, width) {
+  if (kode === "AR-128965") debugger;
   let image = findImage(srcPath, kode, p2c);
   if (!image) image = findImage(srcPath, kode, c2p);
   if (!image) return;
   const destFn = `${subdir}_${width}.${image.ext}`;
-  const urlok = url.replace("(", "\\(").replace(")", "\\)");
+  // url = url.replace("(", "\\(").replace(")", "\\)");
   //  const cmd = `scp "${image.path}" "grunnkart@hydra:~/tilesdata${urlok}/${destFn}"\n`;
-  const cmd = `scp ${image.path} ~/tilesdata${urlok}/${destFn}\n`;
+  const cmd = `cp ${image.path.replace(
+    "build/",
+    ""
+  )} \"/home/grunnkart/tilesdata${url}/${destFn}\"\n`;
   log.info(cmd);
   console.log(cmd);
 }
