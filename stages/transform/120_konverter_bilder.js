@@ -1,6 +1,6 @@
 const path = require("path");
 const { io, log } = require("lastejobb");
-const Mogrify = require("./lib/mogrify");
+const Mogrify = require("../../lib/mogrify");
 
 const cfg = {
   source: "data",
