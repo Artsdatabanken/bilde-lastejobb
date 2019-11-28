@@ -1,4 +1,4 @@
-const { io, log } = require("lastejobb");
+const { io } = require("lastejobb");
 const fs = require("fs");
 const path = require("path");
 
@@ -51,7 +51,9 @@ function deploy(subdir, srcPath, { kode, url }, width) {
   const destFn = `${subdir}_${width}.${image.ext}`;
   // url = url.replace("(", "\\(").replace(")", "\\)");
   //  const cmd = `scp "${image.path}" "grunnkart@hydra:~/tilesdata${urlok}/${destFn}"\n`;
-  const cmd = `cp -n ${image.path.replace(
+  // -n = copy only if file is missing
+  // -u = copy if newer
+  const cmd = `cp -u ${image.path.replace(
     "build/",
     ""
   )} \"/home/grunnkart/tilesdata${url}/${destFn}\"`;
