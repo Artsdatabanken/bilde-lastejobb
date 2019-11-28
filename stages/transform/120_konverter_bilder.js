@@ -13,12 +13,13 @@ function convertSync(kildesti, målsti, format, width, height = "", bildetype) {
   const erLogo = bildetype === "logo" || bildetype === "phylopic";
   const ikkeCrop = erLogo;
   const erBanner = width > 1.5 * height;
+  mogrify.trim();
   mogrify.gravity(erBanner ? "west" : "center");
   mogrify.repage();
   mogrify.background("transparent");
   mogrify.transparent("white");
   mogrify.format(format);
-  mogrify.density(600);
+  if (width > 100) mogrify.density(600);
   //  const faded = erLogo && width < 100;
   //"-channel","A","-evaluate","multiply",faded ? "0.65" : "1.0",
   mogrify.autolevel();
@@ -40,9 +41,9 @@ function convertSync(kildesti, målsti, format, width, height = "", bildetype) {
   // if (r.status > 0) log.error(r.stderr.toString());
 }
 
-function konverterAlle(bildetype, maxWidth, maxHeight) {
+function konverterAlle(bildetype, destBildetype, maxWidth, maxHeight) {
   const kildesti = path.join(cfg.source, bildetype);
-  const målsti = path.join(cfg.processed, bildetype);
+  const målsti = path.join(cfg.processed, destBildetype);
 
   const målstiwidth = `${målsti}/${maxWidth}`;
   io.mkdir(målstiwidth);
@@ -65,15 +66,16 @@ function konverterAlle(bildetype, maxWidth, maxHeight) {
   }
 }
 
-konverterAlle("phylopic", 40, 40);
-konverterAlle("phylopic", 48, 48);
-konverterAlle("phylopic", 560, 560);
-konverterAlle("logo", 24, 24);
-konverterAlle("logo", 40, 40);
-konverterAlle("logo", 48, 48);
-konverterAlle("logo", 408, 297);
-//konverterAlle("logo", 950, 300);
-konverterAlle("banner", 950, 300);
-konverterAlle("foto", 408, 297);
+konverterAlle("phylopic", "logo", 24, 24);
+konverterAlle("phylopic", "logo", 40, 40);
+konverterAlle("phylopic", "logo", 48, 48);
+konverterAlle("phylopic", "logo", 560, 560);
+konverterAlle("logo", "logo", 24, 24);
+konverterAlle("logo", "logo", 40, 40);
+konverterAlle("logo", "logo", 48, 48);
+konverterAlle("logo", "logo", 408, 297);
+//konverterAlle("logo","logo", 950, 300);
+konverterAlle("banner", "banner", 950, 300);
+konverterAlle("foto", "foto", 408, 297);
 //konverterAlle(cfg.source, cfg.processed, 612, 446);
 //konverterAlle(cfg.source, cfg.processed, 816, 594);
