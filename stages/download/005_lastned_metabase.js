@@ -2,7 +2,7 @@ const { http, log } = require("lastejobb");
 
 http
   .downloadBinary(
-    `https://data.artsdatabanken.no/metadata_med_undertyper.json`,
+    `https://data.test.artsdatabanken.no/metadata_med_undertyper.json`,
     "metadata_med_undertyper.json"
   )
   .catch(err => {

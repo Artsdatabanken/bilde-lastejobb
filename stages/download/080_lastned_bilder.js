@@ -2,41 +2,39 @@ const path = require("path");
 const { log, io } = require("lastejobb");
 const fetch = require("node-fetch");
 
-throw new Error("Hvorfor laster vi fra output katalogen?");
-
 var kilder = io.lesDatafil("mediakilde.json").items;
 
 const queue = [];
 
-kilder.forEach(node => {
-  const mediakilde = node.mediakilde;
-  if (mediakilde) queue.push({ kode: node.kode, mediakilde: mediakilde });
+kilder.forEach(mediakilde => {
+  queue.push({ kode: mediakilde.kode, mediakilde: mediakilde });
 });
 log.info("Download queue items: " + queue.length);
 
 processQueue();
 
 async function processQueue() {
+  if (queue.length <= 0) return;
   const pending = queue.pop();
   await download(pending.kode, pending.mediakilde);
-  if (queue.length > 0) processQueue();
+  processQueue();
 }
 
 async function download(kode, mediakilde) {
   if (!mediakilde) return;
-  Object.keys(mediakilde).forEach(key => {
+  for (var key of Object.keys(mediakilde)) {
     let urls = mediakilde[key];
     if (!Array.isArray(urls)) urls = [urls];
-    urls.forEach(url => {
-      //      const ext = url.endsWith(".png") ? ".png" : ".jpg";
+    for (var url of urls) {
+      if (url.indexOf("http") !== 0) continue;
       const ext = path.extname(url);
       const dir = path.join("data/" + key + "/");
       const fn = dir + kode + ext;
-      if (io.fileExists(fn)) return;
+      if (io.fileExists(fn)) continue;
       io.mkdir(dir);
-      downloadBinary(url, fn);
-    });
-  });
+      await downloadBinary(url, fn);
+    }
+  }
 }
 
 async function downloadBinary(url, targetFile) {
