@@ -1,12 +1,8 @@
-const io = require('./lib/io')
-const config = require('./config')
-const log = require('./lib/log')
-var deasync = require('deasync')
+const {io, config, log} = require('@artsdatabanken/lastejobb')
 
 log.logLevel = 5
 
 var osmosis = require('osmosis')
-const fs = require('fs')
 
 let nin_liste = io.readJson(config.datafil.nin_liste)
 let r = {}
@@ -58,18 +54,12 @@ function addCustom(r) {
   r[config.rotkode] = { foto: 'https://www.artsdatabanken.no/Media/F21489' }
 }
 
-function hentfotolinker(nin_liste) {
+const hentfotolinker = async (nin_liste) => {
   const keys = Object.keys(nin_liste)
   for (let i = 0; i < keys.length; i++) {
     const key = keys[i]
     if (key.indexOf(config.prefix.natursystem) === 0) {
-      let done = false
-      hentfotolink(nin_liste[key], () => {
-        done = true
-      })
-      deasync.loopWhile(function() {
-        return !done
-      })
+      await hentfotolink(nin_liste[key])
       addCustom(r)
       io.writeJson(config.datafil.nin_foto, r)
     }

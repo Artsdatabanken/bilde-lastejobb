@@ -42,7 +42,7 @@ async function downloadBinary(url, targetFile) {
   const response = await fetch(url).then();
   const buffer = await response.buffer();
   io.writeBinary(targetFile, buffer);
-  await sleep(9000);
+  await sleep(1000);
 }
 
 function sleep(ms) {

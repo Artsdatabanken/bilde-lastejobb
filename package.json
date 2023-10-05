@@ -1,8 +1,6 @@
 {
  "dependencies": {
-  "deasync": "^0.1.15",
-  "lastejobb": "^2.16.1",
-  "node-fetch": "^2.6.1",
+  "@artsdatabanken/lastejobb": "^4.0.12",
   "osmosis": "^1.1.10",
   "tar": "^5.0.5",
   "tinycolor2": "^1.4.1"
@@ -17,7 +15,6 @@
   "doc": "doc",
   "lib": "lib"
  },
- "devDependencies": {},
  "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
   "download": "node index download",

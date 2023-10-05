@@ -7,6 +7,6 @@ function download(url, filename) {
 }
 
 download(
-  "https://raw.githubusercontent.com/Artsdatabanken/nin-egenskapsdata/master/Natur_i_Norge/Landskap/bilder_som_gjenbrukes.csv",
+  "https://raw.githubusercontent.com/Artsdatabanken/natursystem-ubehandlet/master/bilder_som_gjenbrukes.csv",
   "landskap_bilder_som_gjenbrukes.csv"
 );

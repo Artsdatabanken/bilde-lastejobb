@@ -1,11 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 
-const destPath = "../image/source/";
+fs.mkdirSync("build")
+fs.mkdirSync("build/source")
+const destPath = "build/source/";
 
 //rename("../image/la/fradrupal");
-rename("../../bilder/landskap/landskapstype");
-rename("../../bilder/landskap/landskapsgradient");
+rename("data/landskap/landskapstype");
+rename("data/landskap/landskapsgradient");
 
 function rename(sourcePath) {
   const files = fs.readdirSync(sourcePath);

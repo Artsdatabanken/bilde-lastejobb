@@ -7,14 +7,14 @@ function download(url, filename) {
 }
 
 download(
-  "https://raw.githubusercontent.com/Artsdatabanken/naturvern/master/logo/24px.svg",
+  "https://raw.githubusercontent.com/Artsdatabanken/naturvern/master/logo/logo.svg",
   "VV.svg"
 );
 download(
-  "https://raw.githubusercontent.com/Artsdatabanken/nin-egenskapsdata/master/Natur_i_Norge/Landskap/logo.svg",
+  "https://raw.githubusercontent.com/Artsdatabanken/landskap-ubehandlet/a70627c5fcdef9d55f56eca4197698f9e22d39ef/logo.svg",
   "NN-LA.svg"
 );
 download(
-  "https://raw.githubusercontent.com/Artsdatabanken/nin-egenskapsdata/master/Natur_i_Norge/Natursystem/logo.png",
+  "https://github.com/Artsdatabanken/natursystem-ubehandlet/blob/master/logo.png?raw=true",
   "NN-NA.png"
 );
