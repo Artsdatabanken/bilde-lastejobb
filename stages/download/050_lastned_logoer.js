@@ -1,4 +1,4 @@
-const { http, log } = require("lastejobb");
+const { http, log } = require("@artsdatabanken/lastejobb");
 
 function download(url, filename) {
   http.downloadBinary(url, "logo/" + filename).catch(err => {

@@ -1,8 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 
-fs.mkdirSync("build")
-fs.mkdirSync("build/source")
+const mkdir = dir => { if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })}
+
+mkdir("build/source")
+
 const destPath = "build/source/";
 
 //rename("../image/la/fradrupal");

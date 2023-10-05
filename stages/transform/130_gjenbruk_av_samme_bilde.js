@@ -2,7 +2,7 @@
 // Dette gjøres nå også i 140, men da kopieres bildet
 // Burde man symlinke?
 
-const { io } = require("lastejobb");
+const { io } = require("@artsdatabanken/lastejobb");
 
 let script = [];
 // Forventer følgende katalogstruktur på tile serveren:

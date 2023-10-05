@@ -1,8 +1,8 @@
 const path = require("path");
-const { log, io } = require("lastejobb");
+const { log, io } = require("@artsdatabanken/lastejobb");
 const fetch = require("node-fetch");
 
-var kilder = io.lesDatafil("mediakilde.json").items;
+var kilder = io.lesTempJson("mediakilde.json");
 
 const queue = [];
 
@@ -42,7 +42,7 @@ async function downloadBinary(url, targetFile) {
   const response = await fetch(url).then();
   const buffer = await response.buffer();
   io.writeBinary(targetFile, buffer);
-  await sleep(1000);
+  await sleep(9000);
 }
 
 function sleep(ms) {

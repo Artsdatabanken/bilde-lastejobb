@@ -1,12 +1,12 @@
 {
  "dependencies": {
   "@artsdatabanken/lastejobb": "^4.0.12",
+  "libxmljs": "^1.0.9",
   "osmosis": "^1.1.10",
-  "tar": "^5.0.5",
-  "tinycolor2": "^1.4.1"
+  "tinycolor2": "^1.6.0"
  },
  "engines": {
-  "node": ">=10.0.0 <11.0.0"
+  "node": ">=18.0.0"
  },
  "name": "lastejobb-bilder",
  "version": "1.0.0",
@@ -16,11 +16,10 @@
   "lib": "lib"
  },
  "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "download": "node index download",
-  "transform": "node index transform",
-  "build": "npm run download && npm run transform",
-  "deploy": "node index deploy"
+  "download": "node node_modules/@artsdatabanken/lastejobb/lastejobb stages/download",
+  "transform": "node node_modules/@artsdatabanken/lastejobb/lastejobb stages/transform",
+  "transform_test": "export TEST_RUN=true && node node_modules/@artsdatabanken/lastejobb/lastejobb stages/transform",
+  "build": "npm run download && npm run transform"
  },
  "repository": {
   "type": "git",

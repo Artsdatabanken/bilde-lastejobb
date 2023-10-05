@@ -1,5 +1,5 @@
 const path = require("path");
-const { io, log } = require("lastejobb");
+const { io, log } = require("@artsdatabanken/lastejobb");
 const Mogrify = require("../../lib/mogrify");
 
 const cfg = {

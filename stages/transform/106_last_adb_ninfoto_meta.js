@@ -1,10 +1,9 @@
-const {io, config, log} = require('@artsdatabanken/lastejobb')
+const {io, log} = require('@artsdatabanken/lastejobb')
 
 log.logLevel = 5
-
 var osmosis = require('osmosis')
 
-let nin_liste = io.readJson(config.datafil.nin_liste)
+let nin_liste = io.lesTempJson("nin_liste.json")
 let r = {}
 
 function hentfotolink(item, callback) {
